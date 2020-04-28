@@ -1,0 +1,14 @@
+<nav class="site-header sticky-top py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <%= link_to "#", class: "p-2" do %>
+      <%= image_tag ("logo_white.png"), class: "d-block mx-auto", style: "height: 40px;" %>
+    <% end %>
+    <%= link_to "Skis", "#", class: "p-3 d-none d-md-inline-block" %>
+    <%= link_to "Zubehör", "#", class: "p-3 d-none d-md-inline-block"  %>
+    <%= link_to "Ski-Tests", "#", class: "p-3 d-none d-md-inline-block"  %>
+    <%= link_to "Verkauf", "#", class: "p-3 d-none d-md-inline-block"  %>
+    <%= link_to "Über uns", about_path, class: "p-3 d-none d-md-inline-block"  %>
+    <%= link_to "Kontakt", contact_path, class: "p-3 d-none d-md-inline-block"  %>
+  </div>
+</nav>
+<%# render partial: 'spree/shared/main_nav_bar' if store_menu? %>

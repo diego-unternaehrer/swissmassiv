@@ -1,2 +1,45 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'tree.png' %>);">
+  <div class="container">
+    <h1 class="text-center">Handgemachte Skis aus der Schweiz</h1>
+    <p class="pt-4 text-center">"Ich kaufe nicht einfach Holz für meine Skis, ich kaufe einen Baum.
+      Denn der Charakter eines Ski fängt beim Baum an."</p>
+    <p class="pb-4 text-center"> - René Unternährer </p>
+    <div class="text-center">
+        <%= link_to "Über uns", "#", class: "button_1" %>
+    </div>
+  </div>
+</div>
+<div class="menu">
+  <div class="menu-item" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'ski_preview.png' %>);">
+    <h1 class="text-center">Jeder Ski ist einzigartig</h1>
+    <p class="pt-4 text-center">"Ich kaufe nicht einfach Holz für meine Skis, ich kaufe einen Baum.
+      Denn der Charakter eines Ski fängt beim Baum an."</p>
+    <div class="text-center">
+      <%= link_to "Unsere Skis", "#", class: "button_1" %>
+    </div>
+  </div>
+  <div class="menu-item" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'ski_preview.png' %>);">
+    <h1 class="text-center">Zubehör</h1>
+    <p class="pt-4 text-center">"Ich kaufe nicht einfach Holz für meine Skis, ich kaufe einen Baum.
+      Denn der Charakter eines Ski fängt beim Baum an."</p>
+    <p class="pb-4 text-center"> - René Unternährer </p>
+    <div class="text-center">
+      <%= link_to "Unser Zubehör", "#", class: "button_1" %>
+    </div>
+  </div>
+  <div class="menu-item" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'skitest.jpg' %>);">
+    <h1 class="text-center">Ski-Tests</h1>
+    <p class="pt-4 text-center">An einem Ski-Test können Sie unsere Skis gratis testfahren und sich von der Qualität überzeugen lassen.</p>
+    <div class="text-center">
+      <%= link_to "Unsere Termine", "#", class: "button_1" %>
+    </div>
+  </div>
+  <div class="menu-item" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'skitest.jpg' %>);">
+    <h1 class="text-center">Verkauf</h1>
+    <p class="pt-4 text-center">Viele Skishops im In- und Ausland verkaufen und vermieten unsere Skis und Zubehör.</p>
+    <div class="text-center">
+      <%= link_to "Unsere Partner", "#", class: "button_1" %>
+    </div>
+  </div>
+</div>
