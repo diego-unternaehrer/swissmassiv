@@ -405,7 +405,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.11)
   rails (~> 5.2.4, >= 5.2.4.1)
-  sass-rails (~> 5.0)
+  sass-rails
   selenium-webdriver
   simple_form
   solidus
