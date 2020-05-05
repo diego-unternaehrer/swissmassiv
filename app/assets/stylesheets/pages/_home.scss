@@ -1,18 +1,11 @@
 .banner {
   background-size: cover;
   background-position: center;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
   padding: 100px;
-   h1 {
-    margin: 0;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  h1 {
     font-weight: bold;
-  }
-   p {
-    font-size: 20px;
-    color: white;
-    opacity: .7;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
 }
 
@@ -22,10 +15,11 @@
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 24px;
-  font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
   padding: 100px;
+  h1 {
+    font-weight: bold;
+  }
 }
 
 .menu {

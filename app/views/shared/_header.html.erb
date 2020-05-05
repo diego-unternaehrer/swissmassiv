@@ -1,13 +1,55 @@
-<nav class="site-header sticky-top py-1">
-  <div class="container d-flex flex-column flex-md-row justify-content-between">
-    <%= link_to root_path, class: "p-2" do %>
-      <%= image_tag ("logo_white.png"), class: "d-block mx-auto", style: "height: 40px;" %>
+<nav class="site-header sticky-top py-3">
+  <div class="d-flex justify-content-around align-items-center layer_1">
+    <%= link_to "#", class: "p-2" do %>
+      <p class="d-block header-icon"> <%= fa_icon "calendar" %></p>
+      <p class="d-none d-md-block header-text"> Ski-Tests </p>
     <% end %>
-    <%= link_to "Skis", spree.products_path, class: "p-3 d-none d-md-inline-block" %>
-    <%= link_to "Zubehör", "#", class: "p-3 d-none d-md-inline-block"  %>
-    <%= link_to "Ski-Tests", "#", class: "p-3 d-none d-md-inline-block"  %>
-    <%= link_to "Händlersuche", "#", class: "p-3 d-none d-md-inline-block"  %>
-    <%= link_to "Über uns", main_app.about_path, class: "p-3 d-none d-md-inline-block"  %>
+    <%= link_to "#", class: "p-2" do %>
+      <p class="d-block header-icon"> X </p>
+      <p class="d-none d-md-block header-text"> Händlersuche </p>
+    <% end %>
+    <%= link_to main_app.about_path, class: "p-2" do %>
+      <p class="d-block header-icon"> <%= fa_icon "info-circle" %> </p>
+      <p class="d-none d-md-block header-text"> Über uns </p>
+    <% end %>
+    <%= link_to root_path, class: "p-2" do %>
+      <%= image_tag ("logo_white.png"), style: "height: 40px;" %>
+    <% end %>
+    <%= link_to "#", class: " p-2" do %>
+      <p class="d-block header-icon"> <%= fa_icon "user" %> </p>
+      <p class="d-none d-md-block header-text"> Account </p>
+    <% end %>
+    <%= link_to "#", class: " p-2" do %>
+      <p class="d-block header-icon"> <%= fa_icon "heart" %> </p>
+      <p class="d-none d-md-block header-text"> Wunschzettel </p>
+    <% end %>
+    <%= link_to "#", class: " p-2" do %>
+      <p class="d-block header-icon"> <%= fa_icon "shopping-cart" %> </p>
+      <p class="d-none d-md-block header-text"> Warenkorb </p>
+    <% end %>
+  </div>
+  <div class="d-flex justify-content-around align-items-center pt-1 layer_2">
+    <%= link_to "Skis", spree.products_path, class: "p-2 header-text"%>
+    <%= link_to "Zubehör", "#", class: "p-2 header-text"%>
+    <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+      <div class="form-group">
+        <input class="string required" style="background-color: black; color: white; border: none;" type="text" name="search[query]" id="search_query" placeholder="Produktsuche" />
+      <div class="search_icon">
+        <%= fa_icon "search" %>
+      </div>
+    </div>
+    <% end %>
+    <div class="dropdown">
+      <button class="dropdown-toggle" style="background-color: black; color: white; border: none;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <p class="d-inline header-icon"> <%= fa_icon "language" %> </p>
+        <p class="d-inline header-text"> de </p>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <%= link_to "English", "#", class: "dropdown-item"%>
+        <%= link_to "Français", "#", class: "dropdown-item"%>
+        <%= link_to "Italiano", "#", class: "dropdown-item"%>
+      </div>
+    </div>
   </div>
 </nav>
 <%# render partial: 'spree/shared/main_nav_bar' if store_menu? %>
