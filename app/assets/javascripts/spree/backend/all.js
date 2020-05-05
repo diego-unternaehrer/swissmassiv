@@ -4,7 +4,11 @@
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // the compiled file.
 //
-//= require jquery
 //= require rails-ujs
-//= require spree/frontend
+//= require activestorage
+//= require turbolinks
+//= require jquery
+//= require jquery_ujs
+//= require bootstrap
+//= require spree/backend
 //= require_tree .
