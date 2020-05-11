@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def index
-    @events = Event.where("date > ?", Date.today)
+    @events = Event.where("date > ?", Date.today).order(:date)
   end
 
   def show
