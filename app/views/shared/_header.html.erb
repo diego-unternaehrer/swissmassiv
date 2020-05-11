@@ -1,11 +1,11 @@
 <nav class="site-header sticky-top py-3">
   <div class="d-flex justify-content-around align-items-center layer_1">
-    <%= link_to "#", class: "p-2" do %>
-      <p class="d-block header-icon"> <%= fa_icon "calendar" %></p>
+    <%= link_to main_app.events_path, class: "p-2" do %>
+      <p class="d-block header-icon"> <%= fa_icon "calendar-alt" %></i></p>
       <p class="d-none d-md-block header-text"> Ski-Tests </p>
     <% end %>
-    <%= link_to "#", class: "p-2" do %>
-      <p class="d-block header-icon"> X </p>
+    <%= link_to main_app.partners_path, class: "p-2" do %>
+      <p class="d-block header-icon"> <i class="fas fa-store-alt"></i> </p>
       <p class="d-none d-md-block header-text"> Händlersuche </p>
     <% end %>
     <%= link_to main_app.about_path, class: "p-2" do %>
@@ -15,15 +15,22 @@
     <%= link_to root_path, class: "p-2" do %>
       <%= image_tag ("logo_white.png"), style: "height: 40px;" %>
     <% end %>
-    <%= link_to "#", class: " p-2" do %>
-      <p class="d-block header-icon"> <%= fa_icon "user" %> </p>
-      <p class="d-none d-md-block header-text"> Account </p>
+    <% unless spree_current_user.blank? %>
+      <%= link_to spree.account_path(spree_current_user.id), class: " p-2" do %>
+        <p class="d-block header-icon"> <%= fa_icon "user" %> </p>
+        <p class="d-none d-md-block header-text"> Account </p>
+      <% end %>
+    <% else %>
+      <%= link_to spree.new_spree_user_registration_path, class: " p-2" do %>
+        <p class="d-block header-icon"> <%= fa_icon "user" %> </p>
+        <p class="d-none d-md-block header-text"> Account </p>
+      <% end %>
     <% end %>
     <%= link_to "#", class: " p-2" do %>
       <p class="d-block header-icon"> <%= fa_icon "heart" %> </p>
       <p class="d-none d-md-block header-text"> Wunschzettel </p>
     <% end %>
-    <%= link_to "#", class: " p-2" do %>
+    <%= link_to spree.cart_path, class: " p-2" do %>
       <p class="d-block header-icon"> <%= fa_icon "shopping-cart" %> </p>
       <p class="d-none d-md-block header-text"> Warenkorb </p>
     <% end %>
@@ -41,7 +48,7 @@
     <% end %>
     <div class="dropdown">
       <button class="dropdown-toggle" style="background-color: black; color: white; border: none;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <p class="d-inline header-icon"> <%= fa_icon "language" %> </p>
+        <%= fa_icon "language" %>
         <p class="d-inline header-text"> de </p>
       </button>
       <div class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton">

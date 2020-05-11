@@ -16,14 +16,18 @@
     <h1 class="text-center">Jeder Ski ist einzigartig</h1>
     <p class="py-4 text-center">swiss massiv Ski sind das Resultat jahrzehntelanger Erfahrung. Jeder Ski ist ein Unikat und wird individuell von Hand gefertigt. swiss massiv Premium­-Skis wurden kreiert, um Liebhaber des Aussergewöhnlichen zu begeistern.</p>
     <div class="text-center">
-      <%= link_to "X Unsere Skis", spree.products_path, class: "button_2" %>
+      <%= link_to spree.products_path, class: "button_2" do %>
+        <%= fa_icon "skiing" %> Unsere Skis
+      <% end %>
     </div>
   </div>
   <div class="menu-item" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(<%= asset_path 'jacke.png' %>);">
     <h1 class="text-center">Zubehör</h1>
     <p class="py-4 text-center">swiss massiv bietet nicht nur Skis an, sondern auch das passende Zubehör. Von Ski-Jacke über Ski-Sack bis hin zu Ski-Bindungen ist bei uns alles erhältich. </p>
     <div class="text-center">
-      <%= link_to "X Unser Zubehör", "#", class: "button_2" %>
+      <%= link_to "#", class: "button_2" do %>
+        <%= fa_icon "tshirt" %> Unser Zubehör
+      <% end %>
     </div>
   </div>
   <div class="menu-item" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(<%= asset_path 'skitest.jpg' %>);">
@@ -31,7 +35,7 @@
     <p class="pt-4 text-center">An einem Ski-Test können Sie unsere Skis gratis testfahren und sich von der Qualität überzeugen lassen.</p>
     <div class="text-center">
       <%= link_to "#", class: "button_2" do %>
-        <%= fa_icon "calendar" %> Unsere Termine
+        <%= fa_icon "calendar-alt" %> Unsere Termine
       <% end %>
     </div>
   </div>
@@ -39,7 +43,9 @@
     <h1 class="text-center">Verkauf</h1>
     <p class="pt-4 text-center">Viele Skishops im In- und Ausland verkaufen und vermieten unsere Skis und Zubehör.</p>
     <div class="text-center">
-      <%= link_to "X Unsere Partner", "#", class: "button_2" %>
+      <%= link_to "#", class: "button_2" do %>
+        <%= fa_icon "store" %> Händlersuche
+      <% end %>
     </div>
   </div>
 </div>

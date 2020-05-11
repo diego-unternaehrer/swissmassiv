@@ -37,7 +37,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'autoprefixer-rails'
-gem 'font-awesome-sass'
+gem 'font-awesome-rails'
 gem 'simple_form'
 
 group :development, :test do
@@ -80,3 +80,5 @@ gem 'solidus_auth_devise'
 gem 'bootstrap', '~> 4.4.1'
 
 gem 'jquery-rails'
+
+gem 'geocoder'

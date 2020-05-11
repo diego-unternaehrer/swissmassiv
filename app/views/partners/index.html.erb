@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+<h1>Händlersuche</h1>
+</div>
+<div id="map"
+     style="width: 100%; height: 50vh;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
+  <br>
+<div class="container">
+  <table class="table table-striped table-dark">
+    <% @grouped_partners.each do |country, partners| %>
+      <thead>
+        <tr>
+          <th colspan="5"> <%= country %> </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% partners.each do |partner| %>
+          <tr>
+              <th scope="row"> <%= partner.name %> </td>
+              <td> <%= partner.address %>, <%= partner.zip_code %> <%= partner.place %> </td>
+              <td> <%= link_to "https://#{partner.link}" do%>
+                  <span class="button_2"> Webseite </span>
+                <% end %>
+              </td>
+              <% if !spree_current_user.blank? && spree_current_user.role == "admin" %>
+                <td> <%= link_to edit_admin_partner_path(partner) do %>
+                  <i class="fas fa-edit"></i>
+                <% end %>
+                <%= link_to partner, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <i class="fas fa-trash-alt"></i>
+                <% end %>
+              </td>
+            <% end %>
+           </tr>
+        <% end %>
+      </tbody>
+    <% end %>
+  </table>
+
+  <br>
+
+<!-- <%= link_to 'New Partner', new_admin_partner_path %> -->
+</div>
