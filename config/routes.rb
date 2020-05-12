@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
-  root to: 'pages#home'
+  scope '(:locale)', locale: /de|en|fr|it/ do
+    root to: 'pages#home'
 
-  get 'about',    to: 'pages#about',     as: :about
-  get 'contact',  to: 'pages#contact',   as: :contact
+    get 'about',    to: 'pages#about',     as: :about
+    get 'contact',  to: 'pages#contact',   as: :contact
 
-  resources :partners
-  resources :events
+    resources :partners
+    resources :events
+  end
 
   # This line mounts Solidus's routes at the root of your application.
   # This means, any requests to URLs such as /products, will go to Spree::ProductsController.

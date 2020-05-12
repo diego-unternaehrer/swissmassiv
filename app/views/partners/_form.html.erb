@@ -7,7 +7,7 @@
     <%= f.input :address %>
     <%= f.input :zip_code %>
     <%= f.input :place %>
-    <%= f.input :country, as: :string %>
+    <%= f.input :country, collection: Carmen::Country.all, prompt: :translate %>
     <%= f.input :link %>
   </div>
 

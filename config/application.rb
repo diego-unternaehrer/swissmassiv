@@ -17,6 +17,11 @@ module Swissmassiv
       end
     end
 
+    # Set German as default language
+    config.i18n.enforce_available_locales = false
+    config.i18n.available_locales = [:de, :en, :fr, :it]
+    config.i18n.default_locale = :de
+
     # Load application's view overrides
     initializer 'spree.overrides' do |app|
       config.to_prepare do

@@ -6,7 +6,7 @@
     <% end %>
     <%= link_to main_app.partners_path, class: "p-2" do %>
       <p class="d-block header-icon"> <i class="fas fa-store-alt"></i> </p>
-      <p class="d-none d-md-block header-text"> Händlersuche </p>
+      <p class="d-none d-md-block header-text"> <%= t('store-locator') %> </p>
     <% end %>
     <%= link_to main_app.about_path, class: "p-2" do %>
       <p class="d-block header-icon"> <%= fa_icon "info-circle" %> </p>
@@ -53,12 +53,21 @@
     <div class="dropdown">
       <button class="dropdown-toggle" style="background-color: black; color: white; border: none;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <%= fa_icon "language" %>
-        <p class="d-inline header-text"> de </p>
+        <p class="d-inline header-text"> <%= I18n.locale.to_s %> </p>
       </button>
       <div class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton">
-        <%= link_to "English", "#", class: "dropdown-item", style: "background-color: black;"%>
-        <%= link_to "Français", "#", class: "dropdown-item", style: "background-color: black;"%>
-        <%= link_to "Italiano", "#", class: "dropdown-item", style: "background-color: black;"%>
+        <% unless I18n.locale == :de %>
+          <%= link_to "Deutsch", url_for( locale: "de" ), class: "dropdown-item", style: "background-color: black;"%>
+        <% end %>
+        <% unless I18n.locale == :en %>
+          <%= link_to "English", url_for( locale: "en" ), class: "dropdown-item", style: "background-color: black;"%>
+        <% end %>
+        <% unless I18n.locale == :fr %>
+          <%= link_to "Français", url_for( locale: "fr" ), class: "dropdown-item", style: "background-color: black;"%>
+        <% end %>
+        <% unless I18n.locale == :it %>
+          <%= link_to "Italiano", url_for( locale: "it" ), class: "dropdown-item", style: "background-color: black;"%>
+        <% end %>
       </div>
     </div>
   </div>
