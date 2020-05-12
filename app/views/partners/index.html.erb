@@ -26,11 +26,11 @@
                   <span class="button_2"> Webseite </span>
                 <% end %>
               </td>
-              <% if !spree_current_user.blank? && spree_current_user.role == "admin" %>
-                <td> <%= link_to edit_admin_partner_path(partner) do %>
+              <% if !spree_current_user.blank? && spree_current_user.spree_roles.first.name == "admin" %>
+                <td> <%= link_to edit_partner_path(partner) do %>
                   <i class="fas fa-edit"></i>
                 <% end %>
-                <%= link_to partner, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <%= link_to partner, method: :delete, data: { confirm: 'Bist du sicher?' } do %>
                   <i class="fas fa-trash-alt"></i>
                 <% end %>
               </td>
@@ -42,6 +42,7 @@
   </table>
 
   <br>
-
-<!-- <%= link_to 'New Partner', new_admin_partner_path %> -->
+  <% if !spree_current_user.blank? && spree_current_user.spree_roles.first.name == "admin" %>
+    <%= link_to '+ Händler hinzufügen', new_partner_path, class:"button_2" %>
+  <% end %>
 </div>

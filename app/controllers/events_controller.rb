@@ -18,7 +18,7 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     if @event.save
-      redirect_to @event, notice: 'Event was successfully created.'
+      redirect_to events_url, notice: 'Ski-Test erfolgreich erstellt.'
     else
       render :new
     end
@@ -26,7 +26,7 @@ class EventsController < ApplicationController
 
   def update
     if @event.update(event_params)
-      redirect_to @event, notice: 'Event was successfully updated.'
+      redirect_to events_url, notice: 'Ski-Test erfolgreich aktualisiert.'
     else
       render :edit
     end
@@ -34,7 +34,7 @@ class EventsController < ApplicationController
 
   def destroy
     @event.destroy
-    redirect_to events_url, notice: 'Event was successfully destroyed.'
+    redirect_to events_url, notice: 'Ski-Test erfolgreich entfernt.'
   end
 
   private

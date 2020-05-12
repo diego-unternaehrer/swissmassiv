@@ -36,8 +36,12 @@
     <% end %>
   </div>
   <div class="d-flex justify-content-around align-items-center pt-1 layer_2">
-    <%= link_to "Skis", spree.products_path, class: "p-2 header-text"%>
-    <%= link_to "Zubehör", "#", class: "p-2 header-text"%>
+    <%= link_to spree.products_path, class: "p-2 header-text" do %>
+     <i class="fas fa-skiing"></i> Skis
+    <% end %>
+    <%= link_to "#", class: "p-2 header-text" do %>
+      <i class="fas fa-tshirt"></i> Zubehör
+    <% end %>
     <%= simple_form_for :search, url: root_path, method: :get do |f| %>
       <div class="form-group">
         <input class="string required" style="background-color: black; color: white; border: none;" type="text" name="search[query]" id="search_query" placeholder="Produktsuche" />

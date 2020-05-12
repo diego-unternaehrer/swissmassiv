@@ -26,7 +26,7 @@ class PartnersController < ApplicationController
   def create
     @partner = Partner.new(partner_params)
     if @partner.save
-      redirect_to @partner, notice: 'Partner was successfully created.'
+      redirect_to partners_url, notice: 'Händler erfolgreich erstellt.'
     else
       render :new
     end
@@ -34,7 +34,7 @@ class PartnersController < ApplicationController
 
   def update
     if @partner.update(partner_params)
-      redirect_to @partner, notice: 'Partner was successfully updated.'
+      redirect_to partners_url, notice: 'Händler erfolgreich aktualisiert.'
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class PartnersController < ApplicationController
 
   def destroy
     @partner.destroy
-    redirect_to partners_url, notice: 'Partner was successfully destroyed.'
+    redirect_to partners_url, notice: 'Händler erfolgreich entfernt.'
   end
 
   private
