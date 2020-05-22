@@ -1,12 +1,9 @@
 <nav class="site-header sticky-top py-3">
   <div class="d-flex justify-content-around align-items-center layer_1">
-    <%= link_to main_app.events_path, class: "p-2" do %>
-      <p class="d-block header-icon"> <%= fa_icon "calendar-alt" %></i></p>
-      <p class="d-none d-md-block header-text"> Ski-Tests </p>
-    <% end %>
+
     <%= link_to main_app.partners_path, class: "p-2" do %>
       <p class="d-block header-icon"> <i class="fas fa-store-alt"></i> </p>
-      <p class="d-none d-md-block header-text"> <%= t('store-locator') %> </p>
+      <p class="d-none d-md-block header-text"> <%= t('partner') %> </p>
     <% end %>
     <%= link_to main_app.about_path, class: "p-2" do %>
       <p class="d-block header-icon"> <%= fa_icon "info-circle" %> </p>
@@ -15,42 +12,13 @@
     <%= link_to root_path, class: "p-2" do %>
       <%= image_tag ("logo_white.png"), style: "height: 40px;" %>
     <% end %>
-    <% unless spree_current_user.blank? %>
-      <%= link_to spree.account_path(spree_current_user.id), class: " p-2" do %>
-        <p class="d-block header-icon"> <%= fa_icon "user" %> </p>
-        <p class="d-none d-md-block header-text"> Account </p>
+    <% if I18n.locale == :de %>
+      <%= link_to main_app.events_path, class: "p-2" do %>
+        <p class="d-block header-icon"> <%= fa_icon "calendar-alt" %></i></p>
+        <p class="d-none d-md-block header-text"> <%= t('event') %> </p>
       <% end %>
     <% else %>
-      <%= link_to spree.new_spree_user_registration_path, class: " p-2" do %>
-        <p class="d-block header-icon"> <%= fa_icon "user" %> </p>
-        <p class="d-none d-md-block header-text"> Account </p>
-      <% end %>
-    <% end %>
-    <%= link_to "#", class: " p-2" do %>
-      <p class="d-block header-icon"> <%= fa_icon "heart" %> </p>
-      <p class="d-none d-md-block header-text"> Wunschzettel </p>
-    <% end %>
-    <%= link_to spree.cart_path, class: " p-2" do %>
-      <p class="d-block header-icon"> <%= fa_icon "shopping-cart" %> </p>
-      <p class="d-none d-md-block header-text"> Warenkorb </p>
-    <% end %>
-  </div>
-  <div class="d-flex justify-content-around align-items-center pt-1 layer_2">
-    <%= link_to spree.products_path, class: "p-2" do %>
-     <p class="d-inline header-icon"> <i class="fas fa-skiing"></i> </p>
-     <p class="d-none d-md-inline header-icon"> Skis </p>
-    <% end %>
-    <%= link_to "#", class: "p-2" do %>
-      <p class="d-inline header-icon"> <i class="fas fa-tshirt"></i> </p>
-      <p class="d-none d-md-inline header-icon"> Zubehör </p>
-    <% end %>
-    <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-      <div class="form-group">
-        <input class="string required" style="background-color: black; color: white; border: none;" type="text" name="search[query]" id="search_query" placeholder="Produktsuche" />
-      <div class="search_icon">
-        <%= fa_icon "search" %>
-      </div>
-    </div>
+    <div class="d-block"></div>
     <% end %>
     <div class="dropdown">
       <button class="dropdown-toggle" style="background-color: black; color: white; border: none;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -72,6 +40,39 @@
         <% end %>
       </div>
     </div>
+  </div>
+  <div class="d-flex justify-content-around align-items-center pt-1 layer_2">
+    <%= link_to spree.products_path, class: "p-2" do %>
+     <p class="d-inline header-icon"> <i class="fas fa-skiing"></i> </p>
+     <p class="d-none d-md-inline header-icon"> Skis </p>
+    <% end %>
+    <%= link_to "#", class: "p-2" do %>
+      <p class="d-inline header-icon"> <i class="fas fa-tshirt"></i> </p>
+      <p class="d-none d-md-inline header-icon"> Zubehör </p>
+    <% end %>
+    <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+      <div class="form-group">
+        <input class="string required" style="background-color: black; color: white; border: none;" type="text" name="search[query]" id="search_query" placeholder="Produktsuche" />
+        <div class="search_icon">
+          <%= fa_icon "search" %>
+        </div>
+      </div>
+    <% end %>
+    <% unless spree_current_user.blank? %>
+      <%= link_to spree.account_path(spree_current_user.id), class: " p-2" do %>
+        <p class="d-block header-icon"> <%= fa_icon "user" %> </p>
+        <p class="d-none d-md-block header-text"> Account </p>
+      <% end %>
+    <% else %>
+      <%= link_to spree.new_spree_user_registration_path, class: " p-2" do %>
+        <p class="d-block header-icon"> <%= fa_icon "user" %> </p>
+        <p class="d-none d-md-block header-text"> Account </p>
+      <% end %>
+    <% end %>
+    <%= link_to spree.cart_path, class: " p-2" do %>
+      <p class="d-block header-icon"> <%= fa_icon "shopping-cart" %> </p>
+      <p class="d-none d-md-block header-text"> Warenkorb </p>
+    <% end %>
   </div>
 </nav>
 <%# render partial: 'spree/shared/main_nav_bar' if store_menu? %>

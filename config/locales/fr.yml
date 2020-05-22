@@ -1,3 +1,5 @@
 fr:
-  store-locator: "Händlersuche"
-  equipment: "Zubehör"
+  activerecord:
+    models:
+      partner: "Händlersuche"
+      event: "Events"
