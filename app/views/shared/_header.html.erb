@@ -7,7 +7,7 @@
     <% end %>
     <%= link_to main_app.about_path, class: "p-2" do %>
       <p class="d-block header-icon"> <%= fa_icon "info-circle" %> </p>
-      <p class="d-none d-md-block header-text"> Über uns </p>
+      <p class="d-none d-md-block header-text"> <%= t('about') %> </p>
     <% end %>
     <%= link_to root_path, class: "p-2" do %>
       <%= image_tag ("logo_white.png"), style: "height: 40px;" %>
@@ -48,7 +48,7 @@
     <% end %>
     <%= link_to "#", class: "p-2" do %>
       <p class="d-inline header-icon"> <i class="fas fa-tshirt"></i> </p>
-      <p class="d-none d-md-inline header-icon"> Zubehör </p>
+      <p class="d-none d-md-inline header-icon"> <%= t('equipment') %>  </p>
     <% end %>
     <%= simple_form_for :search, url: root_path, method: :get do |f| %>
       <div class="form-group">
@@ -71,7 +71,7 @@
     <% end %>
     <%= link_to spree.cart_path, class: " p-2" do %>
       <p class="d-block header-icon"> <%= fa_icon "shopping-cart" %> </p>
-      <p class="d-none d-md-block header-text"> Warenkorb </p>
+      <p class="d-none d-md-block header-text"> <%= t('cart') %> </p>
     <% end %>
   </div>
 </nav>
