@@ -22,8 +22,12 @@
           <tr>
               <th scope="row"> <%= partner.name %> </td>
               <td> <%= partner.address %>, <%= partner.zip_code %> <%= partner.place %> </td>
-              <td> <%= link_to "https://#{partner.link}" do%>
-                  <span class="button_2"> Webseite </span>
+              <td>
+                <%= link_to "https://#{partner.link}" do%>
+                  <span class="button_2">
+                    <p class="d-inline"> <%= fa_icon "external-link-alt" %> </p>
+                    <p class="d-none d-lg-inline"> Webseite</p>
+                  </span>
                 <% end %>
               </td>
               <% if !spree_current_user.blank? && spree_current_user.spree_roles.first.name == "admin" %>
