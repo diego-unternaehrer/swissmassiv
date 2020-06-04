@@ -32,17 +32,17 @@
         <% unless I18n.locale == :en %>
           <%= link_to "English", url_for( locale: "en" ), class: "dropdown-item", style: "background-color: black;"%>
         <% end %>
-        <% unless I18n.locale == :fr %>
+<!--         <% unless I18n.locale == :fr %>
           <%= link_to "Français", url_for( locale: "fr" ), class: "dropdown-item", style: "background-color: black;"%>
         <% end %>
         <% unless I18n.locale == :it %>
           <%= link_to "Italiano", url_for( locale: "it" ), class: "dropdown-item", style: "background-color: black;"%>
-        <% end %>
+        <% end %> -->
       </div>
     </div>
   </div>
   <div class="d-flex justify-content-around align-items-center pt-1 layer_2">
-    <%= link_to spree.products_path do %>
+    <%= link_to "#" do %>
      <p class="d-inline header-icon"> <i class="fas fa-skiing"></i> </p>
      <p class="d-none d-md-inline header-icon"> Skis </p>
     <% end %>
