@@ -85,3 +85,7 @@ gem 'geocoder'
 
 gem 'rails-i18n', '~> 5.1'
 
+# contact form
+gem 'mail_form'
+gem 'sendgrid-ruby'
+

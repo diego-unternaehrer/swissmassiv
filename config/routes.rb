@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
+  get 'contact/new'
   scope '(:locale)', locale: /de|en|fr|it/ do
     root to: 'pages#home'
 
     get 'about',    to: 'pages#about',     as: :about
-    get 'contact',  to: 'pages#contact',   as: :contact
+    get 'contact',  to: 'contacts#new',    as: :contact
 
     resources :partners
     resources :events
+    resources :contacts, only: [:create]
   end
 
   # This line mounts Solidus's routes at the root of your application.
