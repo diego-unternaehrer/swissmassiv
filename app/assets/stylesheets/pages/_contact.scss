@@ -2,12 +2,15 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   .contact-info {
+    width: 50%;
     color: white;
-    padding-top: 100px;
-    .contact-form-text-area {
-      color: black;
+    padding-top: 50px;
+
+    input {
+      width: 100%;
     }
-    input textarea {
+
+    textarea {
       width: 100%;
     }
 
@@ -87,7 +90,7 @@
     grid-template-columns: 1fr 1fr;
     #map {
       height: 100vh;
-      width: 400px;
+      width: 100%;
       position: sticky;
       top: 0;
     }
@@ -100,7 +103,7 @@
     grid-template-columns: 1fr 1fr;
     #map {
       height: 100vh;
-      width: 400px;
+      width: 100%;
       position: sticky;
       top: 0;
     }
