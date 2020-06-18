@@ -1,4 +1,12 @@
-<div class="footer">
+  <% unless current_page?(contact_path) %>
+    <div class="text-center">
+      <h2 class="p-4"> <%= t('questions') %> </h2>
+      <%= link_to contact_path, class: "mb-4 button_2" do %>
+         <%= t('contact_us') %>
+      <% end %>
+    </div>
+  <% end %>
+  <div class="footer ">
     <%= link_to "https://www.instagram.com/swissmassiv/" do %>
       <i class="fab fa-instagram"></i>
     <% end %>
@@ -11,7 +19,4 @@
     <%= link_to "https://www.linkedin.com/company/swiss-massiv/" do %>
       <i class="fab fa-linkedin-in"></i>
     <% end %>
-    <%= link_to main_app.contact_path do %>
-      <%= fa_icon "envelope" %>
-    <% end %>
-</div>
+  </div>
