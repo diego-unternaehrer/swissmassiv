@@ -1,13 +1,13 @@
 .contact-items {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  .contact-item {
+  .contact-info {
     color: white;
-    padding: 100px;
+    padding-top: 100px;
     .contact-form-text-area {
       color: black;
     }
-    input {
+    input textarea {
       width: 100%;
     }
 

@@ -1,45 +1,44 @@
-<div class="contact-items">
-  <div class="contact-item">
-    <div class="m-4">
-      <p>swissmassiv
-      René Unternährer
-      Entlebucherstrasse 7
-      6112 Doppleschwand</p>
+<div class="container">
+  <div class="contact-items">
+    <div class="contact-info">
+      <h3>swissmassiv</h3>
+      <p>René Unternährer</p>
+      <p>Entlebucherstrasse 7</p>
+      <p>6112 Doppleschwand</p>
       <br>
-      <p>rene@swissmassiv.ch
-      +41 78 667 78 32</p>
+      <p>rene@swissmassiv.ch</p>
+      <p>+41 78 667 78 32</p>
+      <br>
+      <div id="contact">
+        <%= simple_form_for(@contact) do |f| %>
+            <%= f.label :name %></br>
+            <%= f.text_field  :name, required: true, class: "contact-form-text-area" %></br>
+            <%= f.label :email %></br>
+            <%= f.text_field :email, required: true, class: "contact-form-text-area" %></br>
+            <%= f.label :phone %> <br>
+            <%= f.text_field :phone, class: "contact-form-text-area"  %>
+            <%= f.label :message %></br>
+            <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-text-area",
+                              placeholder: "Send me a message"%></br>
+            <div class= "hidden">
+              <%= f.label :nickname %>
+              <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
+            </div>
+            <%= f.submit 'Send Message', class: "m-4 button_2" %>
+        <% end %>
+      </div>
+      <div class="col-md-6" id="flash-message">
+        <%= render 'shared/flash' %>
+      </div>
     </div>
-    <br>
-    <div id="contact">
-      <%= simple_form_for(@contact) do |f| %>
-          <%= f.label :name %></br>
-          <%= f.text_field  :name, required: true, class: "contact-form-text-area" %></br>
-          <%= f.label :email %></br>
-          <%= f.text_field :email, required: true, class: "contact-form-text-area" %></br>
-          <%= f.label :phone %> <br>
-          <%= f.text_field :phone, class: "contact-form-text-area"  %>
-          <%= f.label :message %></br>
-          <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-text-area",
-                            placeholder: "Send me a message"%></br>
-          <div class= "hidden">
-            <%= f.label :nickname %>
-            <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
-          </div>
-          <%= f.submit 'Send Message', class: "m-4 button_2" %>
-      <% end %>
+    <div class="contact-map">
+      <div id="map"
+         data-markers="<%= @markers.to_json %>"
+         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+      ></div>
     </div>
-    <div class="col-md-6" id="flash-message">
-      <%= render 'shared/flash' %>
-    </div>
-  </div>
-  <div class="contact-item">
-    <div id="map"
-       data-markers="<%= @markers.to_json %>"
-       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-    ></div>
   </div>
 </div>
-
 
 <script type="text/javascript"> $(document).ready(function(){ if(document.URL.indexOf("#")==-1){ url = document.URL+"#"; location = "#"; location.reload(); }}); </script>
 
