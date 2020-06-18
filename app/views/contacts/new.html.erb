@@ -18,12 +18,12 @@
             <%= f.label :phone , t("phone") %> <br>
             <%= f.text_field :phone %>
             <%= f.label :message , t("message") %></br>
-            <%= f.text_area :message, rows: 8, cols: 40, required: true,
-                              placeholder: , t("message_placeholder")%></br>
+            <%= f.text_area :message, rows: 8, cols: 40, required: true %>
             <div class= "hidden">
               <%= f.label :nickname %>
               <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
             </div>
+            </br>
             <%= f.submit t("send_message"), class: "button_2" %>
         <% end %>
       </div>
@@ -40,6 +40,6 @@
   </div>
 </div>
 
-<script type="text/javascript"> $(document).ready(function(){ if(document.URL.indexOf("#")==-1){ url = document.URL+"#"; location = "#"; location.reload(); }}); </script>
-
+<!-- <script type="text/javascript"> $(document).ready(function(){ if(document.URL.indexOf("#")==-1){ url = document.URL+"#"; location = "#"; location.reload(); }}); </script>
+ -->
 
