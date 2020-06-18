@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'contact/new'
   scope '(:locale)', locale: /de|en|fr|it/ do
     root to: 'pages#home'
 
