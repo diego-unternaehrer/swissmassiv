@@ -7,6 +7,9 @@
     .contact-form-text-area {
       color: black;
     }
+    input {
+      width: 100%;
+    }
 
     .hidden { display: none; }
 
@@ -70,12 +73,10 @@
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   .contact-items {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     #map {
-      height: 100vh;
-      width: 400px;
-      position: sticky;
-      top: 0;
+      width: 100%;
+      height: 25vh;
     }
   }
 }
