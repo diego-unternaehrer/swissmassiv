@@ -96,3 +96,8 @@ en:
               A well ground base and edges determine the skis’ glide and turning."
   limited: "Limited serial numbers."
   limited_text: "Every pair of skis has its unique serial number engraved in stainless steel at the back."
+  name: "Name"
+  email: "Email"
+  phone: "Phone number"
+  message: "Message"
+  send_message: "Send message"

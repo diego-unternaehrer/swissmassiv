@@ -2,9 +2,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   .contact-info {
-    width: 50%;
+    width: 100%;
     color: white;
     padding-top: 50px;
+    padding-bottom: 25px;
 
     input {
       width: 100%;

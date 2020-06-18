@@ -97,3 +97,8 @@ de:
               und Drehfreundlichkeit des Skis entscheidend."
   limited: "Limitierte Seriennummer."
   limited_text: "In jedem Ski wird eine Tasche eingefräst und eine fortlaufende Seriennummer eingeleimt."
+  name: "Name"
+  email: "E-Mail"
+  phone: "Telefonnummer"
+  message: "Nachricht"
+  send_message: "Nachricht absenden"
