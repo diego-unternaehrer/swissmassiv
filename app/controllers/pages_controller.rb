@@ -4,4 +4,8 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  def ski
+    @skis = Spree::Products.all
+  end
 end
