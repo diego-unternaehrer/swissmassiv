@@ -21,7 +21,7 @@ module Swissmassiv
     config.i18n.enforce_available_locales = false
     config.i18n.available_locales = [:de, :en, :fr, :it]
     config.i18n.default_locale = :de
-    Carmen.i18n_backend.locales = [:de, :en, :fr, :it]
+    # Carmen.i18n_backend.available_locales = [:de, :en, :fr, :it]
 
     # Load application's view overrides
     initializer 'spree.overrides' do |app|
