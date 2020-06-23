@@ -13,7 +13,7 @@
     <% @grouped_partners.each do |country, partners| %>
       <thead>
         <tr>
-          <th colspan="5"> <%= country %> </th>
+          <th colspan="5"> <%= t("#{country}") %> </th>
         </tr>
       </thead>
 
@@ -26,7 +26,7 @@
                 <%= link_to "https://#{partner.link}" do%>
                   <span class="button_2">
                     <p class="d-inline"> <%= fa_icon "external-link-alt" %> </p>
-                    <p class="d-none d-lg-inline"> Webseite</p>
+                    <p class="d-none d-lg-inline"> Website</p>
                   </span>
                 <% end %>
               </td>

@@ -1,7 +1,7 @@
-  <% unless current_page?(contact_path) %>
+  <% unless current_page?(main_app.contact_path) %>
     <div class="text-center">
       <h2 class="p-4"> <%= t('questions') %> </h2>
-      <%= link_to contact_path, class: "mb-4 button_2" do %>
+      <%= link_to main_app.contact_path, class: "mb-4 button_2" do %>
          <%= t('contact_us') %>
       <% end %>
     </div>
