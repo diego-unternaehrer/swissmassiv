@@ -9,13 +9,14 @@
 ></div>
   <br>
 <div class="container">
-  <h1> <%= Carmen.i18n_backend.t('world.de.name') %> </h1>
-
   <table class="table table-striped table-dark">
     <% @grouped_partners.each do |country, partners| %>
+      <% Carmen.i18n_backend.locale = :de %>
+      <% @code = Carmen::Country.named(country).code.downcase %>
+      <% Carmen.i18n_backend.locale = I18n.locale %>
       <thead>
         <tr>
-          <th colspan="5"> <%= t("#{country}") %> </th>
+          <th colspan="5"> <%= Carmen.i18n_backend.t("world.#{@code}.name") %> </th>
         </tr>
       </thead>
 

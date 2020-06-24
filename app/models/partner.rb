@@ -1,4 +1,7 @@
 class Partner < ApplicationRecord
+  require 'carmen'
+  include Carmen
+
   geocoded_by :full_address
   after_validation :geocode, if: :will_save_change_to_address?
 

@@ -5,6 +5,7 @@ class PartnersController < ApplicationController
     @partners = Partner.geocoded # returns flats with coordinates
     @grouped_partners = @partners.order(:name).group_by {|obj| obj.country}
 
+
     @markers = @partners.map do |partner|
       {
         lat: partner.latitude,
