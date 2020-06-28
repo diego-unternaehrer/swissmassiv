@@ -1,3 +1,14 @@
+GIT
+  remote: https://github.com/solidusio-contrib/solidus_globalize.git
+  revision: 40faa450bf36e4e350eb1fd252e0129636dc776c
+  specs:
+    solidus_globalize (3.1.0.beta)
+      deface (~> 1.5)
+      friendly_id-globalize
+      globalize (~> 5.1)
+      solidus_core (>= 2.0.0, < 3)
+      solidus_support (~> 0.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -130,9 +141,15 @@ GEM
       sassc (>= 1.11)
     friendly_id (5.3.0)
       activerecord (>= 4.0.0)
+    friendly_id-globalize (1.0.0.alpha3)
+      friendly_id (>= 5.2.0, < 6.0)
     geocoder (1.6.3)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    globalize (5.3.0)
+      activemodel (>= 4.2, < 6.1)
+      activerecord (>= 4.2, < 6.1)
+      request_store (~> 1.0)
     handlebars_assets (0.23.8)
       execjs (~> 2.0)
       sprockets (>= 2.0.0)
@@ -274,6 +291,8 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (1.7.0)
+    request_store (1.5.0)
+      rack (>= 1.4)
     responders (3.0.0)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -461,6 +480,7 @@ DEPENDENCIES
   simple_form
   solidus
   solidus_auth_devise
+  solidus_globalize!
   solidus_i18n (~> 2.0)
   spring
   spring-watcher-listen (~> 2.0.0)
