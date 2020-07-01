@@ -6,4 +6,5 @@
 //= require bootstrap
 //= require rails-ujs
 //= require spree/backend
+//= require spree/backend/solidus_globalize
 //= require_tree .
