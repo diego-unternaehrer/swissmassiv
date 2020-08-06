@@ -1,58 +1,62 @@
-<div class="py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(<%= asset_path 'hightech.png' %>); background-size: cover; background-position: center;">
-  <div class="container text-center">
-    <h1><%= t('allround') %></h1>
-    <h2><%= t('allround_header') %></h2>
-    <p><%= t('allround_text') %></p>
-    <%= link_to t('more'), "#", class:"button_2" %>
-  </div>
-</div>
-<div class="py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(<%= asset_path 'hightech.png' %>); background-size: cover; background-position: center;">
-  <div class="container text-center">
-    <h1><%= t('allmountain') %></h1>
-    <h2><%= t('allmountain_header') %></h2>
-    <p><%= t('allmountain_text') %></p>
-    <%= link_to t('more'), "#", class:"button_2" %>
-  </div>
-</div>
-<div class="py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(<%= asset_path 'hightech.png' %>); background-size: cover; background-position: center;">
-  <div class="container text-center">
-    <h1><%= t('slalom_carver') %></h1>
-    <h2><%= t('slalom_carver_header') %></h2>
-    <p><%= t('slalom_carver_text') %></p>
-    <%= link_to t('more'), "#", class:"button_2" %>
-  </div>
-</div>
-<div class="py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(<%= asset_path 'hightech.png' %>); background-size: cover; background-position: center;">
-  <div class="container text-center">
-    <h1><%= t('slalom_race_carver') %></h1>
-    <h2><%= t('slalom_race_carver_header') %></h2>
-    <p><%= t('slalom_race_carver_text') %></p>
-    <%= link_to t('more'), "#", class:"button_2" %>
-  </div>
-</div>
-<div class="py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(<%= asset_path 'hightech.png' %>); background-size: cover; background-position: center;">
-  <div class="container text-center">
-    <h1><%= t('personalised') %></h1>
-    <h2><%= t('personalised_header') %></h2>
-    <p><%= t('personalised_text') %></p>
-    <%= link_to t('more'), personalised_path, class:"button_2" %>
-  </div>
-</div>
-<% if I18n.locale == :de %>
-  <div class="py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(<%= asset_path 'hightech.png' %>); background-size: cover; background-position: center;">
+<div class="menu">
+  <div class="menu-item py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(<%= asset_path 'hightech.png' %>); background-size: cover; background-position: center;">
     <div class="container text-center">
-      <h1><%= t('mieten') %></h1>
-      <h2><%= t('mieten_header') %></h2>
-      <p><%= t('mieten_text') %></p>
-      <%= link_to t('more'), mieten_path, class:"button_2" %>
+      <h1><%= t('allround') %></h1>
+      <h2><%= t('allround_header') %></h2>
+      <p><%= t('allround_text') %></p>
+      <%= link_to t('more'), "#", class:"button_2" %>
     </div>
   </div>
-  <div class="py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(<%= asset_path 'hightech.png' %>); background-size: cover; background-position: center;">
+  <div class="menu-item py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(<%= asset_path 'hightech.png' %>); background-size: cover; background-position: center;">
     <div class="container text-center">
-      <h1><%= t('service') %></h1>
-      <h2><%= t('service_header') %></h2>
-      <p><%= t('service_text') %></p>
-      <%= link_to t('more'), service_path, class:"button_2" %>
+      <h1><%= t('allmountain') %></h1>
+      <h2><%= t('allmountain_header') %></h2>
+      <p><%= t('allmountain_text') %></p>
+      <%= link_to t('more'), "#", class:"button_2" %>
     </div>
   </div>
-<% end %>
+  <div class="menu-item py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(<%= asset_path 'hightech.png' %>); background-size: cover; background-position: center;">
+    <div class="container text-center">
+      <h1><%= t('slalom_carver') %></h1>
+      <h2><%= t('slalom_carver_header') %></h2>
+      <p><%= t('slalom_carver_text') %></p>
+      <%= link_to t('more'), "#", class:"button_2" %>
+    </div>
+  </div>
+  <div class="menu-item py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(<%= asset_path 'hightech.png' %>); background-size: cover; background-position: center;">
+    <div class="container text-center">
+      <h1><%= t('slalom_race_carver') %></h1>
+      <h2><%= t('slalom_race_carver_header') %></h2>
+      <p><%= t('slalom_race_carver_text') %></p>
+      <%= link_to t('more'), "#", class:"button_2" %>
+    </div>
+  </div>
+</div>
+  <div class="py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(<%= asset_path 'hightech.png' %>); background-size: cover; background-position: center;">
+    <div class="container text-center">
+      <h1><%= t('personalised') %></h1>
+      <h2><%= t('personalised_header') %></h2>
+      <p><%= t('personalised_text') %></p>
+      <%= link_to t('more'), personalised_path, class:"button_2" %>
+    </div>
+  </div>
+<div class="menu">
+  <% if I18n.locale == :de %>
+    <div class="menu-item py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(<%= asset_path 'hightech.png' %>); background-size: cover; background-position: center;">
+      <div class="container text-center">
+        <h1><%= t('mieten') %></h1>
+        <h2><%= t('mieten_header') %></h2>
+        <p><%= t('mieten_text') %></p>
+        <%= link_to t('more'), mieten_path, class:"button_2" %>
+      </div>
+    </div>
+    <div class="menu-item py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(<%= asset_path 'hightech.png' %>); background-size: cover; background-position: center;">
+      <div class="container text-center">
+        <h1><%= t('service') %></h1>
+        <h2><%= t('service_header') %></h2>
+        <p><%= t('service_text') %></p>
+        <%= link_to t('more'), service_path, class:"button_2" %>
+      </div>
+    </div>
+  <% end %>
+</div>
