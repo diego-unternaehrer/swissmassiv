@@ -5,7 +5,15 @@ class PagesController < ApplicationController
   def about
   end
 
-  def ski
-    @skis = Spree::Products.all
+  def skis
+  end
+
+  def personalised
+  end
+
+  def mieten
+  end
+
+  def service
   end
 end

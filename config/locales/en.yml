@@ -6,94 +6,43 @@ en:
   questions: "Questions?"
   contact_us: "Contact us"
   unique: "Unique."
-  unique_lead: "swiss massiv skis are hand-made in the heart of Switzerland.
-                They are the outcome of a long-time passion
-                and quest for precision crafting of a highly complex
-                design product. The result is an unequalled, timeless
-                design of uncompromising quality, incorporating
-                leading, state of the art technology – a ski that
-                performs with a supremely comfortable glide that is
-                both smooth and dynamic."
-  unique_text: "Ecology, sustainability and functionality are the guiding
-                elements in the development of swissmassiv skis.
-                Individually sources local wood is incorporated with
-                bamboo, using uni-quely created construction techniques
-                to produce a result that is both technically and
-                visually striking.
-                Because swiss massiv skis are all hand-made, each
-                ski is a one of a kind product. The skis are made to
-                the bodyweight and driving style of the skier. Their
-                unique identity is further expressed in limited production,
-                with each pair having an individual number.
-                swiss massiv skis are for connoisseurs who look for
-                and ap-preciate the extraordinary."
+  unique_lead: "swiss massiv skis are created in the heart of Switzerland. They are the outcome of a long-time passion and quest for precision crafting of a highly complex design product. The result is an unequalled and timeless design of uncompromising quality, incorporating leading, state-of-the-art technology – a ski that performs with a supremely comfortable glide that is both smooth and dynamic."
+  unique_text: "Ecology, sustainability, and functionality are the guiding elements in the development of swissmassiv skis. Individually sourced local wood is incorporated with bamboo, using uniquely created construction techniques, to produce a result that is both technically and visually striking. Because swiss massiv skis are all hand-made, each ski is a one of a kind product. The skis are made to the bodyweight and driving style of the skier. Their unique identity is further expressed in limited production, with each pair having an individual number. swiss massiv skis are for connoisseurs who look for and appreciate the extraordinary."
   rigour: "Rigour."
   hightech: "Hightech base."
-  hightech_text: "In order to maintain the best possible glide for all types of snow,
-                  we use high quality Isospeed Nano Highspeed bases."
+  hightech_text: "In order to maintain the best possible glide for all types of snow, we use high quality Isospeed Nano Highspeed bases."
   innovative: "Innovative."
-  innovative_text: "A tool, developed by swiss massiv, is used to punch small holes into
-                    the rubber sheet. The rubber sheet layers help distributing elasticity
-                    in an even manner and add to the strength of gluing process, which
-                    combines the different materials of each layer together."
+  innovative_text: "A tool, developed by swiss massiv, is used to punch small holes into the rubber sheet. The rubber sheet layers help distributing elasticity in an even manner and add to the strength of gluing process, which combines the different materials of each layer together."
   one_of_a_kind: "Every ski is one of a kind."
-  one_of_a_kind_text: "The natural wood grain of the top sheet of each ski,
-                      gives them all a unique look."
+  one_of_a_kind_text: "The natural wood grain of the top sheet of each ski, gives them all a unique look."
   technology: "Technology."
-  technology_text: "The edges use in swiss massiv skis have a 48° Rockwell hardness. We only
-                    use serrated edges for stronger anchoring with the body of the ski."
+  technology_text: "The edges use in swiss massiv skis have a 48° Rockwell hardness. We only use serrated edges for stronger anchoring with the body of the ski."
   hand_crafted: "Hand crafted."
-  hand_crafted_text: "The process of creating swiss massiv skis is primarily done through
-                      manual work, such as the fitting of the edges."
+  hand_crafted_text: "The process of creating swiss massiv skis is primarily done through manual work, such as the fitting of the edges."
   many-layered: "Many-layered."
-  many-layered_text: "The precision cut parts of the skis are layered and individually glued together.
-                      This is done through a labor intensive process of covering all layers
-                      with two-component epoxy resin inside a form for subsequent pressing."
+  many-layered_text: "The precision cut parts of the skis are layered and individually glued together. This is done through a labor intensive process of covering all layers with two-component epoxy resin inside a form for subsequent pressing."
   quality: "Quality requires time."
-  quality_text: "A pair of swiss massiv skis consists of some 30 individual parts.
-                Building them is done in a process of almost 50 work steps which take
-                about nine hours of labor. Together with all the waiting periods
-                for drying, a pair of skis takes about three weeks to produce."
+  quality_text: "A pair of swiss massiv skis consists of some 30 individual parts. Building them is done in a process of almost 50 work steps which take about nine hours of labor. Together with all the waiting periods for drying, a pair of skis takes about three weeks to produce."
   sandwich: "Sandwich construction."
-  sandwich_text: "The wet sandwich construction makes it possible to combine very
-                  different materials such as wood, steel, fiberglass, aluminium, rubber into
-                  one entity. This construction technique is used to directly influence the
-                  key bounce-back and torsion points of the skis."
+  sandwich_text: "The wet sandwich construction makes it possible to combine very different materials such as wood, steel, fiberglass, aluminium, rubber into one entity. This construction technique is used to directly influence the key bounce-back and torsion points of the skis."
   heart: "The heart of the ski."
-  heart_text: "swiss massiv uses Paulowina as a solid timber at its core, as well as
-              elmwood veneer and fiber bamboo side walls."
+  heart_text: "swiss massiv uses Paulowina as a solid timber at its core, as well as elmwood veneer and fiber bamboo side walls."
   precision: "Precision."
-  precision_text: "Based on the body weight of the customer, the core of the skis is
-                  sanded down to a different thickness to adjust the stiffness of the
-                  skis. Because of this adjustment the edge grip is evenly distributed to
-                  the whole length of the ski."
+  precision_text: "Based on the body weight of the customer, the core of the skis is sanded down to a different thickness to adjust the stiffness of the skis. Because of this adjustment the edge grip is evenly distributed to the whole length of the ski."
   detail: "Love for detail."
-  detail_text: "With a long experience of building skis in Switzerland, we look at each
-                detail in the tradition of Swiss perfection and precision."
+  detail_text: "With a long experience of building skis in Switzerland, we look at each detail in the tradition of Swiss perfection and precision."
   pressing: "Pressing."
-  pressing_text: "Once all the layers are assembled, the skis are pressed into form over 90
-                  minutes using approximately 28 tons or weight. The newly pressed skis
-                  are then let to cool, dry and settle for a few days."
+  pressing_text: "Once all the layers are assembled, the skis are pressed into form over 90 minutes using approximately 28 tons or weight. The newly pressed skis are then let to cool, dry and settle for a few days."
   bamboo: "Bamboo side walls."
-  bamboo_text: "Bamboo has long fiber and its hardness is excellent to transmit pressure
-                directly to the ski edges. It also adapts well to cold temperatures. swiss massiv
-                side walls are a trapeze shape giving a tapered edge and therefore thicker
-                on the lower end."
+  bamboo_text: "Bamboo has long fiber and its hardness is excellent to transmit pressure directly to the ski edges. It also adapts well to cold temperatures. swiss massiv side walls are a trapeze shape giving a tapered edge and therefore thicker on the lower end."
   metal: "Exposed metal upper edge."
-  metal_text: "Few skis have an metal upper edge. This important element to protect the
-              wooden upper surface of the ski was done traditionally and phased out
-              with mass production."
+  metal_text: "Few skis have an metal upper edge. This important element to protect the wooden upper surface of the ski was done traditionally and phased out with mass production."
   engraving: "Engraving."
-  engraving_text: "The wood veneer is cut down to the Titanal aluminium
-                  layer with a digitally controlled engraver. The result is a strong,
-                  distinctive three-dimensional design."
+  engraving_text: "The wood veneer is cut down to the Titanal aluminium layer with a digitally controlled engraver. The result is a strong, distinctive three-dimensional design."
   edges: "Finishing the edges."
-  edges_text: "The edges are sharpened manually to an 88° angle. This contributes
-              significantly to the handling of the skis in the snow."
+  edges_text: "The edges are sharpened manually to an 88° angle. This contributes significantly to the handling of the skis in the snow."
   base: "Ski base preparation."
-  base_text: "Edges and base are pre-ground by hand for the finish. This is done
-              based on years of experience rather than by a computer program.
-              A well ground base and edges determine the skis’ glide and turning."
+  base_text: "Edges and base are pre-ground by hand for the finish. This is done based on years of experience rather than by a computer program. A well ground base and edges determine the skis’ glide and turning."
   limited: "Limited serial numbers."
   limited_text: "Every pair of skis has its unique serial number engraved in stainless steel at the back."
   name: "Name"
@@ -101,3 +50,16 @@ en:
   phone: "Phone number"
   message: "Message"
   send_message: "Send message"
+  allround: "Allrounder"
+  allround_header: "The proficient all-rounder"
+  allround_text: "The Allrounder is a ski for the off-piste and advanced skiers who are looking for a reliable edge-grip in a versatile design. The solid wood core, combined with the aluminium layers in the sandwich construction with trapeze-shaped bamboo sidewalls assures a consistent stability. The movements of the skier are commanding and directly transferred onto the slope. Sharp turns are accomplished with least effort. The ski is forgiving but never looses the desired dynamism."
+  more: "Find out more"
+  allmountain_header: "The versatile one for all purposes"
+  allmountain_text: "The design is curtesy of nature. A versatile ski for demanding skiers. The ski provides enjoyment on and off the piste. On the mountain, the broader side cut and the softer front provide uplift. The fiber bamboo sidewalls assure the required edge grip and stability on the piste. This yew ski is also a perfect touring ski."
+  slalom_carver_header: "The sporty all-rounder"
+  slalom_carver_text: "A high performance carving ski for maximum security. The perfect blending of titanium layers and solid wood core with bamboo sidewalls allows for short, dynamic, and very precise turns on hard surfaces. The Slalom Carver glides playfully and sticks gracefully to the groove. Skied athletically, the Slalom Carver response is lively and agile both through short and long turns."
+  slalom_race_carver_header: "The racer for the advanced skier"
+  slalom_race_carver_text: "A very fast and stable slalom ski which makes you feel you are on tracks. The steady sandwich construction and the bamoo sidewalls assure optimal stability and precision gliding. Very agile and fast – precise turn control – direct force transmission – maximum edge grip. A fast ski, ideal for athletic skiers who love to push the envelope."
+  personalised: "Personalised skis"
+  personalised_header: ""
+  personalised_text: ""

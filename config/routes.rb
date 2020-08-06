@@ -2,8 +2,12 @@ Rails.application.routes.draw do
   scope '(:locale)', locale: /de|en|fr|it/ do
     root to: 'pages#home'
 
-    get 'about',    to: 'pages#about',     as: :about
-    get 'contact',  to: 'contacts#new',    as: :contact
+    get 'about',        to: 'pages#about',        as: :about
+    get 'skis',         to: 'pages#skis',         as: :skis
+    get 'personalised', to: 'pages#personalised', as: :personalised
+    get 'mieten',       to: 'pages#mieten',       as: :mieten
+    get 'service',      to: 'pages#service',      as: :service
+    get 'contact',      to: 'contacts#new',       as: :contact
 
     resources :partners
     resources :events
