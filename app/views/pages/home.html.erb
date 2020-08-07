@@ -1,51 +1,54 @@
 
-
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(<%= asset_path 'tree.png' %>);">
-    <h1 class="text-center">Handgemachte Skis aus der Schweiz </h1>
-    <p class="pt-4 text-center">"Ich kaufe nicht einfach Holz für meine Skis, ich kaufe einen Baum.
-      Denn der Charakter eines Ski fängt beim Baum an."</p>
-    <p class="pb-4 text-center"> - René Unternährer </p>
-    <div class="text-center">
-      <%= link_to main_app.about_path, class: "button_2" do %>
-        <%= fa_icon "info-circle" %> Über uns
-      <% end %>
-    </div>
+<div class="row justify-content-center py-5"  style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(<%= asset_path 'tree.png' %>); background-size: cover; background-position: center;">
+  <div class="col-9 col-md-6 col-lg-4 py-5">
+    <h1>Handgemachte Skis aus der Schweiz </h1>
+    <p>"<%= t('quote') %>"</p>
+    <p class="pb-3" style="font-style: italic;"> - René Unternährer </p>
+    <%= link_to main_app.about_path, class: "button_2" do %>
+      <%= fa_icon "info-circle" %> Über uns
+    <% end %>
+  </div>
+  <div class="col-1 col-md-3 col-lg-2"></div>
 </div>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(<%= asset_path 'ski_preview.png' %>);">
-  <h1 class="text-center">Jeder Ski ist einzigartig</h1>
-  <p class="py-4 text-center">swiss massiv Ski sind das Resultat jahrzehntelanger Erfahrung. Jeder Ski ist ein Unikat und wird individuell von Hand gefertigt. swiss massiv Premium­-Skis wurden kreiert, um Liebhaber des Aussergewöhnlichen zu begeistern.</p>
-  <div class="text-center">
+<div class="row justify-content-center py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(<%= asset_path 'ski_preview.png' %>); background-size: cover; background-position: center;">
+  <div class="col-9 col-md-6 col-lg-4 py-5">
+    <h1>Jeder Ski ist einzigartig</h1>
+    <p  class="pb-3">swiss massiv Ski sind das Resultat jahrzehntelanger Erfahrung. Jeder Ski ist ein Unikat und wird individuell von Hand gefertigt. swiss massiv Premium­-Skis wurden kreiert, um Liebhaber des Aussergewöhnlichen zu begeistern.</p>
     <%= link_to main_app.skis_path, class: "button_2" do %>
       <%= fa_icon "skiing" %> Skis
     <% end %>
   </div>
+  <div class="col-1 col-md-3 col-lg-2"></div>
 </div>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(<%= asset_path 'jacke.png' %>);">
-  <h1 class="text-center">Zubehör</h1>
-  <p class="py-4 text-center">swiss massiv bietet nicht nur Skis an, sondern auch das passende Zubehör. Von Ski-Jacke über Ski-Sack bis hin zu Ski-Bindungen ist bei uns alles erhältich. </p>
-  <div class="text-center">
+<div class="row justify-content-center py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(<%= asset_path 'jacke.png' %>); background-size: cover; background-position: center;">
+  <div class="col-9 col-md-6 col-lg-4 py-5">
+    <h1>Zubehör</h1>
+    <p class="pb-3">swiss massiv bietet nicht nur Skis an, sondern auch das passende Zubehör. Von Ski-Jacke über Ski-Sack bis hin zu Ski-Bindungen ist bei uns alles erhältich. </p>
     <%= link_to "#", class: "button_2" do %>
-      <%= fa_icon "tshirt" %> Zubehör
+        <%= fa_icon "tshirt" %> Zubehör
     <% end %>
   </div>
+  <div class="col-1 col-md-3 col-lg-2"></div>
 </div>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(<%= asset_path 'skitest.jpg' %>);">
-  <h1 class="text-center">Verkauf</h1>
-  <p class="py-4 text-center">Viele Skishops im In- und Ausland verkaufen und vermieten unsere Skis und Zubehör.</p>
-  <div class="text-center">
+<div class="row justify-content-center py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(<%= asset_path 'skitest.jpg' %>); background-size: cover; background-position: center;">
+  <div class="col-9 col-md-6 col-lg-4 py-5">
+    <h1>Verkauf</h1>
+    <p class="pb-3">Viele Skishops im In- und Ausland verkaufen und vermieten unsere Skis und Zubehör.</p>
     <%= link_to main_app.partners_path, class: "button_2" do %>
       <%= fa_icon "store-alt" %> Händlersuche
     <% end %>
   </div>
+  <div class="col-1 col-md-3 col-lg-2"></div>
 </div>
 <% if I18n.locale == :de %>
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(<%= asset_path 'skitest.jpg' %>);">
-    <h1 class="text-center">Ski-Tests</h1>
-    <p class="py-4 text-center">An einem Ski-Test können Sie unsere Skis gratis testfahren und sich von der Qualität überzeugen lassen.</p>
-    <div class="text-center">
+  <div class="row justify-content-center py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(<%= asset_path 'skitest.jpg' %>); background-size: cover; background-position: center;">
+    <div class="col-9 col-md-6 col-lg-4 py-5">
+      <h1>Ski-Tests</h1>
+      <p class="pb-3">An einem Ski-Test können Sie unsere Skis gratis testfahren und sich von der Qualität überzeugen lassen.</p>
       <%= link_to main_app.events_path, class: "button_2" do %>
         <%= fa_icon "calendar-alt" %> Termine
       <% end %>
     </div>
+    <div class="col-1 col-md-3 col-lg-2"></div>
   </div>
 <% end%>
