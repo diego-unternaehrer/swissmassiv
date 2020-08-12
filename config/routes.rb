@@ -4,11 +4,13 @@ Rails.application.routes.draw do
 
     get 'about',        to: 'pages#about',        as: :about
     get 'skis',         to: 'pages#skis',         as: :skis
-    get 'personalised', to: 'pages#personalised', as: :personalised
+    get 'allrounder',   to: 'pages#allrounder',   as: :allrounder
     get 'mieten',       to: 'pages#mieten',       as: :mieten
     get 'service',      to: 'pages#service',      as: :service
     get 'contact',      to: 'contacts#new',       as: :contact
 
+    get 'personalised', to: 'personaliseds#index', as: :personalised
+    resources :personaliseds, except: [:index, :show]
     resources :partners
     resources :events
     resources :contacts, only: [:create]

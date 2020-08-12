@@ -94,3 +94,6 @@ gem 'solidus_globalize', github: 'solidusio-contrib/solidus_globalize'
 gem 'mail_form'
 gem 'sendgrid-ruby'
 
+# image hosting
+gem 'cloudinary', '~> 1.12.0'
+

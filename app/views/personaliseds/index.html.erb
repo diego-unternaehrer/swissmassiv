@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <h1><%= t('personalised') %></h1>
+  <h2><%= t('personalised_header') %></h2>
+  <p class="pb-2"><%= t('personalised_text') %></p>
+  <% unless @personaliseds.empty? %>
+    <div class="card-columns">
+      <% @personaliseds.each do |personalised| %>
+        <div class="card">
+          <%= cl_image_tag personalised.photo.key, style: "width: 100%" %>
+          <div style="color: black;"> <%= personalised.name %> </div>
+          <% if !spree_current_user.blank? && spree_current_user.spree_roles.first.name == "admin" %>
+            <%= link_to edit_personalised_path(personalised) do %>
+              <i class="fas fa-edit"></i>
+            <% end %>
+            <%= link_to personalised, method: :delete, data: { confirm: 'Bist du sicher?' } do %>
+              <i class="fas fa-trash-alt"></i>
+            <% end %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  <br>
+  <br>
+  <% if !spree_current_user.blank? && spree_current_user.spree_roles.first.name == "admin" %>
+    <%= link_to '+ Personalisierte Skis hinzufügen', new_personalised_path, class:"button_2" %>
+  <% end %>
+</div>
