@@ -1,8 +1,26 @@
 <div class="row justify-content-center py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(<%= asset_path 'hightech.png' %>); background-size: cover; background-position: center;">
   <div class="col-9 col-md-6 col-lg-4 py-5">
     <h1><%= t('allround') %></h1>
-    <h2><%= t('allround_header') %></h2>
-    <p class="pb-2"><%= t('allround_text') %></p>
+    <h3><%= t('allround_header') %></h3>
+    <div class="pb-2">
+      <table class="table table-borderless text-white">
+        <tr>
+          <th>Geeignet für:</th>
+        </tr>
+        <tr>
+          <td><i class="fas fa-skiing"></i> Fahrkönnen</td>
+          <td>Anfänger</td>
+        </tr>
+        <tr>
+          <td><i class="fas fa-bacon"></i> Fahrstil</td>
+          <td> Komfort</td>
+        </tr>
+        <tr class="pb-2">
+          <td><i class="fas fa-mountain"></i> Fahrgelände</td>
+          <td>Piste</td>
+        </tr>
+      </table>
+    </div>
     <%= link_to t('more'), spree.nested_taxons_path("skis/allrounder"), class: "button_2" %>
   </div>
   <div class="col-1 col-md-3 col-lg-2"></div>
@@ -10,8 +28,26 @@
 <div class="row justify-content-center py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(<%= asset_path 'hightech.png' %>); background-size: cover; background-position: center;">
   <div class="col-9 col-md-6 col-lg-4 py-5">
     <h1><%= t('allmountain') %></h1>
-    <h2><%= t('allmountain_header') %></h2>
-    <p class="pb-2"><%= t('allmountain_text') %></p>
+    <h3><%= t('allmountain_header') %></h3>
+    <div class="pb-2">
+      <table class="table table-borderless text-white">
+        <tr>
+          <th>Geeignet für:</th>
+        </tr>
+        <tr>
+          <td><i class="fas fa-skiing"></i> Fahrkönnen</td>
+          <td>Durchschnittlich</td>
+        </tr>
+        <tr>
+          <td><i class="fas fa-bacon"></i> Fahrstil</td>
+          <td> Ambitioniert </td>
+        </tr>
+        <tr class="pb-2">
+          <td><i class="fas fa-mountain"></i> Fahrgelände</td>
+          <td>Piste</td>
+        </tr>
+      </table>
+    </div>
     <%= link_to t('more'), spree.nested_taxons_path("skis/allmountain"), class: "button_2" %>
   </div>
   <div class="col-1 col-md-3 col-lg-2"></div>
@@ -20,7 +56,25 @@
   <div class="col-9 col-md-6 col-lg-4 py-5">
     <h1><%= t('slalom_carver') %></h1>
     <h2><%= t('slalom_carver_header') %></h2>
-    <p><%= t('slalom_carver_text') %></p>
+    <div class="pb-2">
+      <table class="table table-borderless text-white">
+        <tr>
+          <th>Geeignet für:</th>
+        </tr>
+        <tr>
+          <td><i class="fas fa-skiing"></i> Fahrkönnen</td>
+          <td>Gut</td>
+        </tr>
+        <tr>
+          <td><i class="fas fa-bacon"></i> Fahrstil</td>
+          <td> Sport</td>
+        </tr>
+        <tr class="pb-2">
+          <td><i class="fas fa-mountain"></i> Fahrgelände</td>
+          <td>Piste / Abseits (50/50)</td>
+        </tr>
+      </table>
+    </div>
     <%= link_to t('more'), spree.nested_taxons_path("skis/slalom-carver"), class: "button_2" %>
   </div>
   <div class="col-1 col-md-3 col-lg-2"></div>
@@ -29,7 +83,25 @@
   <div class="col-9 col-md-6 col-lg-4 py-5">
     <h1><%= t('slalom_race_carver') %></h1>
     <h2><%= t('slalom_race_carver_header') %></h2>
-    <p class="pb-2"><%= t('slalom_race_carver_text') %></p>
+    <div class="pb-2">
+      <table class="table table-borderless text-white">
+        <tr>
+          <th>Geeignet für:</th>
+        </tr>
+        <tr>
+          <td><i class="fas fa-skiing"></i> Fahrkönnen</td>
+          <td>Sport</td>
+        </tr>
+        <tr>
+          <td><i class="fas fa-bacon"></i> Fahrstil</td>
+          <td> Komfort</td>
+        </tr>
+        <tr class="pb-2">
+          <td><i class="fas fa-mountain"></i> Fahrgelände</td>
+          <td>Abseits / Tiefschnee</td>
+        </tr>
+      </table>
+    </div>
     <%= link_to t('more'), spree.nested_taxons_path("skis/slalom-race-carver"), class: "button_2" %>
   </div>
   <div class="col-1 col-md-3 col-lg-2"></div>
