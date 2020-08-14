@@ -1,1 +1,93 @@
-service.html.erb
+<div class="container">
+  <div class="text-center">
+    <h1><%= t('service') %></h1>
+    <h2><%= t('service_header') %></h2>
+    <p class="pb-2"><%= t('service_text') %></p>
+    <%= link_to t('contact_us'), main_app.contact_path, class: "button_2"%>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 pt-5">
+    <div class="col mb-4">
+      <div class="card" style="background-color: #DFAA82;">
+        <div class="text-center">
+          <div class="card-header">
+            <h4>WACHSEN</h4>
+            <p>Für die Schnellen</p>
+          </div>
+          <h2 class="card-text py-4">CHF 20.-</h2>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <ul>
+              <li>Warm Wachsen</li>
+              <li>Polieren</li>
+            </ul>
+          </small>
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+      <div class="card" style="background-color: #DFAA82;">
+        <div class="text-center">
+          <div class="card-header">
+            <h4>SERVICE klein</h4>
+            <p>Das Nötigste</p>
+          </div>
+          <h2 class="card-text py-4">CHF 40.-</h2>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <ul>
+              <li>Belag feinschleifen</li>
+              <li>Kanten schleifen</li>
+              <li>Kantentuning</li>
+              <li>Wachsen & Polieren</li>
+            </ul>
+          </small>
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+      <div class="card" style="background-color: #DFAA82;">
+        <div class="text-center">
+          <div class="card-header">
+            <h4>SERVICE gross</h4>
+            <p>Vor oder Nach der Saison</p>
+          </div>
+          <h2 class="card-text py-4">CHF 65.-</h2>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <ul>
+              <li>Belag auffilmen</li>
+              <li>Belag feinschleifen</li>
+              <li>Kanten schleifen</li>
+              <li>Kantentuning</li>
+              <li>Wachsen & Polieren</li>
+            </ul>
+          </small>
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+      <div class="card" style="background-color: #DFAA82;">
+        <div class="text-center">
+          <div class="card-header">
+            <h4>swiss massiv Skiservice</h4>
+            <p>Speziell für swiss massiv Skis</p>
+          </div>
+          <h2 class="card-text py-4">CHF 200.-</h2>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <ul>
+              <li>SERVICE gross</li>
+              <li>Schleifen</li>
+              <li>Ausbessern</li>
+              <li>Neulackierung</li>
+            </ul>
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
