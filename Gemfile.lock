@@ -62,6 +62,7 @@ GEM
       actionpack (= 5.2.4.3)
       activerecord (= 5.2.4.3)
       marcel (~> 0.3.1)
+    activestorage-cloudinary-service (0.2.3)
     activesupport (5.2.4.3)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
@@ -508,13 +509,14 @@ PLATFORMS
   x86-mswin32
 
 DEPENDENCIES
+  activestorage-cloudinary-service
   autoprefixer-rails
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.4.1)
   byebug
   capybara (>= 2.15)
   chromedriver-helper
-  cloudinary (~> 1.1.7)
+  cloudinary
   coffee-rails (~> 4.2)
   dotenv-rails
   font-awesome-sass

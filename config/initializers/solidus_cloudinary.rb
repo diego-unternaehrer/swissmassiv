@@ -1,8 +1,6 @@
-if ENV['CLOUDINARY_URL']
-  Cloudinary.config do |config|
-    config.secure = true
-    config.cdn_subdomain = true
-  end
-else
-  Rails.logger.info { puts "****** Warning: There is no 'cloudinary' configuration info" }
+Cloudinary.config do |config|
+  config.cloud_name = ENV['CLOUDINARY_CLOUD_NAME']
+  config.api_key = ENV['CLOUDINARY_API_KEY']
+  config.api_secret = ENV['CLOUDINARY_API_SECRET']
+  config.cdn_subdomain = true
 end

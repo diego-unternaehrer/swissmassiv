@@ -95,6 +95,7 @@ gem 'mail_form'
 gem 'sendgrid-ruby'
 
 # image hosting
-gem 'cloudinary', '~> 1.1.7'
+gem 'cloudinary', require: false
+gem 'activestorage-cloudinary-service'
 gem 'open_solidus_cloudinary', github: 'Berlimioz/open_solidus_cloudinary'
 
