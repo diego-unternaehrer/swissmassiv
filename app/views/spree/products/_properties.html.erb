@@ -1,11 +1,11 @@
-<% unless @product_properties.empty? %>  
+<% unless @product_properties.empty? %>
   <h6 class="product-section-title"><%= t('spree.properties')%></h6>
-  <table id="product-properties" class="table-display" data-hook>
+  <table id="product-properties" class="table table-borderless text-white" data-hook>
     <tbody>
       <% @product_properties.each do |product_property| %>
         <% css_class = cycle('even', 'odd', name: "properties") %>
         <tr class="<%= css_class %>">
-          <td><strong><%= product_property.property.presentation %></strong></td>
+          <th scope="row"><strong><%= product_property.property.presentation %></strong></th>
           <td><%= product_property.value %></td>
         </tr>
       <% end %>
