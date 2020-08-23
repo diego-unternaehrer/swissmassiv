@@ -4,9 +4,9 @@
 
   <% if @order.line_items.empty? %>
 
-    <div data-hook="empty_cart">
-      <p><%= t('spree.your_cart_is_empty') %></p>
-      <p><%= link_to t('spree.continue_shopping'), products_path, class: 'button continue' %></p>
+    <div data-hook="empty_cart" class="pb-5 text-center">
+      <h2 class="p-5"><%= t('spree.your_cart_is_empty') %></h2>
+      <p><%= link_to t('spree.continue_shopping'), products_path, class: "button_2" %></p>
     </div>
 
   <% else %>

@@ -1,29 +1,26 @@
 <% order = order_form.object %>
 <%= render 'spree/shared/error_messages', target: order %>
-<table id="cart-detail" data-hook class="table table-borderless text-white">
-  <thead>
-    <tr data-hook="cart_items_headers">
-      <th class="cart-item-description-header" colspan="2"><%= t('spree.item') %></th>
-      <th class="cart-item-price-header"><%= t('spree.price') %></th>
-      <th class="cart-item-quantity-header"><%= t('spree.qty') %></th>
-      <th class="cart-item-total-header"><%= t('spree.total') %></th>
-      <th class="cart-item-delete-header"></th>
-    </tr>
-  </thead>
-  <tbody id="line_items" data-hook>
+<div id="cart-detail" data-hook>
+  <div class="row border-bottom border-light py-3" data-hook="cart_items_headers">
+      <div class="cart-item-description-header col-12 col-lg-6"><%= t('spree.item') %></div>
+      <div class="cart-item-price-header col-4 col-lg-2"><%= t('spree.price') %></div>
+      <div class="cart-item-quantity-header col-2 col-lg-1"><%= t('spree.qty') %></div>
+      <div class="cart-item-total-header col-4 col-lg-2"><%= t('spree.total') %></div>
+      <div class="cart-item-delete-header col-2 col-lg-1"></div>
+  </div>
+  <div id="line_items" data-hook>
     <%= render partial: 'spree/orders/line_item', collection: order.line_items, locals: { order_form: order_form } %>
-  </tbody>
+  </div>
   <% if order.adjustments.nonzero.exists? || order.line_item_adjustments.nonzero.exists? || order.shipment_adjustments.nonzero.exists? || order.shipments.any? %>
-    <tr class="cart-subtotal">
-      <td colspan="4" align='right'><h5><%= t('spree.cart_subtotal', count: order.line_items.sum(:quantity)) %></h5></td>
-      <td colspan><h5><%= order.display_item_total %></h5></td>
+    <div class="cart-subtotal row align-items-center p-3 border-bottom border-light">
+      <h6 class="col-6 col-lg-9 text-right"><%= t('spree.cart_subtotal', count: order.line_items.sum(:quantity)) %></h6>
+      <h6 class="col-6 col-lg-3"><%= order.display_item_total %></h6>
       <td></td>
-    </tr>
+    </div>
     <%= render "spree/orders/adjustments" %>
   <% end %>
-  <tr class="cart-total">
-    <td colspan="4" align='right'><h5><%= t('spree.total') %></h5></td>
-    <td colspan><h5><%= order.display_total %></h5></td>
-    <td></td>
-  </tr>
-</table>
+  <div class="cart-total row align-items-center py-3">
+    <h5 class="col-6 col-lg-9 text-right"><%= t('spree.total') %></h5>
+    <h5 class="col-6 col-lg-3"><%= order.display_total %></h5>
+  </div>
+</div>
