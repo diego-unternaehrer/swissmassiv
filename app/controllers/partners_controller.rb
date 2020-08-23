@@ -2,7 +2,7 @@ class PartnersController < ApplicationController
   before_action :set_partner, only: [:show, :edit, :update, :destroy]
 
   def index
-    @partners = Partner.geocoded # returns flats with coordinates
+    @partners = Partner.geocoded # returns partners with coordinates
     @grouped_partners = @partners.order(:name).group_by {|obj| obj.country}
 
 

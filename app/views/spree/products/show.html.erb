@@ -4,7 +4,7 @@
 
         <h1 class="text-center py-4" itemprop="name"><%= @product.name %></h1>
         <div class="row justify-content-around">
-          <div class="col-12 col-md-4 pb-4">
+          <div class="col-12 col-lg-4 pb-4">
             <div id="product-images" data-hook="product_images">
               <div id="main-image" data-hook>
                 <%= render partial: 'image' %>
@@ -14,7 +14,7 @@
               </div> -->
             </div>
           </div>
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-lg-4">
             <div data-hook="product_properties">
               <%= render partial: 'properties' %>
             </div>
@@ -29,7 +29,7 @@
               </div>
             <% end %>
           </div>
-          <div class="col-11 col-md-4 pb-5">
+          <div class="col-11 col-lg-4 pb-5">
               <div id="cart-form" data-hook="cart_form">
                 <%= render partial: 'cart_form' %>
               </div>

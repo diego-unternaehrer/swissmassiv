@@ -3,8 +3,12 @@
 
     <% if @product.variants_and_option_values_for(current_pricing_options).any? %>
         <div id="product-variants">
-          <h6 class="product-section-title row"><%= t('select') %></h6>
-          <ul class="row" style="list-style-type: none; padding: 0;">
+     <!--      <h6 class="product-section-title row">
+            <% @product.option_types.each do |option_type| %>
+              <%= option_type.presentation %>:
+            <% end %>
+          </h6> -->
+          <ul style="list-style-type: none; padding: 0;">
             <% @product.variants_and_option_values_for(current_pricing_options).each_with_index do |variant, index| %>
               <li>
                 <%= radio_button_tag "variant_id", variant.id, index == 0, 'data-price' => variant.price_for(current_pricing_options)  %>
@@ -29,14 +33,12 @@
     <% end %>
 
     <% if @product.price_for(current_pricing_options) and !@product.price.nil? %>
-      <div id="product-price" data-hook="product_price">
-        <h6 class="product-section-title row"><%= t('spree.price') %></h6>
-        <div class="row pb-2">
-          <span class="price selling" itemprop="price" content="<%= @product.price_for(current_pricing_options).to_d %>">
-            <%= display_price(@product) %>
-          </span>
-          <span itemprop="priceCurrency" content="<%= current_pricing_options.currency %>"></span>
-        </div>
+      <div class="row pb-2" id="product-price" data-hook="product_price">
+        <h6 class="product-section-title"><%= t('spree.price') %>:&nbsp;</h6>
+        <h6 class="price selling" itemprop="price" content="<%= @product.price_for(current_pricing_options).to_d %>">
+          <%= display_price(@product) %>
+        </h6>
+        <h6 itemprop="priceCurrency" content="<%= current_pricing_options.currency %>"></h6>
         <% if @product.master.can_supply? %>
           <link itemprop="availability" href="http://schema.org/InStock" />
         <% elsif @product.variants.empty? %>

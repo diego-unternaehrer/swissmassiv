@@ -20,13 +20,13 @@
       </div>
     </div>
     <div class="cart-item-price col-4 col-lg-2" data-hook="cart_item_price">
-      <small> <%= line_item.single_money.to_html %> &nbsp;&nbsp; x </small>
+      <small> <%= line_item.single_money.to_html %> </small>
     </div>
     <div class="cart-item-quantity col-2 col-lg-1" data-hook="cart_item_quantity">
       <%= item_form.number_field :quantity, min: 0, class: "line_item_quantity", size: 5, style: "width: 50px; text-align: center;" %>
     </div>
     <div class="cart-item-total col-4 col-lg-2" data-hook="cart_item_total">
-     <small> = &nbsp;&nbsp; <%= line_item.display_amount.to_html unless line_item.quantity.nil? %> </small>
+     <small> <%= line_item.display_amount.to_html unless line_item.quantity.nil? %> </small>
     </div>
     <div class="cart-item-delete col-2 col-lg-1" data-hook="cart_item_delete">
       <%= link_to image_tag('icons/delete.png'), '#', class: 'delete', id: "delete_#{dom_id(line_item)}" %>
