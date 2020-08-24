@@ -1,0 +1,16 @@
+<% if flash[:alert] %>
+  <div class="flash errors"><%= flash[:alert] %></div>
+<% end %>
+
+<% @body_id = 'login' %>
+<div id="existing-customer">
+  <h1 class="text-center py-2"><%= I18n.t('spree.login_as_existing') %></h1>
+  <div data-hook="login" class="row justify-content-center">
+    <div class="col-12 col-md-6 col-lg-5 pb-4">
+      <%= render partial: 'spree/shared/login' %>
+      <br>
+      <p><%= I18n.t('spree.or') %> &nbsp; &nbsp; <%= link_to I18n.t('spree.create_a_new_account'), spree.signup_path, class:"button_2" %></p>
+    </div>
+  </div>
+</div>
+<div data-hook="login_extras"></div>

@@ -1,0 +1,19 @@
+  <% @body_id = 'signup' %>
+
+<%= render 'spree/shared/error_messages', target: resource %>
+
+<div id="new-customer">
+  <h1 class="text-center py-4"><%= I18n.t('spree.new_customer') %></h1>
+  <div data-hook="signup" class="row justify-content-around">
+    <div class="col-12 col-md-6 col-lg-5 pb-4">
+      <%= form_for resource, as: :spree_user, url: spree.registration_path(resource) do |f| %>
+        <div data-hook="signup_inside_form">
+          <%= render partial: 'spree/shared/user_form', locals: { f: f } %>
+          <p><%= f.submit I18n.t('spree.create'), class: 'button_2' %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div data-hook="login_extras"></div>

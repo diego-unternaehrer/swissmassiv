@@ -1,0 +1,18 @@
+<div id="forgot-password">
+  <h1 class="text-center py-4"><%= I18n.t('spree.forgot_password') %></h1>
+  <div  class="row justify-content-center">
+    <div class="col-12 col-md-6 col-lg-5 pb-4">
+      <p><%= I18n.t('spree.instructions_to_reset_password') %></p>
+
+      <%= form_for Spree::User.new, as: :spree_user, url: spree.reset_password_path do |f| %>
+        <p>
+          <%= f.label :email, I18n.t('spree.email') %><br />
+          <%= f.email_field :email, required: true, class: 'form-control' %>
+        </p>
+        <p>
+          <%= f.submit I18n.t('spree.reset_password'), class: 'button_2' %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+</div>
