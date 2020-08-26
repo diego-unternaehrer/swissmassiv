@@ -1,51 +1,53 @@
 <fieldset id='shipping_method' data-hook>
-  <legend align="center"><%= t('spree.delivery') %></legend>
+  <legend align="center"> <h2> <%= t('spree.delivery') %> </h2> </legend>
   <div class="inner" data-hook="shipping_method_inner">
     <div id="methods">
       <%= form.fields_for :shipments do |ship_form| %>
 
         <div class="shipment">
-          <h3 class="stock-location" data-hook="stock-location">
+<!--           <h3 class="stock-location" data-hook="stock-location">
             <%= t('spree.package_from') %>
             <strong class="stock-location-name" data-hook="stock-location-name"><%= ship_form.object.stock_location.name %></strong>
-          </h3>
+          </h3> -->
 
-          <table class="stock-contents" data-hook="stock-contents">
-            <colgroup>
-              <col style="width: 10%;" />
-              <col style="width: 60%;" />
-              <col style="width: 10%;" />
-              <col style="width: 20%;" />
-            </colgroup>
-            <thead>
-              <th></th>
-              <th align='left'><%= t('spree.item') %></th>
-              <th><%= t('spree.qty') %></th>
-              <th><%= t('spree.price') %></th>
-            </thead>
-            <tbody>
-              <% ship_form.object.manifest.each do |item| %>
-                <tr class="stock-item">
-                  <td class="item-image">
-                    <%= render 'spree/shared/image',
-                      image: (item.variant.gallery.images.first || item.variant.product.gallery.images.first),
-                      size: :mini %>
-                  </td>
-                  <td class="item-name"><%= item.variant.name %></td>
-                  <td class="item-qty"><%= item.quantity %></td>
-                  <td class="item-price"><%= display_price(item.variant) %></td>
-                </tr>
-              <% end %>
-            </tbody>
-          </table>
+          <div class="stock-contents" data-hook="stock-contents">
+            <div class="row border-bottom border-light py-3 align-items-center">
+              <div class="col-8"><%= t('spree.item') %></div>
+              <div class="col-1"><%= t('spree.qty') %></div>
+              <div class="col-3"><%= t('spree.price') %></div>
+            </div>
+            <% ship_form.object.manifest.each do |item| %>
+              <div class="row border-bottom border-light py-3 align-items-center">
+                <div class="col-8">
+                  <div class="row align-items-center">
+                    <div class="col-3 item-image">
+                      <%= render('spree/shared/image',
+                                  image: (item.variant.gallery.images.first || item.variant.product.gallery.images.first),
+                                  size: :product) %>
+                    </div>
+                    <div class="col-9 item-name">
+                      <p><%= item.variant.name %></p>
+                      <small> <%= item.variant.options_text %> </small>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-qty col-1">
+                  <%= item.quantity %>
+                </div>
+                <div class="item-price col-3">
+                 <%= display_price(item.variant) %>
+                </div>
+              </div>
+            <% end %>
+          </div>
 
-          <h5 class="stock-shipping-method-title"><%= t('spree.shipping_method') %></h5>
+          <h3 class="stock-shipping-method-title pt-5 pb-3"><%= t('spree.shipping_method') %></h3>
           <ul class="radios shipping-methods">
             <% ship_form.object.shipping_rates.each do |rate| %>
               <li class="shipping-method">
                 <label>
                   <%= ship_form.radio_button :selected_shipping_rate_id, rate.id %>
-                  <span class="rate-name"><%= rate.name %></span>
+                  <span class="rate-name"><%= rate.name %>: </span>
                   <span class="rate-cost"><%= rate.display_cost %></span>
                 </label>
               </li>
@@ -104,5 +106,5 @@
 <br />
 
 <div class="form-buttons" data-hook="buttons">
-  <%= submit_tag t('spree.save_and_continue'), class: 'continue button primary' %>
+  <%= submit_tag t('spree.save_and_continue'), class: 'button_2' %>
 </div>
