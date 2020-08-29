@@ -1,0 +1,14 @@
+<% if target && target.errors.any? %>
+  <div id="errorExplanation" class="errorExplanation alert alert-danger alert-dismissible fade show" role="alert" data-hook>
+    <h2><%= t('spree.errors_prohibited_this_record_from_being_saved', count: target.errors.count) %>:</h2>
+    <p><%= t('spree.there_were_problems_with_the_following_fields') %>:</p>
+     <ul>
+     <% target.errors.full_messages.each do |msg| %>
+       <li><%= msg %></li>
+     <% end %>
+     </ul>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+<% end %>

@@ -4,8 +4,14 @@
 Spree.config do |config|
   # Core:
 
+  config.address_requires_state = false
+
   # Default currency for new sites
   config.currency = "CHF"
+
+  # Default country in address form
+  country = Spree::Country.find_by_name('Switzerland')
+  config.default_country_id = country.id if country.present?
 
   # from address for transactional emails
   config.mails_from = "rene@swissmassiv.com"
