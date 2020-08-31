@@ -17,9 +17,8 @@
       <% end %>
     </div>
     <div class="local">
-      <span class="locality"><%= address.city %></span>
-      <span class="region"><%= address.state_text %></span>
       <span class="postal-code"><%= address.zipcode %></span>
+      <span class="locality"><%= address.city %></span>
       <div class="country-name"><%= address.country.try(:name) %></div>
     </div>
   </div>

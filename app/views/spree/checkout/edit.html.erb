@@ -5,14 +5,15 @@
     <h1 class="text-center py-4" data-hook="checkout_title"><%= t('spree.checkout') %></h1>
     <div class="pb-5" data-hook="checkout_progress" style="font-size:xx-small;">  <%= checkout_progress %> </div>
   </div>
-
-  <div class="row justify-content-between" data-hook="checkout_content">
-    <div class="col-12 col-md-6 pb-4" data-hook="checkout_form_wrapper">
-      <%= form_for @order, url: update_checkout_path(@order.state), html: { id: "checkout_form_#{@order.state}" } do |form| %>
-        <%= render @order.state, form: form %>
-      <% end %>
-    </div>
+  <div class="row justify-content-center" data-hook="checkout_content">
     <% if @order.state != 'confirm' %>
+      <div class="col-12 col-md-6 pb-4" data-hook="checkout_form_wrapper">
+    <% end %>
+    <%= form_for @order, url: update_checkout_path(@order.state), html: { id: "checkout_form_#{@order.state}" } do |form| %>
+      <%= render @order.state, form: form %>
+    <% end %>
+    <% if @order.state != 'confirm' %>
+      </div>
       <div id="checkout-summary" data-hook="checkout_summary_box" class="col-12 col-md-5 pb-4">
         <%= render partial: 'summary', locals: { order: @order } %>
       </div>

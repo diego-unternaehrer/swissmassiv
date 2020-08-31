@@ -12,9 +12,9 @@
 
           <div class="stock-contents" data-hook="stock-contents">
             <div class="row border-bottom border-light py-3 align-items-center">
-              <div class="col-8"><%= t('spree.item') %></div>
-              <div class="col-1"><%= t('spree.qty') %></div>
-              <div class="col-3"><%= t('spree.price') %></div>
+              <div class="col-8"> <small> <%= t('spree.item') %> </small> </div>
+              <div class="col-1"> <small> <%= t('spree.qty') %> </small> </div>
+              <div class="col-3 text-right"> <small> <%= t('spree.price') %> </small> </div>
             </div>
             <% ship_form.object.manifest.each do |item| %>
               <div class="row border-bottom border-light py-3 align-items-center">
@@ -26,15 +26,15 @@
                                   size: :product) %>
                     </div>
                     <div class="col-9 item-name">
-                      <p><%= item.variant.name %></p>
-                      <small> <%= item.variant.options_text %> </small>
+                      <div><%= item.variant.name %></div>
+                      <div style="font-size:xx-small;"> <%= item.variant.options_text %> </div>
                     </div>
                   </div>
                 </div>
                 <div class="item-qty col-1">
                   <%= item.quantity %>
                 </div>
-                <div class="item-price col-3">
+                <div class="item-price col-3 text-right">
                  <%= display_price(item.variant) %>
                 </div>
               </div>
@@ -42,17 +42,15 @@
           </div>
 
           <h3 class="stock-shipping-method-title pt-5 pb-3"><%= t('spree.shipping_method') %></h3>
-          <ul class="radios shipping-methods">
+          <div class="shipping-methods p-3">
             <% ship_form.object.shipping_rates.each do |rate| %>
-              <li class="shipping-method">
-                <label>
-                  <%= ship_form.radio_button :selected_shipping_rate_id, rate.id %>
-                  <span class="rate-name"><%= rate.name %>: </span>
-                  <span class="rate-cost"><%= rate.display_cost %></span>
-                </label>
-              </li>
+              <div class="shipping-method row pb-3 justify-content-between">
+                  <%= ship_form.radio_button :selected_shipping_rate_id, rate.id, class:"col-1 align-middle" %>
+                  <span class="rate-name col-9"><%= rate.name %>: </span>
+                  <span class="rate-cost col-2 text-right"><%= rate.display_cost %></span>
+              </div>
             <% end %>
-          </ul>
+          </div>
         </div>
 
       <% end %>
@@ -106,5 +104,5 @@
 <br />
 
 <div class="form-buttons" data-hook="buttons">
-  <%= submit_tag t('spree.save_and_continue'), class: 'button_2' %>
+  <%= submit_tag t('save_and_continue'), class: 'button_2' %>
 </div>

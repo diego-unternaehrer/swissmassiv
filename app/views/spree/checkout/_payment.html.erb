@@ -1,5 +1,5 @@
 <fieldset id="payment" data-hook>
-  <legend align="center"><%= t('spree.payment_information') %></legend>
+  <legend align="center"><h2 class="pb-1"><%= t('spree.payment_information') %></h2></legend>
   <div data-hook="checkout_payment_step">
     <% if @wallet_payment_sources.present? %>
       <div class="card_options">
@@ -37,24 +37,22 @@
 
     <div id="payment-method-fields" data-hook>
       <% @order.available_payment_methods.each do |method| %>
-      <p>
-        <label>
-          <%= radio_button_tag "order[payments_attributes][][payment_method_id]", method.id, method == @order.available_payment_methods.first %>
-          <%= t(method.name, scope: 'spree.payment_methods', default: method.name) %>
-        </label>
-      </p>
+      <div class="row pb-3 justify-content-between">
+        <div class="col-1"><%= radio_button_tag "order[payments_attributes][][payment_method_id]", method.id, method == @order.available_payment_methods.first %></div>
+          <div class="col-11"><%= t(method.name, scope: 'spree.payment_methods', default: method.name) %></div>
+      </div>
       <% end %>
     </div>
 
-    <ul id="payment-methods" data-hook>
+    <div id="payment-methods" data-hook>
       <% @order.available_payment_methods.each do |method| %>
-        <li id="payment_method_<%= method.id %>" class="<%= 'last' if method == @order.available_payment_methods.last %>" data-hook>
+        <div id="payment_method_<%= method.id %>" class="row <%= 'last' if method == @order.available_payment_methods.last %>" data-hook>
           <fieldset>
             <%= render partial: "spree/checkout/payment/#{method.partial_name}", locals: { payment_method: method } %>
           </fieldset>
-        </li>
+        </div>
       <% end %>
-    </ul>
+    </div>
     <br style="clear:both;" />
   </div>
 </fieldset>
@@ -62,6 +60,6 @@
 <br class="space" />
 
 <div class="form-buttons" data-hook="buttons">
-  <%= submit_tag t('spree.save_and_continue'), class: 'continue button primary' %>
+  <%= submit_tag t('save_and_continue'), class: 'continue button_2' %>
   <script>Spree.disableSaveOnClick();</script>
 </div>

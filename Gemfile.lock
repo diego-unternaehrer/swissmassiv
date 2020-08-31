@@ -18,6 +18,16 @@ GIT
       solidus_core (>= 2.0.0, < 3)
       solidus_support (~> 0.5)
 
+GIT
+  remote: https://github.com/spree/deface.git
+  revision: 84e466919eecfe38b32830ff0e97262f37b69396
+  specs:
+    deface (1.5.3)
+      nokogiri (>= 1.6)
+      polyglot
+      rails (>= 5.2)
+      rainbow (>= 2.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -130,11 +140,6 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.7)
     crass (1.0.6)
-    deface (1.5.3)
-      nokogiri (>= 1.6)
-      polyglot
-      rails (>= 4.1)
-      rainbow (>= 2.1.0)
     devise (4.7.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -518,6 +523,7 @@ DEPENDENCIES
   chromedriver-helper
   cloudinary
   coffee-rails (~> 4.2)
+  deface!
   dotenv-rails
   font-awesome-sass
   geocoder

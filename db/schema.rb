@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_10_134717) do
+ActiveRecord::Schema.define(version: 2020_08_31_153527) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -399,6 +399,16 @@ ActiveRecord::Schema.define(version: 2020_08_10_134717) do
     t.datetime "created_at", precision: 6
     t.datetime "updated_at", precision: 6
     t.index ["payment_id"], name: "index_spree_payment_capture_events_on_payment_id"
+  end
+
+  create_table "spree_payment_method_translations", force: :cascade do |t|
+    t.integer "spree_payment_method_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.index ["locale"], name: "index_spree_payment_method_translations_on_locale"
+    t.index ["spree_payment_method_id"], name: "index_54e08b997873be9e89e0569bcd4bc61162b94ed3"
   end
 
   create_table "spree_payment_methods", id: :serial, force: :cascade do |t|

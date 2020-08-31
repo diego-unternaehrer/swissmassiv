@@ -99,3 +99,6 @@ gem 'cloudinary', require: false
 gem 'activestorage-cloudinary-service'
 gem 'open_solidus_cloudinary', github: 'Berlimioz/open_solidus_cloudinary'
 
+#deface solidus backend
+gem 'deface', github: 'spree/deface'
+
