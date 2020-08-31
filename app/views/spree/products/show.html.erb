@@ -5,13 +5,19 @@
         <h1 class="text-center py-4" itemprop="name"><%= @product.name %></h1>
         <div class="row justify-content-around">
           <div class="col-12 col-lg-4 pb-4">
-            <div id="product-images" data-hook="product_images">
+            <div id="product-images" data-hook="product_images" class="row">
+              <% if @product.gallery.images.size > 1 %>
+                <div id="thumbnails" data-hook class="col-3">
+                  <%= render partial: 'thumbnails' %>
+                </div>
+                <div class="col-9">
+              <% end %>
               <div id="main-image" data-hook>
                 <%= render partial: 'image' %>
               </div>
-    <!--           <div id="thumbnails" data-hook>
-                <%= render partial: 'thumbnails' %>
-              </div> -->
+              <% if @product.gallery.images.size > 1 %>
+                </div>
+              <% end %>
             </div>
           </div>
           <div class="col-12 col-lg-4">
