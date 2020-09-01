@@ -22,9 +22,9 @@
 </div>
 
 <% if products.any? %>
-  <div id="products" class="cards" data-hook>
+  <div id="products" class="card-columns" data-hook>
     <% products.each do |product| %>
-      <div class="product-card">
+      <div class="card product-card">
         <% url = spree.product_path(product, taxon_id: @taxon.try(:id)) %>
         <div id="product_<%= product.id %>" class="<%= cycle("alpha", "secondary", "", "omega secondary", name: "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
           <% cache(@taxon.present? ? [I18n.locale, current_pricing_options, @taxon, product] : [I18n.locale, current_pricing_options, product]) do %>

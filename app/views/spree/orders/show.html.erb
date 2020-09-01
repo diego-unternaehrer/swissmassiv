@@ -1,8 +1,8 @@
 <fieldset id="order_summary" data-hook>
-  <legend><%= t('spree.order_number', number: @order.number) %></legend>
-  <h1><%= accurate_title %></h1>
+  <legend align="center"> <h1> <%= t('spree.order_number', number: @order.number) %> </h1> </legend>
+<!--   <h1><%= accurate_title %></h1> -->
   <% if order_just_completed?(@order) %>
-    <strong><%= t('spree.thank_you_for_your_order') %></strong>
+      <h2 class="text-center pb-5"><%= t('spree.thank_you_for_your_order') %></h2>
   <% end %>
 
   <div id="order" data-hook>
@@ -10,11 +10,11 @@
 
     <br class="clear" />
 
-    <p data-hook="links">
-      <%= link_to t('spree.back_to_store'), spree.root_path, class: "button" %>
+    <p data-hook="links" class="p-3">
+      <%= link_to t('spree.back_to_store'), spree.root_path, class: "button_2" %>
       <% unless order_just_completed?(@order) %>
         <% if try_spree_current_user && respond_to?(:account_path) %>
-          <%= link_to t('spree.my_account'), spree.account_path, class: "button" %>
+          <%= link_to t('spree.my_account'), spree.account_path, class: "button_1" %>
         <% end %>
       <% end %>
     </p>
