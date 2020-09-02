@@ -54,4 +54,18 @@
   <% end %>
 </div>
 
-<script type="text/javascript"> $(document).ready(function(){ if(document.URL.indexOf("#")==-1){ url = document.URL+"#"; location = "#"; location.reload(); }}); </script>
+<script type='text/javascript'>
+  (function()
+  {
+    if( window.localStorage )
+    {
+      if( !localStorage.getItem('firstLoad') )
+      {
+        localStorage['firstLoad'] = true;
+        window.location.reload();
+      }
+      else
+        localStorage.removeItem('firstLoad');
+    }
+  })();
+</script>
