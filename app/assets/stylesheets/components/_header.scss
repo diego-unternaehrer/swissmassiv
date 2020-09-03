@@ -27,10 +27,16 @@
       position: relative;
     }
     .search_icon{
+      background-color: #151515;
+      border: none;
       color: white;
       position: absolute;
-      top: 2px;
-      right: 2px
+      top: 0px;
+      right: 2px;
+      :active {
+        background-color: yellow;
+        border: none;
+      }
     }
     .header-text {
       margin-bottom: 0;

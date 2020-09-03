@@ -58,6 +58,9 @@
         </div>
       </div>
     <% end %>
+    <div id="search-bar" data-hook>
+      <%= render partial: 'spree/shared/search' %>
+    </div>
     <% unless spree_current_user.blank? %>
       <%= link_to spree.account_path(spree_current_user.id) do %>
         <p class="d-block header-icon"> <%= fa_icon "user" %> </p>
