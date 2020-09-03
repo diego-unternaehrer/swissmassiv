@@ -17,7 +17,7 @@
 
       <tbody>
         <% @events.each do |event| %>
-          <tr>
+          <tr <% if event.cancelled? %>style="text-decoration: line-through;"<% end %>>
             <td> <%=I18n.l(event.date , format: :long, locale: :'de')%> </td>
             <td> <%= event.place %> </td>
             <% if !spree_current_user.blank? && spree_current_user.spree_roles.first.name == "admin" %>
