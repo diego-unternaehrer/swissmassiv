@@ -34,6 +34,7 @@
                     </span>
                   <% end %>
                 </small>
+
               </td>
               <% if !spree_current_user.blank? && spree_current_user.spree_roles.first.name == "admin" %>
                 <td> <%= link_to edit_partner_path(partner) do %>

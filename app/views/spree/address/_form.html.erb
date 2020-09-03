@@ -22,11 +22,6 @@
     <%= form.text_field :address1, class: 'form-control required', autocomplete: address_type + ' address-line1',  required: true %>
   </div>
 
-<!--   <div class="field" id=<%="#{address_id}address2" %>>
-    <%= form.label :address2, I18n.t('spree.street_address_2') %>
-    <%= form.text_field :address2, autocomplete: address_type + ' address-line2' %>
-  </div> -->
-
   <div class="field <%= 'field-required' if address.require_zipcode? %>" id=<%="#{address_id}zipcode" %>>
     <%= form.label :zipcode, t('spree.zip') %>
     <%= form.text_field :zipcode, class: "#{'required' if address.require_zipcode?} form-control", autocomplete: address_type + ' postal-code',  required: true %>
