@@ -21,22 +21,15 @@
     margin-bottom: 0;
     .form-group{
       margin-bottom: 0;
-      background-color: black;
+      background-color: transparent;
       color: white;
       border-bottom: 0.1rem solid white;
       position: relative;
     }
     .search_icon{
-      background-color: #151515;
-      border: none;
-      color: white;
       position: absolute;
       top: 0px;
       right: 2px;
-      :active {
-        background-color: yellow;
-        border: none;
-      }
     }
     .header-text {
       margin-bottom: 0;

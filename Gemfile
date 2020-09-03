@@ -104,6 +104,6 @@ gem 'open_solidus_cloudinary', github: 'Berlimioz/open_solidus_cloudinary'
 gem 'deface', github: 'spree/deface'
 
 #product search
-gem 'searchkick'
-gem 'solidus_searchkick'
+# gem 'searchkick'
+# gem 'solidus_searchkick'
 
