@@ -1,0 +1,58 @@
+<div style="text-align: center">
+  <h3 style="font-weight: 900;"><%= t('.dear_customer') %></h3>
+  <p><%= t('.instructions') %></p>
+  <br>
+  <p> <%= t('.order_summary') %>:</p>
+</div>
+<table style="width: 350px;">
+  <% @order.line_items.each do |item| %>
+    <tr>
+      <td style="border-bottom: 1px solid black;"> <div> <%=item.quantity%> <%= item.variant.product.name %>,</div> <div> <%= item.variant.options_text %>:</div></td>
+      <td style="text-align: right; vertical-align: bottom; border-bottom: 1px solid black;"> <%= item.display_amount %></td>
+    </tr>
+  <% end %>
+  <tr>
+    <td><%= t('.subtotal') %> </td>
+    <td style="text-align: right; vertical-align: bottom;"><%= @order.display_item_total %></td>
+  </tr>
+  <% if @order.line_item_adjustments.exists? %>
+    <% if @order.all_adjustments.promotion.eligible.exists? %>
+      <% @order.all_adjustments.promotion.eligible.group_by(&:label).each do |label, adjustments| %>
+        <tr>
+          <td><%= t('spree.promotion') %> <%= label %>:</td>
+          <td style="text-align: right; vertical-align: bottom;"><%= Spree::Money.new(adjustments.sum(&:amount), currency: @order.currency) %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  <% end %>
+  <% @order.shipments.group_by { |s| s.selected_shipping_rate.try(:name) }.each do |name, shipments| %>
+    <tr>
+      <td style="border-bottom: 1px solid black;"> <%= name %>:</td>
+      <td style="text-align: right; vertical-align: bottom; border-bottom: 1px solid black;"> <%= Spree::Money.new(shipments.sum(&:total_before_tax), currency: @order.currency) %> </td>
+    </tr>
+  <% end %>
+  <% if @order.all_adjustments.eligible.tax.exists? %>
+    <% @order.all_adjustments.eligible.tax.group_by(&:label).each do |label, adjustments| %>
+      <tr>
+        <td><%= t('spree.tax') %> <%= label %>: </td>
+        <td style="text-align: right; vertical-align: bottom;"><%= Spree::Money.new(adjustments.sum(&:amount), currency: @order.currency) %></td>
+      </tr>
+    <% end %>
+  <% end %>
+  <% @order.adjustments.eligible.each do |adjustment| %>
+    <% next if (adjustment.source_type == 'Spree::TaxRate') and (adjustment.amount == 0) %>
+      <tr>
+        <td><%= adjustment.label %>:</td>
+        <td style="text-align: right; vertical-align: bottom;"><%= adjustment.display_amount %></td>
+    </tr>
+  <% end %>
+  <tr>
+    <td><%= t('.total') %></td>
+    <td style="text-align: right; vertical-align: bottom; border-bottom: 1px double black;"><%= @order.display_total %></td>
+  </tr>
+</table>
+<br>
+<h2 style="text-align: center">
+  <%= t('.thanks') %>
+</h2>
+

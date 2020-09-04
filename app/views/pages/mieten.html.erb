@@ -1,8 +1,12 @@
 <div class="container text-center">
-  <h1><%= t('mieten') %></h1>
-  <h2><%= t('mieten_header') %></h2>
-  <p class="pb-2"><%= t('mieten_text') %></p>
-  <%= link_to t('contact_us'), main_app.contact_path, class: "button_2"%>
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-6">
+      <h1 class="py-4"><%= t('mieten') %></h1>
+      <h3><%= t('mieten_header') %></h3>
+      <p class="pb-3"><%= t('mieten_text') %></p>
+      <%= link_to t('contact_us'), main_app.contact_path, class: "button_2"%>
+    </div>
+  </div>
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 pt-5">
     <div class="col mb-4">
       <div class="card" style="background-color: #DFAA82;">
@@ -46,7 +50,10 @@
           <h4>SAISON</h4>
           <p>Komplette Wintersaison</p>
         </div>
-        <h2 class="card-text py-4">50%</h2>
+        <div class="card-text py-4">
+          <h2 >50%</h2>
+          <small>des Kaufpreises</small>
+        </div>
         <div class="card-footer">
           <small class="text-muted">Bei allfälligem Kauf, erhalten Sie 50% auf den Listenpreis.</small>
         </div>

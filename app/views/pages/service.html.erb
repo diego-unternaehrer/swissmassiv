@@ -1,9 +1,11 @@
 <div class="container">
-  <div class="text-center">
-    <h1><%= t('service') %></h1>
-    <h2><%= t('service_header') %></h2>
-    <p class="pb-2"><%= t('service_text') %></p>
-    <%= link_to t('contact_us'), main_app.contact_path, class: "button_2"%>
+  <div class="row justify-content-center text-center">
+    <div class="col-12 col-md-10 col-lg-6">
+      <h1 class="py-4"><%= t('service') %></h1>
+      <h3><%= t('service_header') %></h3>
+      <p class="pb-3"><%= t('service_text') %></p>
+      <%= link_to t('contact_us'), main_app.contact_path, class: "button_2"%>
+    </div>
   </div>
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 pt-5">
     <div class="col mb-4">

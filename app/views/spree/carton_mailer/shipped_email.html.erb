@@ -1,0 +1,20 @@
+<div style="text-align: center">
+  <h3 style="font-weight: 900;"><%= t('spree.shipment_mailer.shipped_email.dear_customer') %></h3>
+  <p> <%= t('spree.shipment_mailer.shipped_email.instructions') %> </p>
+  <br>
+  <p> <%= t('spree.shipment_mailer.shipped_email.shipment_summary') %>: </p>
+</div>
+<table style="width: 350px;">
+  <% @manifest.each do |item| %>
+    <tr>
+      <td><%=item.quantity%> <%= item.variant.product.name %></td>
+      <td style="text-align: right;"><%= item.variant.options_text %></td>
+    </tr>
+  <% end %>
+</table>
+<div style="text-align: center">
+  <p> <%= t('spree.shipment_mailer.shipped_email.track_information', tracking: @carton.tracking) if @carton.tracking %> </p>
+  <p> <%= t('spree.shipment_mailer.shipped_email.track_link', url: @carton.tracking_url) if @carton.tracking_url %></p>
+  <br>
+  <h2><%= t('spree.order_mailer.confirm_email.thanks') %></h2>
+</div>

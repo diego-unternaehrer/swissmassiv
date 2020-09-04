@@ -1,8 +1,12 @@
-<p id="notice"><%= notice %></p>
 <div class="container">
-  <h1><%= t('personalised') %></h1>
-  <h2><%= t('personalised_header') %></h2>
-  <p class="pb-2"><%= t('personalised_text') %></p>
+  <div class="row justify-content-center text-center">
+    <div class="col-12 col-md-10 col-lg-6">
+      <h1 class="py-4"><%= t('personalised') %></h1>
+      <h3><%= t('personalised_header') %></h3>
+      <p class="pb-3"><%= t('personalised_text') %></p>
+      <%= link_to t('contact_us'), main_app.contact_path, class: "button_2"%>
+    </div>
+  </div>
   <% unless @personaliseds.empty? %>
     <div class="card-columns">
       <% @personaliseds.each do |personalised| %>
