@@ -1,26 +1,8 @@
 <div class="row justify-content-center py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1514289247233-4408d3a2c300?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80); background-size: cover; background-position: center;">
   <div class="col-9 col-md-6 col-lg-4 py-5">
-    <h1><%= t('allround') %></h1>
-    <h3><%= t('allround_header') %></h3>
-    <div class="pb-2">
-      <table class="table table-borderless text-white">
-        <tr>
-          <th>Geeignet für:</th>
-        </tr>
-        <tr>
-          <td><i class="fas fa-skiing"></i> Fahrkönnen</td>
-          <td>Anfänger</td>
-        </tr>
-        <tr>
-          <td><i class="fas fa-bacon"></i> Fahrstil</td>
-          <td> Komfort</td>
-        </tr>
-        <tr class="pb-2">
-          <td><i class="fas fa-mountain"></i> Fahrgelände</td>
-          <td>Piste</td>
-        </tr>
-      </table>
-    </div>
+    <h1><%= t('allrounder') %></h1>
+    <h3><%= t('allrounder_header') %></h3>
+    <p class="pb-2"><%= t('allrounder_text') %></p>
     <%= link_to t('more'), spree.nested_taxons_path("skis/allrounder"), class: "button_2" %>
   </div>
   <div class="col-1 col-md-3 col-lg-2"></div>
@@ -29,25 +11,7 @@
   <div class="col-9 col-md-6 col-lg-4 py-5">
     <h1><%= t('allmountain') %></h1>
     <h3><%= t('allmountain_header') %></h3>
-    <div class="pb-2">
-      <table class="table table-borderless text-white">
-        <tr>
-          <th>Geeignet für:</th>
-        </tr>
-        <tr>
-          <td><i class="fas fa-skiing"></i> Fahrkönnen</td>
-          <td>Durchschnittlich</td>
-        </tr>
-        <tr>
-          <td><i class="fas fa-bacon"></i> Fahrstil</td>
-          <td> Ambitioniert </td>
-        </tr>
-        <tr class="pb-2">
-          <td><i class="fas fa-mountain"></i> Fahrgelände</td>
-          <td>Piste</td>
-        </tr>
-      </table>
-    </div>
+    <p class="pb-2"><%= t('allmountain_text') %></p>
     <%= link_to t('more'), spree.nested_taxons_path("skis/allmountain"), class: "button_2" %>
   </div>
   <div class="col-1 col-md-3 col-lg-2"></div>
@@ -56,25 +20,7 @@
   <div class="col-9 col-md-6 col-lg-4 py-5">
     <h1><%= t('slalom_carver') %></h1>
     <h2><%= t('slalom_carver_header') %></h2>
-    <div class="pb-2">
-      <table class="table table-borderless text-white">
-        <tr>
-          <th>Geeignet für:</th>
-        </tr>
-        <tr>
-          <td><i class="fas fa-skiing"></i> Fahrkönnen</td>
-          <td>Gut</td>
-        </tr>
-        <tr>
-          <td><i class="fas fa-bacon"></i> Fahrstil</td>
-          <td> Sport</td>
-        </tr>
-        <tr class="pb-2">
-          <td><i class="fas fa-mountain"></i> Fahrgelände</td>
-          <td>Piste / Abseits (50/50)</td>
-        </tr>
-      </table>
-    </div>
+    <p class="pb-2"><%= t('slalom_carver_text') %></p>
     <%= link_to t('more'), spree.nested_taxons_path("skis/slalom-carver"), class: "button_2" %>
   </div>
   <div class="col-1 col-md-3 col-lg-2"></div>
@@ -83,30 +29,12 @@
   <div class="col-9 col-md-6 col-lg-4 py-5">
     <h1><%= t('slalom_race_carver') %></h1>
     <h2><%= t('slalom_race_carver_header') %></h2>
-    <div class="pb-2">
-      <table class="table table-borderless text-white">
-        <tr>
-          <th>Geeignet für:</th>
-        </tr>
-        <tr>
-          <td><i class="fas fa-skiing"></i> Fahrkönnen</td>
-          <td>Sport</td>
-        </tr>
-        <tr>
-          <td><i class="fas fa-bacon"></i> Fahrstil</td>
-          <td> Komfort</td>
-        </tr>
-        <tr class="pb-2">
-          <td><i class="fas fa-mountain"></i> Fahrgelände</td>
-          <td>Abseits / Tiefschnee</td>
-        </tr>
-      </table>
-    </div>
+    <p class="pb-2"><%= t('slalom_race_carver_text') %></p>
     <%= link_to t('more'), spree.nested_taxons_path("skis/slalom-race-carver"), class: "button_2" %>
   </div>
   <div class="col-1 col-md-3 col-lg-2"></div>
 </div>
-<div class="row justify-content-center py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(<%= asset_path 'engraving.png' %>); background-size: cover; background-position: center;">
+<div class="row justify-content-center py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(https://res.cloudinary.com/swissmassiv/image/upload/f_auto,q_auto/v1599601170/Assets/engraving_l27a4i.jpg); background-size: cover; background-position: center;">
   <div class="col-9 col-md-6 col-lg-4 py-5">
     <h1><%= t('personalised') %></h1>
     <h2><%= t('personalised_header') %></h2>
@@ -117,7 +45,7 @@
 </div>
 
 <% if I18n.locale == :de %>
-  <div class="row justify-content-center py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(<%= asset_path 'skier.jpg' %>); background-size: cover; background-position: center;">
+  <div class="row justify-content-center py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(https://res.cloudinary.com/swissmassiv/image/upload/f_auto,q_auto/v1599604722/Assets/skier_rpd2bp.jpg); background-size: cover; background-position: center;">
     <div class="col-9 col-md-6 col-lg-4 py-5">
       <h1><%= t('mieten') %></h1>
       <h2><%= t('mieten_header') %></h2>
@@ -126,7 +54,7 @@
     </div>
     <div class="col-1 col-md-3 col-lg-2"></div>
   </div>
-  <div class="row justify-content-center py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(<%= asset_path 'bamboo.png' %>); background-size: cover; background-position: center;">
+  <div class="row justify-content-center py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(https://res.cloudinary.com/swissmassiv/image/upload/f_auto,q_auto/v1599598972/Assets/bamboo_we2vfe.jpg); background-size: cover; background-position: center;">
     <div class="col-9 col-md-6 col-lg-4 py-5">
       <h1><%= t('service') %></h1>
       <h2><%= t('service_header') %></h2>
