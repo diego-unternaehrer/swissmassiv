@@ -7,6 +7,7 @@
     <%= f.input :address, label: "Adresse" %>
     <%= f.input :zip_code, label: "PLZ" %>
     <%= f.input :place, label: "Ort" %>
+    <% Carmen.i18n_backend.locale = :de %>
     <%= f.input :country, label: "Land", collection: Carmen::Country.all, prompt: :translate %>
     <%= f.input :link, label: "Webseite" %>
   </div>
