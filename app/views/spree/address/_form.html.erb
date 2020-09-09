@@ -36,7 +36,7 @@
   <div class="field field-required" id=<%="#{address_id}country" %>>
     <%= form.label :country_id, t('spree.country') %>
     <span id=<%="#{address_id}country-selection" %>>
-      <%= form.collection_select :country_id, available_countries, :id, :name, {},
+      <%= form.collection_select :country_id, country_selection, :id, :name, {},
           class: 'form-control required',
           autocomplete: address_type + ' country-name',
           required: true

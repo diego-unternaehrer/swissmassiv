@@ -64,3 +64,5 @@ en:
   personalised_header: ""
   personalised_text: ""
   save_and_continue: "Save and continue"
+  ch_only: "Currently, only orders within Switzerland can be processed by the online shop."
+  from_abroad: "If you would like to order from abroad, please contact us."
