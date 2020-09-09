@@ -1,18 +1,18 @@
 
 <div class="row justify-content-center py-5"  style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(https://res.cloudinary.com/swissmassiv/image/upload/f_auto,q_auto/v1599604722/Assets/tree_pcqwjm.jpg); background-size: cover; background-position: center;">
   <div class="col-9 col-md-6 col-lg-4 py-5">
-    <h1>Handgemachte Skis aus der Schweiz </h1>
+    <h1><%= t('handmade') %></h1>
     <p class="pb-3" >"<%= t('quote') %>" <i>- René Unternährer </i></p>
     <%= link_to main_app.about_path, class: "button_2" do %>
-      <%= fa_icon "info-circle" %> Über uns
+      <%= fa_icon "info-circle" %> <%= t('about') %>
     <% end %>
   </div>
   <div class="col-1 col-md-3 col-lg-2"></div>
 </div>
 <div class="row justify-content-center py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(https://res.cloudinary.com/swissmassiv/image/upload/f_auto,q_auto/v1599604724/Assets/ski_preview_vjoq93.jpg); background-size: cover; background-position: center;">
   <div class="col-9 col-md-6 col-lg-4 py-5">
-    <h1>Jeder Ski ist einzigartig</h1>
-    <p  class="pb-3">swiss massiv Ski sind das Resultat jahrzehntelanger Erfahrung. Jeder Ski ist ein Unikat und wird individuell von Hand gefertigt. swiss massiv Premium­-Skis wurden kreiert, um Liebhaber des Aussergewöhnlichen zu begeistern.</p>
+    <h1><%= t('one_of_a_kind') %></h1>
+    <p class="pb-3"><%= t('ski_preview') %></p>
     <%= link_to main_app.skis_path, class: "button_2" do %>
       <%= fa_icon "skiing" %> Skis
     <% end %>
@@ -21,20 +21,20 @@
 </div>
 <div class="row justify-content-center py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://res.cloudinary.com/swissmassiv/image/upload/f_auto,q_auto/v1599602441/Assets/jacke_vc3pu5.jpg); background-size: cover; background-position: center;">
   <div class="col-9 col-md-6 col-lg-4 py-5">
-    <h1>Zubehör</h1>
-    <p class="pb-3">swiss massiv bietet nicht nur Skis an, sondern auch das passende Zubehör. Von Ski-Jacke über Ski-Sack bis hin zu Ski-Bindungen ist bei uns alles erhältich. </p>
-    <%= link_to "#", class: "button_2" do %>
-        <%= fa_icon "tshirt" %> Zubehör
+    <h1><%= t('equipment') %></h1>
+    <p class="pb-3"><%= t('equipment_preview') %> </p>
+    <%= link_to spree.nested_taxons_path("equipment"), class: "button_2" do %>
+        <%= fa_icon "tshirt" %> <%= t('equipment') %>
     <% end %>
   </div>
   <div class="col-1 col-md-3 col-lg-2"></div>
 </div>
 <div class="row justify-content-center py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://res.cloudinary.com/swissmassiv/image/upload/f_auto,q_auto/v1599604724/Assets/shop_t29h73.jpg); background-size: cover; background-position: center;">
   <div class="col-9 col-md-6 col-lg-4 py-5">
-    <h1>Verkauf</h1>
-    <p class="pb-3">Viele Skishops im In- und Ausland verkaufen und vermieten unsere Skis und Zubehör.</p>
+    <h1><%= t('stores') %></h1>
+    <p class="pb-3"><%= t('stores_preview') %></p>
     <%= link_to main_app.partners_path, class: "button_2" do %>
-      <%= fa_icon "store-alt" %> Händlersuche
+      <%= fa_icon "store-alt" %> <%= t('partner') %>
     <% end %>
   </div>
   <div class="col-1 col-md-3 col-lg-2"></div>

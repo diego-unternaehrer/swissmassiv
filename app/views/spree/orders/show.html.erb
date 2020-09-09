@@ -1,10 +1,17 @@
 <fieldset id="order_summary" data-hook>
-  <legend align="center"> <h1> <%= t('spree.order_number', number: @order.number) %> </h1> </legend>
+  <legend align="center" class="pt-4"> <h1> <%= t('spree.order_number', number: @order.number) %> </h1> </legend>
 <!--   <h1><%= accurate_title %></h1> -->
   <% if order_just_completed?(@order) %>
-      <h2 class="text-center pb-5"><%= t('spree.thank_you_for_your_order') %></h2>
+      <h2 class="text-center"><%= t('spree.thank_you_for_your_order') %></h2>
   <% end %>
+  <div class="text-center p-5">
+      <p><%= t('bank_account') %></p>
+      <p>IBAN: CH13 8080 8009 6153 5262 6</p>
+      <p>swiss massiv GmbH</p>
+      <p>Entlebucherstrasse 7</p>
+      <p>CH-6112 Doppleschwand</p>
 
+  </div>
   <div id="order" data-hook>
     <%= render partial: 'spree/shared/order_details', locals: { order: @order } %>
 
