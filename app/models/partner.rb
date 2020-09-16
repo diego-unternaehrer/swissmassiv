@@ -6,6 +6,6 @@ class Partner < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
 
   def full_address
-    address + " " + zip_code + " " + place + " " + country
+    address + ", " + zip_code + " " + place + ", " + country
   end
 end
