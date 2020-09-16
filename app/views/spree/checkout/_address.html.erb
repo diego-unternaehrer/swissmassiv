@@ -25,7 +25,22 @@
   <%= form.label :email %><br />
   <%= form.email_field :email, required: true, class: 'form-control' %>
 </div>
-
+<% if @order.contain_skis? %>
+  <% if @order.contain_skis? && @order.contain_binding? %>
+    <div class="alert-dark rounded p-3 m-3" role="alert">
+      <small><%= t('ski_binding_selected') %></small>
+    </div>
+  <% else %>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+       <%=t("no_binding_selected")%>
+      <hr>
+      <small><%=t("bingings_in_shop")%></small>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  <% end %>
+<% end %>
 
 <div class="form-buttons p-3" data-hook="buttons">
   <%= submit_tag t('save_and_continue'), class: 'button_2' %>

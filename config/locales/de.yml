@@ -79,4 +79,17 @@ de:
   save_and_continue: "Speichern und weiterfahren"
   ch_only: "Zur Zeit können nur Bestellungen innerhalb der Schweiz über den Webshop entgegengenommen werden."
   from_abroad: "Falls Sie aus dem Ausland bestellen möchten, kontaktieren Sie uns bitte."
+  ski_binding_selected: "Da Sie einen Ski mit Bindung bestellen, werden wir zur Montierung der Bindung persönliche Informationen, wie Grösse und Gewicht, benötigen. Diesbezüglich werden wir uns nach Bestellungsabschluss per E-Mail bei Ihnen melden."
+  no_binding_selected: "Ihre Bestellung enthält Skis, aber keine Bindung."
+  bingings_in_shop: "Falls Sie gerne Skis mit Bindung bestellen möchten, wählen Sie bitte die entsprechende Bindung unter Zubehör aus."
   bank_account: "Bitte überweisen Sie den Rechnungsbetrag auf folgendes Bankkonto:"
+  spree:
+    helpers:
+      products:
+        price_diff_add_html: "(Zuschlag: %{amount_html})"
+        price_diff_subtract_html: "(Rabatt: %{amount_html})"
+  time:
+    formats:
+      solidus:
+        long: "%d. %b %Y %-k:%M "
+        short: "%-d.  '%y %-k:%M"

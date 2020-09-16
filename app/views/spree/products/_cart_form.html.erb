@@ -3,11 +3,13 @@
 
     <% if @product.variants_and_option_values_for(current_pricing_options).any? %>
         <div id="product-variants">
-     <!--      <h6 class="product-section-title row">
-            <% @product.option_types.each do |option_type| %>
-              <%= option_type.presentation %>:
+<!--           <% @options.each do |option_type, option_values| %>
+            <%= content_tag :h2, option_type.presentation %>
+            <% option_values.each do |option_value| %>
+              <%= radio_button_tag option_type.name, option_value.id %>
+              <%= label_tag option_value.presentation %>
             <% end %>
-          </h6> -->
+          <% end %> -->
           <ul style="list-style-type: none; padding: 0;">
             <% @product.variants_and_option_values_for(current_pricing_options).each_with_index do |variant, index| %>
               <li>

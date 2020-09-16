@@ -23,9 +23,6 @@
         <div data-hook="product_properties">
           <%= render partial: 'properties' %>
         </div>
-    <!--<div data-hook="promotions">
-          <%= render partial: 'promotions' %>
-        </div> -->
         <% unless @product.description.nil? %>
           <div id="product-description" data-hook="product_description">
             <div itemprop="description" data-hook="description">

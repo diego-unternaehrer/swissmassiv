@@ -72,4 +72,8 @@ en:
   save_and_continue: "Save and continue"
   ch_only: "Currently, only orders within Switzerland can be processed by the online shop."
   from_abroad: "If you would like to order from abroad, please contact us."
+  ski_binding_selected: "You are about to order a ski with binding. In order to mount and adjust the binding correctly, we are going to require some personal information, such as body height and weight. We shall get in touch with you by email once this order has been placed."
   bank_account: "Please transfer the order total to the following bank account:"
+  no_binding_selected: "Your current order contains skis but no binding."
+  bingings_in_shop: "If you would like to order skis with binding, please select the binding you would like in the equipment section."
+
