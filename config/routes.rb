@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
     get 'personalised', to: 'personaliseds#index', as: :personalised
     resources :personaliseds, except: [:index, :show]
-    resources :partners
+    resources :partners, except: [:show]
     resources :events
     resources :contacts, only: [:create]
     mount Spree::Core::Engine, at: '/'
