@@ -5,9 +5,6 @@ class EventsController < ApplicationController
     @events = Event.where("date > ?", Date.today).order(:date)
   end
 
-  def show
-  end
-
   def new
     @event = Event.new
   end

@@ -38,9 +38,9 @@
             </td>
             <% if !spree_current_user.blank? && spree_current_user.spree_roles.first.name == "admin" %>
               <td>
-    <!--             <%= link_to edit_partner_path(partner, locale: I18n.locale) do %>
+                 <%= link_to edit_partner_path(partner) do %>
                   <i class="fas fa-edit"></i>
-                <% end %> -->
+                <% end %>
                 <%= link_to partner_url(partner, locale: I18n.locale), method: :delete, data: { confirm: 'Bist du sicher?' } do %>
                   <i class="fas fa-trash-alt"></i>
                 <% end %>

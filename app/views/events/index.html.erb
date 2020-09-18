@@ -19,13 +19,13 @@
           <tbody>
             <% @events.each do |event| %>
               <tr <% if event.cancelled? %>style="text-decoration: line-through;"<% end %>>
-                <td> <%=I18n.l(event.date , format: :long, locale: :'de')%> </td>
+                <td> <%=I18n.l(event.date , format: :long, locale: :de)%> </td>
                 <td> <%= event.place %> </td>
                 <% if !spree_current_user.blank? && spree_current_user.spree_roles.first.name == "admin" %>
                   <td> <%= link_to edit_event_path(event) do %>
                     <i class="fas fa-edit"></i>
                   <% end %>
-                  <%= link_to event, method: :delete, data: { confirm: 'Bist du sicher?' } do %>
+                  <%= link_to event_url(event, locale: I18n.locale), method: :delete, data: { confirm: 'Bist du sicher?' } do %>
                     <i class="fas fa-trash-alt"></i>
                   <% end %>
                 </td>
