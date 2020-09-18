@@ -1,5 +1,5 @@
 class PartnersController < ApplicationController
-  before_action :set_partner, only: [:show, :edit, :update, :destroy]
+  before_action :set_partner, only: [:edit, :update, :destroy]
 
   def index
     @partners = Partner.geocoded # returns partners with coordinates
@@ -13,9 +13,6 @@ class PartnersController < ApplicationController
         infoWindow: render_to_string(partial: "info_window", locals: { partner: partner })
       }
     end
-  end
-
-  def show
   end
 
   def new
