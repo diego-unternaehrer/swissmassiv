@@ -3,9 +3,11 @@
     <h1 class="taxon-title"><%= @taxon.name %></h1>
     <p><%= @taxon.description %></p>
   </div>
-  <div data-hook="taxon_products">
-    <%= render partial: 'spree/shared/products', locals: { products: @products, taxon: @taxon } %>
-  </div>
+  <% unless @taxon.children.any? %>
+    <div data-hook="taxon_products">
+      <%= render partial: 'spree/shared/products', locals: { products: @products, taxon: @taxon } %>
+    </div>
+  <% end %>
 
   <% unless params[:keywords].present? %>
     <div data-hook="taxon_children">
