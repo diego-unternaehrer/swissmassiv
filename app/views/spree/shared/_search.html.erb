@@ -1,6 +1,6 @@
 <% @taxons = @taxon && @taxon.parent ? @taxon.parent.children : Spree::Taxon.roots %>
 <%= form_tag spree.products_path, method: :get, class: "form-group" do %>
-  <%= search_field_tag :keywords, params[:keywords], placeholder: t('spree.search'), class: "string required", style: "background-color: #151515; color: white; border: none;" %>
+  <%= search_field_tag :keywords, params[:keywords], placeholder: t('product_search'), class: "string required", style: "background-color: #151515; color: white; border: none;" %>
   <%= button_tag type: "submit", class: "search_icon", style: "color: white; background-color: transparent; border: none;" do %>
     <%= fa_icon "search" %>
   <% end %>
