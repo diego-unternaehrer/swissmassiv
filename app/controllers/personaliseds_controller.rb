@@ -1,5 +1,4 @@
 class PersonalisedsController < ApplicationController
-  before_action :set_personalised, only: [:edit, :update, :destroy]
 
   def index
     @personaliseds = Personalised.all
@@ -7,9 +6,6 @@ class PersonalisedsController < ApplicationController
 
   def new
     @personalised = Personalised.new
-  end
-
-  def edit
   end
 
   def create
@@ -21,24 +17,13 @@ class PersonalisedsController < ApplicationController
     end
   end
 
-  def update
-    if @personalised.update(personalised_params)
-      redirect_to personalised_path, notice: 'Erfolgreich aktualisiert.'
-    else
-      render :edit
-    end
-  end
-
   def destroy
+    @personalised = Personalised.find(params[:id])
     @personalised.destroy
-    redirect_to personalised_path notice: 'Erfolgreich entfernt.'
+    redirect_to personalised_path, notice: 'Erfolgreich entfernt.'
   end
 
   private
-    def set_personalised
-      @personalised = Personalised.find(params[:id])
-    end
-
     def personalised_params
       params.require(:personalised).permit(:name, :photo)
     end

@@ -15,7 +15,8 @@ Rails.application.routes.draw do
     get 'contact',      to: 'contacts#new',       as: :contact
 
     get 'personalised', to: 'personaliseds#index', as: :personalised
-    resources :personaliseds, except: [:index, :show]
+    delete 'personalised', to: 'personaliseds#destroy', as: :delete_personalised
+    resources :personaliseds, only: [:new, :create]
     resources :partners, except: [:edit, :update, :show]
     resources :events, except: [:edit, :update, :show]
     resources :contacts, only: [:create]

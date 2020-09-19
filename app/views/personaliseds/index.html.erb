@@ -13,7 +13,7 @@
         <div class="card">
           <%= cl_image_tag personalised.photo.key, style: "width: 100%" %>
           <% if !spree_current_user.blank? && spree_current_user.spree_roles.first.name == "admin" %>
-            <%= link_to personalised, method: :delete, data: { confirm: 'Bist du sicher?' } do %>
+            <%= link_to delete_personalised_url(id: personalised.id, locale: I18n.locale), method: :delete, data: { confirm: 'Bist du sicher?' } do %>
               <i class="fas fa-trash-alt"></i>
             <% end %>
           <% end %>

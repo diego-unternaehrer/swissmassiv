@@ -1,5 +1,21 @@
 <div class="container">
-  <%= render 'form', personalised: @personalised %>
+  <%= simple_form_for(@personalised) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+    <div class="form-inputs">
+      <%= f.input :photo, as: :file %>
+    </div>
+
+    <div class="form-actions">
+      <% if params[:action] == "edit" %>
+        <%= f.submit "Aktualisieren", class: "button_2" %>
+      <% else %>
+        <%= f.submit "Hinzufügen", class: "button_2" %>
+      <% end %>
+    </div>
+  <% end %>
+
   <br>
   <%= link_to 'Zurück', personalised_path %>
 </div>
