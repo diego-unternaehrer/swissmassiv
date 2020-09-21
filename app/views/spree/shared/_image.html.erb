@@ -3,9 +3,9 @@
 
 <% if image_url = image.try(:url, size)  %>
   <% if image_alt = image.try(:alt) %>
-    <%= image_tag image_url, alt: image_alt, itemprop: itemprop, style: "width: 100%;" %>
+    <%= image_tag image_url, alt: image_alt, itemprop: itemprop, style: "width: auto; max-width: 100%; max-height: 50vh" %>
   <% else %>
-    <%= image_tag image_url, itemprop: itemprop, style: "width: 100%;" %>
+    <%= image_tag image_url, itemprop: itemprop, style: "width: auto; max-width: 100%; max-height: 50vh" %>
   <% end %>
 <% else %>
   <span class="image-placeholder <%= size %>"></span>
