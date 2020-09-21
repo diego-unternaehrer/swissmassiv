@@ -29,7 +29,7 @@
           <% url = spree.product_path(product, taxon_id: @taxon.try(:id)) %>
           <div id="product_<%= product.id %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
             <% cache(@taxon.present? ? [I18n.locale, current_pricing_options, @taxon, product] : [I18n.locale, current_pricing_options, product]) do %>
-              <div class="product-image">
+              <div class="product-image" style="display: flex; justify-content: center;">
                <%= link_to(render('spree/shared/image', image: product.gallery.images.first, size: :large, itemprop: "image"), url, itemprop: 'url') %>
               </div>
               <div class="product-info">
