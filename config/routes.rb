@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  get "partners/:id/edit", to: "partners#edit",  as: :edit_partner
-  patch "partners/:id", to: "partners#update", as: :partner
-  get "events/:id/edit", to: "events#edit",  as: :edit_event
-  patch "events/:id", to: "events#update", as: :event
-
   scope '(:locale)', locale: /de|en|fr|it/ do
     root to: 'pages#home'
 
@@ -17,8 +12,8 @@ Rails.application.routes.draw do
     get 'personalised', to: 'personaliseds#index', as: :personalised
     delete 'personalised', to: 'personaliseds#destroy', as: :delete_personalised
     resources :personaliseds, only: [:new, :create]
-    resources :partners, except: [:edit, :update, :show]
-    resources :events, except: [:edit, :update, :show]
+    resources :partners, except: [:show]
+    resources :events, except: [:show]
     resources :contacts, only: [:create]
     mount Spree::Core::Engine, at: '/'
   end

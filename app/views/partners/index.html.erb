@@ -41,7 +41,7 @@
                  <%= link_to edit_partner_path(partner) do %>
                   <i class="fas fa-edit"></i>
                 <% end %>
-                <%= link_to partner_url(partner, locale: I18n.locale), method: :delete, data: { confirm: 'Bist du sicher?' } do %>
+                <%= link_to partner_path(partner), method: :delete, data: { confirm: 'Bist du sicher?' } do %>
                   <i class="fas fa-trash-alt"></i>
                 <% end %>
               </td>
