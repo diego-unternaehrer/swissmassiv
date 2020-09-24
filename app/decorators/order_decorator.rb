@@ -1,15 +1,13 @@
 module Swissmassiv::OrderDecorator
 
   def contain_skis?
-    require 'set'
-    @taxons = []
+    @taxonomies = []
     line_items.each do |line_item|
       line_item.product.taxons.each do |taxon|
-        @taxons << taxon.name
+        @taxonomies << taxon.taxonomy.name
       end
     end
-    @skis = ["Allrounder", "Allmountain", "Slalom Carver", "Slalom Race Carver"]
-    @taxons.to_set.intersect?(@skis.to_set)
+    @taxonomies.include?("ski")
   end
 
   def contain_binding?
@@ -17,11 +15,14 @@ module Swissmassiv::OrderDecorator
     @taxons = []
     line_items.each do |line_item|
       line_item.product.taxons.each do |taxon|
-        @taxons << taxon.name
+        @taxons << taxon.permalink
       end
     end
-    @taxons.include?("Bindung")
+    @permalinks = ["zubehoer/bindings-allmountain", "zubehoer/bindings-others"]
+    @taxons.to_set.intersect?(@permalinks.to_set)
   end
 
   Spree::Order.prepend self
 end
+
+
