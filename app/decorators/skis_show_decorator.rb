@@ -1,11 +1,13 @@
 module Swissmassiv::Product
   # Find the Product's Variant from an array of OptionValue ids
   def is_ski?
-    @taxonomies = []
+    require 'set'
+    @taxons = []
     taxons.each do |taxon|
-      @taxonomies << taxon.taxonomy.name
+      @taxons << taxon.name
     end
-    @taxonomies.include?("ski")
+    @skis = ["Allrounder", "Allmountain", "Slalom Carver", "Slalom Race Carver"]
+    @taxons.to_set.intersect?(@skis.to_set)
   end
 
   Spree::Product.prepend self
