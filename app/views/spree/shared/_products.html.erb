@@ -36,8 +36,8 @@
                 <h3>
                   <%= product.name %>
                 </h3>
-                <div class="product-details">
-                  <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                <div class="product-details row">
+                  <span class="col-6 col-md-12 col-xl-6" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                     <% if price = product.price_for(current_pricing_options) %>
                       <span class="price selling" itemprop="price" content="<%= price.to_d %>">
                         <%= price.to_html %>
@@ -45,7 +45,9 @@
                     <% end %>
                     <span itemprop="priceCurrency" content="<%= current_pricing_options.currency %>"></span>
                   </span>
-                  <small><%= link_to t('more'), url, class: "button_2" %></small>
+                  <div class="pt-3 col-6 col-md-12 col-xl-6">
+                    <small><%= link_to t('more'), url, class: "button_2" %></small>
+                  </div>
                 </div>
               </div>
             <% end %>
