@@ -1,3 +1,14 @@
+<head>
+  <style>
+    @media (min-width: 576px) {
+      #products.card-columns {column-count: 1;}
+    }
+    @media (min-width: 768px) {
+      #products.card-columns { column-count: 2; }
+    }
+  </style>
+</head>
+
 <%
   paginated_products = @searcher.retrieve_products if params.key?(:keywords)
   paginated_products ||= products
