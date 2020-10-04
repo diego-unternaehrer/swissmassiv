@@ -26,7 +26,8 @@
     <div class="card-columns">
       <% products.each do |product| %>
         <style scoped>
-          @media (max-width: 991px) and (min-width: 576px) { .card-columns { column-count: 2;} }
+          @media (max-width: 767px) { .card-columns { column-count: 1;} }
+          @media (max-width: 991px) and (min-width: 768px) { .card-columns { column-count: 2;} }
         </style>
         <div class="card product-card">
           <% url = spree.product_path(product, taxon_id: @taxon.try(:id)) %>
@@ -40,7 +41,7 @@
                   <%= product.name %>
                 </h3>
                 <div class="product-details row">
-                  <span class="col-6 col-sm-12 col-md-5 col-lg-12 col-xl-6" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                  <span class="col-5 col-sm-12 col-md-5 col-lg-12 col-xl-6" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                     <% if price = product.price_for(current_pricing_options) %>
                       <span class="price selling" itemprop="price" content="<%= price.to_d %>">
                         <%= price.to_html %>
@@ -48,7 +49,7 @@
                     <% end %>
                     <span itemprop="priceCurrency" content="<%= current_pricing_options.currency %>"></span>
                   </span>
-                  <div class="pt-3 col-6 col-sm-12 col-md-7 col-lg-12 col-xl-6">
+                  <div class="pt-3 col-7 col-sm-12 col-md-7 col-lg-12 col-xl-6">
                     <small><%= link_to t('more'), url, class: "button_2" %></small>
                   </div>
                 </div>
