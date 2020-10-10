@@ -1,5 +1,5 @@
 
-<div class="row justify-content-center py-5"  style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(https://res.cloudinary.com/swissmassiv/image/upload/f_auto,q_auto/v1599604722/Assets/tree_pcqwjm.jpg); background-size: cover; background-position: center;">
+<div class="row justify-content-center py-5"  style="position: relative; background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(https://res.cloudinary.com/swissmassiv/image/upload/f_auto,q_auto/v1599604722/Assets/tree_pcqwjm.jpg); background-size: cover; background-position: center;">
   <div class="col-9 col-md-6 col-lg-4 py-5">
     <h1><%= t('handmade') %></h1>
     <p class="pb-3" >"<%= t('quote') %>" <i>- René Unternährer </i></p>
@@ -8,6 +8,10 @@
     <% end %>
   </div>
   <div class="col-1 col-md-3 col-lg-2"></div>
+  <div style="position: absolute; right: 40px; bottom: 40px;">
+    <%= cl_image_tag("Assets/swisslabel-logo_izofhp.png", :height=>50, :quality=>"auto:best", :crop=>"scale", :fetch_format=>:auto) %>
+    <%= cl_image_tag("Assets/UBE_Partner_Betrieb_2017_cv3zge.png", :height=>50, :quality=>"auto:best", :crop=>"scale", :fetch_format=>:auto) %>
+  </div>
 </div>
 <div class="row justify-content-center py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(https://res.cloudinary.com/swissmassiv/image/upload/f_auto,q_auto/v1599604724/Assets/ski_preview_vjoq93.jpg); background-size: cover; background-position: center;">
   <div class="col-9 col-md-6 col-lg-4 py-5">

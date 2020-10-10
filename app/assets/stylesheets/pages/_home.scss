@@ -1,0 +1,14 @@
+.label-space {
+  position: relative;
+  .labels {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    width: 50vw;
+  }
+}
+
+
