@@ -11,8 +11,10 @@
       <% if I18n.locale == :de %>
         <br>
         <h4>Öffnungszeiten:</h4>
-        <p>Mo. – Fr.  8.00 – 12.00 / 13.30 – 17.30 auf telefonische Anmeldung</p>
-        <p>Ab November zusätzlich Samstagvormittag  9.00 – 12.00</p>
+        <h5> Montag  – Freitag  <small>(auf telefonische Anmeldung):</small> </h5>
+        <p> 8.00 – 12.00 / 13.30 – 17.30</p>
+        <h5> Ab November zusätzlich:</h5>
+        <p>Samstagvormittag  (9.00 – 12.00)</p>
       <% end %>
     </div>
     <%= cl_image_tag("Assets/shop_entry_wdtvu9.jpg", style: "width: 100%;") %>
@@ -21,13 +23,13 @@
     <div id="contact">
       <%= simple_form_for(@contact) do |f| %>
         <%= f.label :name, t("name") %></br>
-        <%= f.text_field  :name, required: true, style: "width: 90%;" %></br></br>
+        <%= f.text_field  :name, required: true %></br></br>
         <%= f.label :email, t("email") %></br>
-        <%= f.text_field :email, required: true, style: "width: 90%;" %></br></br>
+        <%= f.text_field :email, required: true %></br></br>
         <%= f.label :phone , t("phone") %> <br>
-        <%= f.text_field :phone, style: "width: 90%;" %></br></br>
+        <%= f.text_field :phone %></br></br>
         <%= f.label :message , t("message") %></br>
-        <%= f.text_area :message, rows: 8, cols: 40, required: true, style: "width: 90%;" %></br>
+        <%= f.text_area :message, rows: 8, cols: 40, required: true %></br>
         <div style= "display: none;" >
           <%= f.label :nickname%>
           <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
