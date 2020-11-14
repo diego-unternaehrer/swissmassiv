@@ -1,23 +1,19 @@
 .contact-items {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  .contact-info {
-    width: 100%;
-    color: white;
-    padding-top: 50px;
-    padding-bottom: 25px;
-    padding-right: 25px;
-
+  padding-top: 50px;
+  padding-bottom: 25px;
+  padding-right: 25px;
+  #contact{
     input {
       width: 100%;
     }
-
     textarea {
       width: 100%;
     }
-
-    .hidden { display: none; }
-
+    .hidden {
+      display: none;
+    }
     .alert-error {
     background-color: #f2dede;
     border-color: #eed3d7;
