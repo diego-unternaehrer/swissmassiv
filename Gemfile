@@ -74,8 +74,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'webpacker', '~> 3.0'
 
 # webshop
-gem 'solidus'
-gem 'solidus_auth_devise'
+gem 'solidus', '~> 2.10.2'
+gem 'solidus_auth_devise', '~> 2.5.0'
 
 # style
 gem 'bootstrap', '~> 4.4.1'
