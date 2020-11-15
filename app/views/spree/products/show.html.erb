@@ -3,7 +3,7 @@
     <% @body_id = 'product-details' %>
     <h1 class="text-center py-4" itemprop="name"><%= @product.name %></h1>
     <div class="row justify-content-around">
-      <div class="col-12 col-lg-4 pb-4 d-flex align-items-center justify-content-around" style="background-color: #D6D8D9;">
+      <div class="col-12 col-lg-4 pb-4 d-flex align-items-center justify-content-around" style="background-color: #757575; border-radius: 15px;">
         <div id="product-images" data-hook="product_images" class="row pr-1">
           <% if @product.gallery.images.size > 1 %>
             <div id="thumbnails" data-hook class="col-3">
