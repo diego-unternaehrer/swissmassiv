@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     get 'mieten',       to: 'pages#mieten',       as: :mieten
     get 'service',      to: 'pages#service',      as: :service
     get 'contact',      to: 'contacts#new',       as: :contact
+    get 'schreiner',    to: 'pages#schreiner',    as: :schreiner
 
     get 'personalised', to: 'personaliseds#index', as: :personalised
     delete 'personalised', to: 'personaliseds#destroy', as: :delete_personalised
