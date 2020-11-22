@@ -90,6 +90,11 @@ de:
       products:
         price_diff_add_html: "(Zuschlag: %{amount_html})"
         price_diff_subtract_html: "(Rabatt: %{amount_html})"
+    adjustment_labels:
+      line_item: "(%{promotion_name})"
+    cart_subtotal:
+      one: "Zwischensumme"
+      other: "Zwischensumme"
   time:
     formats:
       solidus:

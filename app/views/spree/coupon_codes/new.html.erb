@@ -1,6 +1,6 @@
-<div id="coupon_code" data-hook="coupon_code">
-  <%= form_tag order_coupon_codes_path(@order), method: :post do %>
-    <%= text_field_tag :coupon_code, nil, placeholder: t("spree.coupon_code"), size: 10 %>
-    <%= submit_tag t("spree.apply_code") %>
+<div id="coupon_code" data-hook="coupon_code" class="py-4">
+  <%= form_tag order_coupon_codes_path(@order), method: :post, class: "form-inline" do %>
+    <%= text_field_tag :coupon_code, nil, placeholder: t("spree.coupon_code"), class: "form-control mr-2" %>
+    <%= submit_tag t("spree.apply_code"), class: 'button_2' %>
   <% end %>
 </div>

@@ -78,3 +78,7 @@ en:
   bank_account: "Please transfer the order total to the following bank account:"
   no_binding_selected: "Your current order contains skis but no binding."
   bingings_in_shop: "If you would like to order skis with binding, please select the binding you would like in the equipment section."
+  spree:
+    cart_subtotal:
+      one: "Subtotal"
+      other: "Subtotal"

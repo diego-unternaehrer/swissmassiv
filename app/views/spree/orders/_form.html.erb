@@ -15,7 +15,6 @@
     <div class="cart-subtotal row align-items-center p-3 border-bottom border-light">
       <h6 class="col-6 col-lg-9 text-right"><%= t('spree.cart_subtotal', count: order.line_items.sum(:quantity)) %></h6>
       <h6 class="col-6 col-lg-3"><%= order.display_item_total %></h6>
-      <td></td>
     </div>
     <%= render "spree/orders/adjustments" %>
   <% end %>

@@ -1,24 +1,18 @@
 <% @body_id = 'cart' %>
 <div data-hook="cart_container">
   <h1 class="text-center py-4"><%= t('spree.shopping_cart') %></h1>
-
   <% if @order.line_items.empty? %>
-
     <div data-hook="empty_cart" class="pb-5 text-center">
       <h2 class="p-5"><%= t('spree.your_cart_is_empty') %></h2>
       <p><%= link_to t('spree.continue_shopping'), products_path, class: "button_2" %></p>
     </div>
-
   <% else %>
-
     <div data-hook="outside_cart_form">
       <%= form_for @order, url: update_cart_path, html: {id: 'update-cart'} do |order_form| %>
         <div data-hook="inside_cart_form">
-
           <div data-hook="cart_items">
             <%= render 'spree/orders/form', order_form: order_form %>
           </div>
-
           <div class="row justify-content-around" data-hook="cart_buttons">
             <%= button_tag t("spree.update"), class: "button_1", id: "update-button" %>
 
@@ -28,9 +22,8 @@
           </div>
         </div>
       <% end %>
+      <%= render template: 'spree/coupon_codes/new' %>
     </div>
-
-
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
        <%=t("ch_only")%>
       <hr>
@@ -39,6 +32,5 @@
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
-
   <% end %>
 </div>
