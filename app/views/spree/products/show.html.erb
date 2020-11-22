@@ -3,22 +3,28 @@
     <% @body_id = 'product-details' %>
     <h1 class="text-center py-4" itemprop="name"><%= @product.name %></h1>
     <div class="row justify-content-around">
-      <div class="col-12 col-lg-4 pb-4 d-flex align-items-center justify-content-around" style="background-color: #757575; border-radius: 15px;">
-        <div id="product-images" data-hook="product_images" class="row pr-1">
-          <% if @product.gallery.images.size > 1 %>
+      <% if @product.gallery.images.size > 1 %>
+        <div class="col-12 col-lg-4 mb-4" style="background-color: #757575; border-radius: 15px;">
+          <div id="product-images" data-hook="product_images" class="row align-items-center justify-content-around">
             <div id="thumbnails" data-hook class="col-3">
               <%= render partial: 'thumbnails' %>
             </div>
             <div class="col-9">
-          <% end %>
-          <div id="main-image" data-hook>
-            <%= render partial: 'image' %>
-          </div>
-          <% if @product.gallery.images.size > 1 %>
+              <div id="main-image" class="row align-items-center justify-content-around py-2" data-hook>
+                <%= render partial: 'image' %>
+              </div>
             </div>
-          <% end %>
+          </div>
         </div>
-      </div>
+      <% else %>
+        <div class="col-12 col-lg-4 mb-4 d-flex align-items-center justify-content-around" style="background-color: #757575; border-radius: 15px;">
+          <div id="product-images" data-hook="product_images" class="row pr-1">
+            <div id="main-image" data-hook>
+              <%= render partial: 'image' %>
+            </div>
+          </div>
+        </div>
+      <% end %>
       <div class="col-12 col-lg-4">
         <div data-hook="product_properties">
           <%= render partial: 'properties' %>

@@ -2,6 +2,5 @@
   <div class="adjustment row align-items-center p-3 border-bottom border-light">
     <h6 class="col-6 col-lg-9 text-right"><%= type %>: <%= label %></h6>
     <h6 class="col-6 col-lg-3"><%= Spree::Money.new(adjustments.sum(&:amount), currency: @order.currency) %></h6>
-
   </div>
 <% end %>

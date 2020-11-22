@@ -1,4 +1,4 @@
-<tbody id="cart_adjustments" data-hook>
+<div id="cart_adjustments" data-hook>
   <% if @order.line_item_adjustments.exists? %>
     <% @order.line_item_adjustments.promotion.eligible.group_by(&:label).each do |label, adjustments| %>
       <%= render "spree/orders/adjustment_row", label: label, adjustments: adjustments, type: t('spree.promotion') %>
@@ -10,15 +10,13 @@
   <% end %>
 
   <% @order.shipments.each do |shipment| %>
-    <tr>
-      <td colspan="4" align='right'><h5><%= t('spree.shipping') %>: <%= shipment.shipping_method.name %></h5></td>
-      <td colspan='2'>
-        <h5><%= shipment.display_total_before_tax %></h5>
-      </td>
-    </tr>
+    <div class="row align-items-center p-3 border-bottom border-light">
+      <h6 class="col-6 col-lg-9 text-right"><%= t('spree.shipping') %>: <%= shipment.shipping_method.name %></h6>
+      <h6 class="col-6 col-lg-3"><%= shipment.display_total_before_tax %></h6>
+    </div>
   <% end %>
 
   <% @order.adjustments.eligible.group_by(&:label).each do |label, adjustments| %>
     <%= render "spree/orders/adjustment_row", label: label, adjustments: adjustments, type: t('spree.adjustment') %>
   <% end %>
-</tbody>
+</div>
