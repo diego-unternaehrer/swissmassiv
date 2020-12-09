@@ -77,7 +77,7 @@ Rails.application.configure do
     port:                 587,
     domain:               'swissmassiv.ch',
     user_name:            'apikey',
-    password:             ENV['SENDGRID_API_KEY']
+    password:             ENV['SENDGRID_API_KEY'],
     authentication:       :plain,
     enable_starttls_auto: true  }
 
