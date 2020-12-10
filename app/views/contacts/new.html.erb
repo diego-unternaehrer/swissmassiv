@@ -16,10 +16,16 @@
         <h5> Ab November zusätzlich</h5>
         <p> Samstagvormittag  (9.00 – 12.00)</p>
       <% end %>
+      <%= cl_image_tag("Assets/shop_entry_wdtvu9.jpg", style: "width: 100%;") %>
     </div>
-    <%= cl_image_tag("Assets/shop_entry_wdtvu9.jpg", style: "width: 100%;") %>
+     <div class="contact-map">
+      <div id="map" style="padding-bottom: 25px;"
+         data-markers="<%= @markers.to_json %>"
+         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+      ></div>
+    </div>
   </div>
-  <div class="contact-items">
+<!--   <div class="contact-items">
     <div id="contact">
       <%= simple_form_for(@contact) do |f| %>
         <%= f.label :name, t("name") %></br>
@@ -42,14 +48,14 @@
       <div  id="flash-message">
         <%= render 'shared/flash' %>
       </div>
-    </div>
-    <div class="contact-map">
+    </div> -->
+ <!--    <div class="contact-map">
       <div id="map" style="padding-bottom: 25px;"
          data-markers="<%= @markers.to_json %>"
          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
       ></div>
     </div>
-  </div>
+  </div> -->
 </div>
 
 <script type='text/javascript'>
