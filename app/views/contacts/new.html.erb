@@ -25,6 +25,17 @@
       ></div>
     </div>
   </div>
+  <% if I18n.locale == :de %>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <h2>Trotz Shutdown für Sie da:</h2>
+      <hr>
+      <p>Abholung vorbestellter Ware und Skimiete weiterhin möglich.</p>
+      <p>Gerne berate ich Sie telefonisch 078 667 78 32.</p>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  <% end%>
 <!--   <div class="contact-items">
     <div id="contact">
       <%= simple_form_for(@contact) do |f| %>
