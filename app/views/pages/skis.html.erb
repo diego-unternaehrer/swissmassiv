@@ -43,6 +43,16 @@
   </div>
   <div class="col-1 col-md-3 col-lg-2"></div>
 </div>
+<div class="row justify-content-center py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(https://res.cloudinary.com/swissmassiv/image/upload/v1618683053/Assets/Testkis_igqsul.jpg); background-size: cover; background-position: center;">
+  <div class="col-9 col-md-6 col-lg-4 py-5">
+    <h1><%= t('testskis') %></h1>
+    <h2><%= t('testskis_header') %></h2>
+    <p class="pb-2"><%= t('testskis_text') %></p>
+    <%= link_to t('more'), spree.nested_taxons_path("testskis"), class: "button_2" %>
+  </div>
+  <div class="col-1 col-md-3 col-lg-2"></div>
+</div>
+
 
 <% if I18n.locale == :de %>
   <div class="row justify-content-center py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(https://res.cloudinary.com/swissmassiv/image/upload/f_auto,q_auto/v1599604722/Assets/skier_rpd2bp.jpg); background-size: cover; background-position: right;">
