@@ -19,38 +19,37 @@
       <% end %>
       <br>
       <%= cl_image_tag("Assets/shop_entry_wdtvu9.jpg", style: "width: 100%;") %>
+      <div id="contact">
+        <%= simple_form_for(@contact) do |f| %>
+          <%= f.label :name, t("name") %></br>
+          <%= f.text_field  :name, required: true %></br></br>
+          <%= f.label :email, t("email") %></br>
+          <%= f.text_field :email, required: true %></br></br>
+          <%= f.label :phone , t("phone") %> <br>
+          <%= f.text_field :phone %></br></br>
+          <%= f.label :message , t("message") %></br>
+          <%= f.text_area :message, rows: 8, cols: 40, required: true %></br>
+          <div style= "display: none;" >
+            <%= f.label :nickname%>
+            <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
+          </div>
+          </br>
+          <%= f.submit t("send_message"), class: "button_2" %>
+          </br>
+          </br>
+        <% end %>
+        <div  id="flash-message">
+          <%= render 'shared/flash' %>
+        </div>
+      </div>
     </div>
-     <div class="contact-map">
+    <div class="contact-map">
       <div id="map" style="padding-bottom: 25px;"
-         data-markers="<%= @markers.to_json %>"
-         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
       ></div>
     </div>
   </div>
-<!--   <div class="contact-items">
-    <div id="contact">
-      <%= simple_form_for(@contact) do |f| %>
-        <%= f.label :name, t("name") %></br>
-        <%= f.text_field  :name, required: true %></br></br>
-        <%= f.label :email, t("email") %></br>
-        <%= f.text_field :email, required: true %></br></br>
-        <%= f.label :phone , t("phone") %> <br>
-        <%= f.text_field :phone %></br></br>
-        <%= f.label :message , t("message") %></br>
-        <%= f.text_area :message, rows: 8, cols: 40, required: true %></br>
-        <div style= "display: none;" >
-          <%= f.label :nickname%>
-          <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
-        </div>
-        </br>
-        <%= f.submit t("send_message"), class: "button_2" %>
-        </br>
-        </br>
-      <% end %>
-      <div  id="flash-message">
-        <%= render 'shared/flash' %>
-      </div>
-    </div> -->
  <!--    <div class="contact-map">
       <div id="map" style="padding-bottom: 25px;"
          data-markers="<%= @markers.to_json %>"
