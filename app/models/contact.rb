@@ -10,7 +10,7 @@ class Contact < MailForm::Base
       subject: "Neue Nachricht von Webseite",
       to: "rene@swissmassiv.ch",
       bcc: "diego.unternaehrer@hotmail.com",
-      from: %("#{name}" <#{email}>)
+      from: "rene@swissmassiv.ch"
     }
   end
 end
