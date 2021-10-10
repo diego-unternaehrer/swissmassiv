@@ -1,6 +1,6 @@
 ActionMailer::Base.smtp_settings = {
   user_name: 'apikey',
-  password: 'SENDGRID_API_KEY',
+  password: ENV['SENDGRID_API_KEY'],
   domain: 'jolly-br.com',
   address: 'smtp.sendgrid.net',
   port: 587,
