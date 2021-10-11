@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     get 'service',      to: 'pages#service',      as: :service
     get 'contact',      to: 'contacts#new',       as: :contact
     get 'schreiner',    to: 'pages#schreiner',    as: :schreiner
+    post 'schreiner_send',    to: 'pages#schreiner_send',    as: :schreiner_send
 
     get 'personalised', to: 'personaliseds#index', as: :personalised
     delete 'personalised', to: 'personaliseds#destroy', as: :delete_personalised
