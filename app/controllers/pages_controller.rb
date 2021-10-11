@@ -32,4 +32,5 @@ class PagesController < ApplicationController
       redirect_to "/schreiner"
     end
   end
+
 end
