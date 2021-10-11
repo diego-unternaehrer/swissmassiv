@@ -136,13 +136,11 @@
           <%= f.text_field :email, style: "width: 100%", required: true %></br></br>
           <%= f.label :phone, "Telefonnummer" %> <br>
           <%= f.text_field :phone, style: "width: 100%" %></br></br>
-          <%= f.label :message, "Ski-Test" %></br>
-          <%= f.input :message, style: "width: 100%", collection: ["4. Dezember 2021 in Engelberg (Stand)", "5. Dezember 2021 in Engelberg (Stand)", "8. Dezember 2021 in Lenzerheide (Talstation Pedra Grossa)", "11. Dezember 2021 in Hoch-Ybrig (Alter Sternen)", "12. Dezember 2021 in Hoch-Ybrig (Alter Sternen)", "18. Dezember 2021 in Leukerbad (Bergstation Torrent)", "18. Dezember 2021 in Meiringen-Hasliberg (Käserstatt)", "19. Dezember 2021 in Meiringen Hasliberg (Käserstatt)"], required: true %></br>
+          <%= f.input :message, label: "Ski-Test", style: "width: 100%", collection: ["4. Dezember 2021 in Engelberg (Stand)", "5. Dezember 2021 in Engelberg (Stand)", "8. Dezember 2021 in Lenzerheide (Talstation Pedra Grossa)", "11. Dezember 2021 in Hoch-Ybrig (Alter Sternen)", "12. Dezember 2021 in Hoch-Ybrig (Alter Sternen)", "18. Dezember 2021 in Leukerbad (Bergstation Torrent)", "18. Dezember 2021 in Meiringen-Hasliberg (Käserstatt)", "19. Dezember 2021 in Meiringen Hasliberg (Käserstatt)"], required: true %></br>
           <div style= "display: none;" >
             <%= f.label :nickname%>
             <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
           </div>
-          </br>
           <%= f.submit "Jetzt anmelden", class: "button_2" %>
           </br>
           </br>
