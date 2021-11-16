@@ -1,1 +1,1 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+swiss massiv skis are handmade in the heart of Switzerland. Each ski is one of a kind and has a highly complex design.
