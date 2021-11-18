@@ -77,7 +77,7 @@ gem 'webpacker', '~> 3.0'
 
 # webshop
 gem 'solidus', '~> 2.10.2'
-gem 'solidus_auth_devise', '~> 2.5.0'
+gem 'solidus_auth_devise', '~> 2.5.4'
 
 # style
 gem 'bootstrap', '~> 4.4.1'
