@@ -1,0 +1,43 @@
+# pack-refs with: peeled fully-peeled sorted 
+e36041b22bfb5d2664b283260fa12c588c284cef refs/heads/1.0.3-eager-load
+840daedfaab7a693b0eef75d8b1d19c03b27311a refs/heads/actions
+5c071048b70b8d3f510b9e7c57d3f352a86953db refs/heads/dsl
+d47a0e86ba09bd74e3cf1439a24b9bfe02a6883c refs/heads/eager_load_paths
+6bf18df76715ee3eb3d0cd1b6eda822817ace91c refs/heads/elia/ci-check
+12e33dd5a4660c007f110553b9d6df3ecfb75d97 refs/heads/feature/update_supported_rails_versions
+5a5c74d0d6ff87ff723dbf252b0ddb61462d5b67 refs/heads/fix/ruby-3-0-rails-6-1
+6bf18df76715ee3eb3d0cd1b6eda822817ace91c refs/heads/master
+83215927dcbe1c5dbdc7bbec96c15900b3e7596c refs/heads/rails4
+6075246227059b8d92d95d27f06b508cb3cf0ce9 refs/tags/1.0.0
+8b92c30684ed306b8f98b6c98636997c0fefd5a4 refs/tags/1.0.0.rc2
+f126e8ecafe82fe53a367e47f4feec160616dcae refs/tags/v0.1.0
+4803b5b27491f7f1dc4682e97883e5d7f558f43c refs/tags/v0.2.0
+1b271d8d6f88c133d737fc9cac8a8bc43b01dd9e refs/tags/v0.3.0
+b414e834628e3d72b0eaad7ff06a3dc317e956f4 refs/tags/v0.7.0
+eec879a7d18481c7e15433bac1ed37530105e83c refs/tags/v0.7.1
+25de2ec3363929deb6b6d65da2ef30523bcdff9b refs/tags/v0.7.2
+b9f8a27277845d1bcf7e8523e28cc006386605a6 refs/tags/v0.8.0
+74dea7124e375005af21c89a2f19257622ae8587 refs/tags/v0.9.0
+48a15618c57470ccdcb597d651ea923e024dd51f refs/tags/v0.9.1
+7324fd3a14f2689d9c2c157ee0115d711ef25b47 refs/tags/v1.1.0
+e6c633f5c9e9e6eb5f268cb98a651ec2161c7424 refs/tags/v1.2.0
+0eb43645d8a593fd7d09e597a1925274dc2ac65a refs/tags/v1.3.0
+dd3839604ecc2db7a5930cf64eac0b660258156a refs/tags/v1.3.1
+281fef45eb2592017fdbf844d2060b72d482bc7e refs/tags/v1.3.2
+61932763ffd92848c5ea09dae80aaac2fa1c3a87 refs/tags/v1.5.0
+2cb25e0879fabbe424ba64e24506ecc1bdb0d5f2 refs/tags/v1.5.1
+b4d417500af83d636d252de837ccb52709e0fba6 refs/tags/v1.5.2
+9b4badfd98ca47ef426b7d0bacf667f8fa2a6893 refs/tags/v1.5.3
+69abb810e7ab742bb2ba912a1c84ca4294b5282a refs/tags/v1.6.0
+399f7b806c105ae0e2b43620d36162970ab7836c refs/tags/v1.6.2
+^36da15f34fef75623c4acde17040c45465ffdbcd
+078944973f2df782d4d5af60de9e6295bbdcae7c refs/tags/v1.7.0
+^4026408966fde96c5d2aa8b191a6f1a953a0f811
+ddef6e31a77e2a86b91151c13ffbdc1a9c9f24fe refs/tags/v1.8.0
+^6a9807e68ba7dd4f2c1e656413f6074fa35a3151
+8dd2a695be3b53e29b6300d0809629e1b4b07256 refs/tags/v1.8.1
+^aee5f7985072c76d90597d13137ffd7e9b44f22c
+9e530510f97ae89f17b4ae0299cfced6151bb898 refs/tags/v1.8.2
+^a5cd57555bb1c0a7ff190956182a7ad12a3fc5f7
+e3fa80016cb35d813107a416bbb4180fb1ef301e refs/tags/v1.9.0
+^6bf18df76715ee3eb3d0cd1b6eda822817ace91c

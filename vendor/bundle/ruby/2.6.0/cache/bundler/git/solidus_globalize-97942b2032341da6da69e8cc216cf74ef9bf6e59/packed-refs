@@ -1,0 +1,4 @@
+# pack-refs with: peeled fully-peeled sorted 
+357ae9f47b9c109a7ca5fd43c1a6320af40c069e refs/heads/build-fix
+8aa26ca44926ba0041874190f1c6856f357033f5 refs/heads/master
+2ad925e509a8d5861f188000b8fc68076566d2b6 refs/heads/rails5
