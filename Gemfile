@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
+gem 'rails', '~> 6.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -17,7 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
+# gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -36,7 +36,7 @@ gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dab
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootsnap', require: false
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
@@ -73,11 +73,11 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # webpacker
-gem 'webpacker', '~> 3.0'
+gem 'webpacker'
 
 # webshop
-gem 'solidus', '~> 2.10.2'
-gem 'solidus_auth_devise', '~> 2.5.0'
+gem 'solidus', '= 2.11.17'
+gem 'solidus_auth_devise', '= 2.5.4'
 
 # style
 gem 'bootstrap', '~> 4.4.1'
@@ -86,15 +86,15 @@ gem 'jquery-rails'
 
 gem 'geocoder'
 
-gem 'solidus_i18n', '~> 2.0'
-gem 'rails-i18n', '~> 5.1'
+gem 'solidus_i18n', '= 2.1.1'
+gem 'rails-i18n', '~> 6.0'
 gem 'kaminari-i18n', '~> 0.5.0'
-gem 'routing-filter', '~> 0.6.0'
+gem 'routing-filter', '~> 0.7.0'
 gem 'solidus_globalize', github: 'solidusio-contrib/solidus_globalize'
 
 
 # contact form
-gem 'mail_form'
+gem 'mail_form', '= 1.9.0'
 gem 'sendgrid-ruby'
 
 # image hosting
@@ -109,3 +109,4 @@ gem 'deface', github: 'spree/deface'
 # gem 'searchkick'
 # gem 'solidus_searchkick'
 
+gem 'psych', '< 4'
