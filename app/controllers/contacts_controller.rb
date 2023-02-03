@@ -8,11 +8,9 @@ class ContactsController < ApplicationController
     @contact = Contact.new(params[:contact])
     @contact.request = request
     if @contact.deliver
-      flash.now[:success] = 'Message sent successfully'
-      redirect_to(:back)
+      redirect_back fallback_location: root_path, notice: 'Message sent successfully'
     else
-      flash.now[:error] = 'Cannot send message'
-      redirect_to(:back)
+      redirect_back fallback_location: root_path, alert: 'Cannot send message'
     end
   end
 end

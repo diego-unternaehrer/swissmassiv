@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.5'
+ruby '3.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1'
@@ -90,6 +90,7 @@ gem 'solidus_i18n', '= 2.1.1'
 gem 'rails-i18n', '~> 6.0'
 gem 'kaminari-i18n', '~> 0.5.0'
 gem 'routing-filter', '~> 0.7.0'
+gem 'friendly_id-globalize', github: 'norman/friendly_id-globalize', branch: "master"
 gem 'solidus_globalize', github: 'solidusio-contrib/solidus_globalize'
 
 
