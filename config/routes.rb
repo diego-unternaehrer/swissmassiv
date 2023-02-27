@@ -11,6 +11,9 @@ Rails.application.routes.draw do
     get 'schreiner',    to: 'pages#schreiner',    as: :schreiner
     post 'schreiner_send',    to: 'pages#schreiner_send',    as: :schreiner_send
 
+    get 'media', to: 'media#index', as: :media
+    delete 'media', to: 'media#destroy', as: :delete_medium
+    resources :media, only: [:new, :create]
     get 'personalised', to: 'personaliseds#index', as: :personalised
     delete 'personalised', to: 'personaliseds#destroy', as: :delete_personalised
     resources :personaliseds, only: [:new, :create]

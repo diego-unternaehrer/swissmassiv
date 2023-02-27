@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row justify-content-center text-center pb-5">
+    <div class="col-12 col-md-10 col-lg-6">
+      <h1 class="py-4"><%= t('media') %></h1>
+      <h3><%= t('media_header') %></h3>
+      <p class="pb-3"><%= t('media_text') %></p>
+    </div>
+  </div>
+  <% unless @media.empty? %>
+    <div class="card-columns">
+      <% @media.each do |medium| %>
+        <div class="card">
+          <a href="<%= medium.link %>" target="_blank">
+            <%= cl_image_tag medium.photo.key, style: "width: 100%" %>
+          </a>
+          <% if !spree_current_user.blank? && spree_current_user.spree_roles.first.name == "admin" %>
+            <%= link_to delete_medium_url(id: medium.id), method: :delete, data: { confirm: 'Bist du sicher?' } do %>
+              <i class="fas fa-trash-alt"></i>
+            <% end %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  <br>
+  <br>
+  <% if !spree_current_user.blank? && spree_current_user.spree_roles.first.name == "admin" %>
+    <%= link_to '+ Personalisierte Skis hinzufügen', new_medium_path, class: "button_2" %>
+  <% end %>
+</div>

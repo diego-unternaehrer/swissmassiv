@@ -25,6 +25,6 @@ class PersonalisedsController < ApplicationController
 
   private
     def personalised_params
-      params.require(:personalised).permit(:name, :photo)
+      params.require(:personalised).permit(:photo)
     end
 end
