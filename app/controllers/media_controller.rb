@@ -24,6 +24,6 @@ class MediaController < ApplicationController
 
   private
     def personalised_params
-      params.require(:medium).permit(:link, :photo)
+      params.require(:medium).permit(:link, :photo, :title)
     end
 end

@@ -4,8 +4,9 @@
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
     <div class="form-inputs">
-      <%= f.input :photo, as: :file %>
+      <%= f.input :photo, label: "Vorschaubild", as: :file %>
     </div>
+    <%= f.input :title, label: "Beschreibung / Titel" %>
     <%= f.input :link, label: "Link" %>
 
     <div class="form-actions">
