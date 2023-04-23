@@ -6,7 +6,7 @@ module Swissmassiv::Product
     taxons.each do |taxon|
       @taxons << taxon.name
     end
-    @skis = ["Allrounder", "Allmountain", "Slalom Carver", "Slalom Race Carver"]
+    @skis = ["Allrounder", "Allmountain", "Slalom Carver", "Slalom Race Carver", "Freeride"]
     @taxons.to_set.intersect?(@skis.to_set)
   end
 

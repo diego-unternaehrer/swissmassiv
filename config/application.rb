@@ -22,6 +22,7 @@ module Swissmassiv
     config.i18n.available_locales = [:de, :en, :fr, :it]
     config.i18n.default_locale = :de
 
+    config.active_storage.service = :cloudinary
     # Load application's view overrides
     initializer 'spree.overrides' do |app|
       config.to_prepare do

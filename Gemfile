@@ -99,9 +99,9 @@ gem 'mail_form', '= 1.9.0'
 gem 'sendgrid-ruby'
 
 # image hosting
-gem 'cloudinary', require: false
-gem 'activestorage-cloudinary-service'
-gem 'open_solidus_cloudinary', github: 'Berlimioz/open_solidus_cloudinary'
+gem 'cloudinary', '~> 1.25'
+# gem 'activestorage-cloudinary-service'
+# gem 'open_solidus_cloudinary', github: 'Berlimioz/open_solidus_cloudinary'
 
 #deface solidus backend
 gem 'deface', github: 'spree/deface'

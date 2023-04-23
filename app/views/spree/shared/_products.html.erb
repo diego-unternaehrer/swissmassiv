@@ -26,8 +26,14 @@
     <div class="card-columns">
       <% products.each do |product| %>
         <style scoped>
-          @media (max-width: 767px) { .card-columns { column-count: 1;} }
-          @media (max-width: 991px) and (min-width: 768px) { .card-columns { column-count: 2;} }
+          <% if params[:id] == "skis/freeride" %>
+            .card-columns { column-count: 1; width: 100%; margin: auto; }
+          <% elsif params[:id] == "skis/allmountain" %>
+              .card-columns { column-count: 1; width: 100%; margin: auto; max-width: 600px; }
+          <% else %>
+            @media (max-width: 767px) { .card-columns { column-count: 1;} }
+            @media (max-width: 991px) and (min-width: 768px) { .card-columns { column-count: 2;} }
+          <% end %>
         </style>
         <div class="card product-card">
           <% url = spree.product_path(product, taxon_id: @taxon.try(:id)) %>
@@ -49,7 +55,7 @@
                     <% end %>
                     <span itemprop="priceCurrency" content="<%= current_pricing_options.currency %>"></span>
                   </span>
-                  <div class="pt-3 col-7 col-sm-5 col-md-7 col-lg-12 col-xl-6">
+                  <div class="pt-3 col-7 col-sm-5 col-md-7 col-lg-12 col-xl-6 text-right">
                     <small><%= link_to t('more'), url, class: "button_2" %></small>
                   </div>
                 </div>
@@ -66,3 +72,4 @@
 <% if paginated_products.respond_to?(:total_pages) %>
   <%= paginate paginated_products %>
 <% end %>
+
