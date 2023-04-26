@@ -100,7 +100,7 @@ gem 'sendgrid-ruby'
 
 # image hosting
 gem 'cloudinary', '~> 1.25'
-gem 'activestorage-cloudinary-service'
+# gem 'activestorage-cloudinary-service'
 # gem 'open_solidus_cloudinary', github: 'Berlimioz/open_solidus_cloudinary'
 
 #deface solidus backend
