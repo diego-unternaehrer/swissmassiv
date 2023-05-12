@@ -10,7 +10,8 @@ namespace :active_storage do
       picture = image.attachment.record
       content_type = "image/png"
       filename = picture.attachment_file_name
-      image.as_attachment.attach(io: File.open(filename), content_type: content_type, filename: filename)
+      filepath = "https://res.cloudinary.com/swissmassiv/"+filename
+      image.as_attachment.attach(io: File.open(filepath), content_type: content_type, filename: filename)
       image.attachment.remove!
       image.save
     end
