@@ -8,11 +8,9 @@ namespace :active_storage do
       next if !image.attachment.present? || image.as_attachment.attached?
 
       picture = image.attachment
-      picture.cache_stored_file!
-      file = picture.sanitized_file.file
       content_type = "image/png"
-      filename = picture.filename
-      image.as_attachment.attach(io: file, content_type: content_type, filename: filename)
+      filename = picture.attachment_file_name
+      image.as_attachment.attach(io: File.open(filename), content_type: content_type, filename: filename)
       image.attachment.remove!
       image.save
     end
