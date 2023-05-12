@@ -8,10 +8,10 @@ namespace :active_storage do
       next if !image.attachment.present? || image.as_attachment.attached?
 
       picture = image.attachment.record
-      content_type = "image/png"
+      ctype = "image/png"
       filename = picture.attachment_file_name
       filepath = "https://res.cloudinary.com/swissmassiv/"+filename
-      image.as_attachment.attach(io: URI.open(filepath), content_type: content_type, filename: filename)
+      image.as_attachment.attach(io: URI.open(filepath), content_type: ctype, filename: filename)
       image.attachment.remove!
       image.save
     end
