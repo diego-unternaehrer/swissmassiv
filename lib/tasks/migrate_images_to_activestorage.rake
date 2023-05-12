@@ -7,7 +7,7 @@ namespace :active_storage do
     Spree::Image.find_each do |image|
       next if !image.attachment.present? || image.as_attachment.attached?
 
-      picture = image.attachment
+      picture = image.attachment.record
       content_type = "image/png"
       filename = picture.attachment_file_name
       image.as_attachment.attach(io: File.open(filename), content_type: content_type, filename: filename)
