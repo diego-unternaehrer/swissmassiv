@@ -4,7 +4,7 @@
     <h1 class="text-center py-4" itemprop="name"><%= @product.name %></h1>
     <div class="row justify-content-around">
       <% if @product.gallery.images.size > 1 %>
-        <div class="col-12 col-lg-4 mb-4" style="background-color: #757575; border-radius: 15px;">
+        <div class="col-12 col-lg-4 mb-4" style="background-color: #2a2a2a; border-radius: 5px;">
           <div id="product-images" data-hook="product_images" class="row align-items-center justify-content-around">
             <div id="thumbnails" data-hook class="col-3">
               <%= render partial: 'thumbnails' %>
@@ -17,7 +17,7 @@
           </div>
         </div>
       <% else %>
-        <div class="col-12 col-lg-4 mb-4 d-flex align-items-center justify-content-around" style="background-color: #757575; border-radius: 15px;">
+        <div class="col-12 col-lg-4 mb-4 d-flex align-items-center justify-content-around" style="background-color: #2a2a2a; border-radius: 5px;">
           <div id="product-images" data-hook="product_images" class="row pr-1">
             <div id="main-image" data-hook>
               <%= render partial: 'image' %>
