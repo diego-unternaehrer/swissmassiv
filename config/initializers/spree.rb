@@ -25,7 +25,7 @@ Spree.config do |config|
 
   # Enable Paperclip adapter for attachments on images and taxons
   config.image_attachment_module = 'Spree::Image::ActiveStorageAttachment'
-  config.taxon_attachment_module = 'Spree::Image::ActiveStorageAttachment'
+  # config.taxon_attachment_module = 'Spree::Image::ActiveStorageAttachment'
 
 
   # Permission Sets:
