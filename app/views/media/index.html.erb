@@ -14,7 +14,7 @@
             <%= cl_image_tag medium.photo.key, style: "width: 100%" %>
           </a>
           <div style="color: black; padding: 5px;"> <%= medium.title %> </div>
-          <% if !spree_current_user.blank? && spree_current_user.spree_roles.first.name == "admin" %>
+          <% if !spree_current_user.blank? && spree_current_user.spree_roles.first&.name == "admin" %>
             <%= link_to delete_medium_url(id: medium.id), method: :delete, data: { confirm: 'Bist du sicher?' } do %>
               <i class="fas fa-trash-alt"></i>
             <% end %>
@@ -25,7 +25,7 @@
   <% end %>
   <br>
   <br>
-  <% if !spree_current_user.blank? && spree_current_user.spree_roles.first.name == "admin" %>
+  <% if !spree_current_user.blank? && spree_current_user.spree_roles.first&.name == "admin" %>
     <%= link_to '+ Beitrag hinzufügen', new_medium_path, class: "button_2" %>
   <% end %>
 </div>

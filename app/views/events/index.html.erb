@@ -21,7 +21,7 @@
               <tr <% if event.cancelled? %>style="text-decoration: line-through; color: #5F021F"<% end %>>
                 <td> <%=I18n.l(event.date , format: :long, locale: :de)%> </td>
                 <td> <%= event.place %> </td>
-                <% if !spree_current_user.blank? && spree_current_user.spree_roles.first.name == "admin" %>
+                <% if !spree_current_user.blank? && spree_current_user.spree_roles.first&.name == "admin" %>
                   <td> <%= link_to edit_event_path(event) do %>
                     <i class="fas fa-edit"></i>
                   <% end %>
@@ -37,7 +37,7 @@
       <% end %>
 
       <br>
-      <% if !spree_current_user.blank? && spree_current_user.spree_roles.first.name == "admin" %>
+      <% if !spree_current_user.blank? && spree_current_user.spree_roles.first&.name == "admin" %>
         <%= link_to '+ Ski-Test hinzufügen', new_event_path, class:"button_2" %>
       <% end %>
     </div>

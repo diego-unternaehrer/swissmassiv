@@ -9,7 +9,7 @@ class Contact < MailForm::Base
     {
       subject: "Neue Nachricht von Webseite",
       to: "rene@swissmassiv.ch",
-      bcc: "diego.unternaehrer@hotmail.com",
+      bcc: "diego.unternaehrer@hotmail.com; rene@swissmassiv.ch",
       from: "rene@swissmassiv.ch"
     }
   end
