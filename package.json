@@ -2,7 +2,7 @@
   "name": "swissmassiv",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "5.4.4",
+    "@rails/webpacker": "^5.4.4",
     "babel-preset-react": "^6.24.1",
     "bootstrap": "4.4.1",
     "jquery": "^3.5.0",
@@ -11,6 +11,22 @@
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
-    "webpack-dev-server": "3.1.11"
+    "webpack-dev-server": "^4.15.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "not safari < 10",
+      "not chrome < 51",
+      "not android < 5",
+      "not ie < 12"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

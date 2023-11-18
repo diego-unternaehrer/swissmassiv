@@ -22,7 +22,7 @@ module Swissmassiv::OrderDecorator
     @taxons.to_set.intersect?(@permalinks.to_set)
   end
 
-  Spree::Order.prepend self
+  Spree::Core::StateMachines::Order.prepend self
 end
 
 

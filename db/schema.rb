@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_04_02_135631) do
+ActiveRecord::Schema.define(version: 2023_11_18_175924) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -459,6 +459,7 @@ ActiveRecord::Schema.define(version: 2023_04_02_135631) do
     t.integer "position", default: 0
     t.boolean "available_to_users", default: true
     t.boolean "available_to_admin", default: true
+    t.string "type_before_removal"
     t.index ["id", "type"], name: "index_spree_payment_methods_on_id_and_type"
   end
 
@@ -492,7 +493,7 @@ ActiveRecord::Schema.define(version: 2023_04_02_135631) do
 
   create_table "spree_prices", id: :serial, force: :cascade do |t|
     t.integer "variant_id", null: false
-    t.decimal "amount", precision: 10, scale: 2
+    t.decimal "amount", precision: 10, scale: 2, null: false
     t.string "currency"
     t.datetime "deleted_at"
     t.datetime "created_at", precision: 6
@@ -1180,6 +1181,7 @@ ActiveRecord::Schema.define(version: 2023_04_02_135631) do
     t.datetime "deleted_at"
     t.datetime "starts_at"
     t.datetime "expires_at"
+    t.integer "level", default: 0, null: false
     t.index ["deleted_at"], name: "index_spree_tax_rates_on_deleted_at"
     t.index ["zone_id"], name: "index_spree_tax_rates_on_zone_id"
   end
@@ -1354,8 +1356,10 @@ ActiveRecord::Schema.define(version: 2023_04_02_135631) do
     t.integer "tax_category_id"
     t.datetime "updated_at", precision: 6
     t.datetime "created_at", precision: 6
+    t.bigint "shipping_category_id"
     t.index ["position"], name: "index_spree_variants_on_position"
     t.index ["product_id"], name: "index_spree_variants_on_product_id"
+    t.index ["shipping_category_id"], name: "index_spree_variants_on_shipping_category_id"
     t.index ["sku"], name: "index_spree_variants_on_sku"
     t.index ["tax_category_id"], name: "index_spree_variants_on_tax_category_id"
     t.index ["track_inventory"], name: "index_spree_variants_on_track_inventory"
