@@ -2,9 +2,13 @@
   "name": "swissmassiv",
   "private": true,
   "dependencies": {
+    "@rails/webpacker": "5.4.4",
     "bootstrap": "5.3.2",
     "jquery": "^3.5.0",
-    "mapbox-gl": "^1.10.0",
+    "mapbox-gl": "2.15.0",
     "@popperjs/core": "2.11.8"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "4.15.1"
   }
 }
