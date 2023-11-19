@@ -32,7 +32,8 @@
               .card-columns { column-count: 1; width: 100%; margin: auto; max-width: 600px; }
           <% else %>
             @media (max-width: 767px) { .card-columns { column-count: 1;} }
-            @media (max-width: 991px) and (min-width: 768px) { .card-columns { column-count: 2;} }
+            @media (min-width: 768px) and (max-width: 991px) { .card-columns { column-count: 2;} }
+            @media (min-width: 992px)  { .card-columns { column-count: 3;} }
           <% end %>
         </style>
         <div class="card product-card">
@@ -43,11 +44,11 @@
                <%= link_to(render('spree/shared/image', image: product.gallery.images.first, size: :large, itemprop: "image"), url, itemprop: 'url') %>
               </div>
               <div class="product-info">
-                <h3>
+                <h3 class="product-text">
                   <%= product.name %>
                 </h3>
                 <div class="product-details row">
-                  <span class="col-5 col-sm-7 col-md-5 col-lg-12 col-xl-6" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                  <span class="product-text col-5 col-sm-7 col-md-5 col-lg-12 col-xl-6" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                     <% if price = product.price_for(current_pricing_options) %>
                       <span class="price selling" itemprop="price" content="<%= price.to_d %>">
                         <%= price.to_html %>

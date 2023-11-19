@@ -32,7 +32,7 @@
 ></div>-->
   <br>
 <div class="container">
-  <table class="table table-borderless text-white">
+  <table class="table table-dark table-striped text-white">
     <% @grouped_partners.each do |country, partners| %>
       <% Carmen.i18n_backend.locale = :de %>
       <% @code = Carmen::Country.named(country).code.downcase %>

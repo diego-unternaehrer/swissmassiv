@@ -27,7 +27,7 @@
 </div>
 <% if @order.contain_skis? %>
   <% if @order.contain_skis? && @order.contain_binding? %>
-    <div class="alert-dark rounded p-3 m-3" role="alert">
+    <div class="alert alert-dark rounded p-3 m-3" role="alert">
       <small><%= t('ski_binding_selected') %></small>
     </div>
   <% else %>
