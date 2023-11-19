@@ -1,5 +1,5 @@
 <% unless @product_properties.empty? %>
-  <table id="product-properties" class="table table-borderless text-white" data-hook>
+  <table id="product-properties" class="table table-dark table-borderless text-white" data-hook>
     <tbody>
       <% @product_properties.each do |product_property| %>
         <% css_class = cycle('even', 'odd', name: "properties") %>

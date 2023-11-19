@@ -43,7 +43,7 @@
       </div>
       <% if @product.master.can_supply? %>
         <div class="add-to-cart row">
-            <%= number_field_tag :quantity, 1, class: 'title', min: 1, style: "width: 75px; text-align: center; margin-right: 25px;"%>
+            <%= number_field_tag :quantity, 1, class: 'title', min: 1, style: "width: 75px; text-align: center; margin-right: 25px; margin-bottom: 25px;"%>
             <%= button_tag class: 'button_2', id: 'add-to-cart-button', type: :submit do %>
               <%= t('spree.add_to_cart') %>
             <% end %>
