@@ -38,7 +38,7 @@
         <% end %>
         <% if @product.is_ski? %>
           <%= link_to spree.nested_taxons_path("equipment"), style:"text-decoration: none;" do %>
-            <div class="alert alert-dark rounded p-3 m-3" role="alert">
+            <div class="alert alert-warning rounded p-3 m-3" role="alert">
               <small><%= t('select_binding') %></small>
             </div>
           <% end %>
