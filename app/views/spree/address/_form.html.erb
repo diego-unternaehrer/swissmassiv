@@ -1,13 +1,8 @@
 <% address_id = address_type.chars.first %>
 <div class="inner p-3" data-hook=<%="#{address_type}_inner" %>>
-  <div class="field field-required" id=<%="#{address_id}firstname" %>>
-    <%= form.label :firstname, t('spree.first_name') %>
-    <%= form.text_field :firstname, class: 'form-control required', autocomplete: address_type + ' given-name', required: true, autofocus: true %>
-  </div>
-
-  <div class="field" id=<%="#{address_id}lastname" %>>
-    <%= form.label :lastname, t('spree.last_name') %>
-    <%= form.text_field :lastname, class: 'form-control', autocomplete: address_type + ' family-name' %>
+  <div class="field field-required" id=<%="#{address_id}name" %>>
+    <%= form.label :name, t('spree.name') %>
+    <%= form.text_field :name, class: 'form-control required', autocomplete: address_type + ' given-name', required: true, autofocus: true %>
   </div>
 
   <% if Spree::Config[:company] %>
