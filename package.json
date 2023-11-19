@@ -1,6 +1,9 @@
 {
   "name": "swissmassiv",
   "private": true,
+  "scripts": {
+    "start": "--openssl-legacy-provider"
+  },
   "dependencies": {
     "@rails/webpacker": "^5.4.4",
     "babel-preset-react": "^6.24.1",
