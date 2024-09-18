@@ -29,3 +29,9 @@
     <%= link_to '+ Beitrag hinzufügen', new_medium_path, class: "button_2" %>
   <% end %>
 </div>
+
+<style>
+  @media (max-width: 767px) { .card-columns { column-count: 1;} }
+  @media (min-width: 768px) and (max-width: 991px) { .card-columns { column-count: 2;} }
+  @media (min-width: 992px)  { .card-columns { column-count: 3;} }
+</style>
