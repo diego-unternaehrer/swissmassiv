@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     get 'contact',      to: 'contacts#new',       as: :contact
     get 'schreiner',    to: 'pages#schreiner',    as: :schreiner
     post 'schreiner_send',    to: 'pages#schreiner_send',    as: :schreiner_send
-    get 'recycled',      to: 'pages#recycled',     as: :recycled
+    get 'eco-peak',      to: 'pages#eco-peak'
 
     get 'media', to: 'media#index', as: :media
     delete 'media', to: 'media#destroy', as: :delete_medium
