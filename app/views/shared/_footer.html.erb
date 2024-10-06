@@ -1,18 +1,30 @@
-  <% unless current_page?(main_app.contact_path) %>
-    <div class="text-center">
-      <h2 class="p-4"> <%= t('questions') %> </h2>
-      <%= link_to t('contact_us'), main_app.contact_path, class: "button_2"%>
-    </div>
-  <% end %>
-  <div class="footer ">
+  <div class="text-center">
+    <% if I18n.locale == :de %>
+      <h2 class="p-4"> Bestellung und Beratung <br> auch unkompliziert <br> über <i class="fab fa-whatsapp"></i> WhatsApp möglich </h2>
+      <div class="row d-flex justify-content-center align-items-center pb-5">
+        <div class="col-12 col-md-3 pb-4">
+          <a href=" https://wa.me/41786677832?text=Hey%20René" class="button_2">
+            <i class="fab fa-whatsapp"></i>
+            <%= t('contact_whatsapp')%>
+          </a>
+        </div>
+        <div class="col-12 col-md-3">
+          <a href=" https://wa.me/41786677832?text=Hey%20René" style="width:50px;">
+            <%= cl_image_tag("Assets/QR-whatsapp_ovazq6.png", style: "width: 100%; max-width: 200px; height: auto;") %>
+          </a>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="footer pt-5">
+    <p class="text-white">swiss massiv <br> René Unternährer <br> Entlebucherstrasse 7 <br> 6112 Doppleschwand
+          <br> <%= link_to t('contact_shop'), main_app.contact_path, style: "font-size: 1rem; text-decoration: underline;", class: "pb-5" %>
+    </p>
     <%= link_to "https://www.instagram.com/swissmassiv/" do %>
       <i class="fab fa-instagram"></i>
     <% end %>
     <%= link_to "https://www.facebook.com/swissmassiv" do %>
       <i class="fab fa-facebook"></i>
-    <% end %>
-    <%= link_to "https://twitter.com/swissmassiv" do %>
-      <i class="fab fa-twitter"></i>
     <% end %>
     <%= link_to "https://www.linkedin.com/company/swiss-massiv/" do %>
       <i class="fab fa-linkedin-in"></i>

@@ -2,15 +2,15 @@ Rails.application.routes.draw do
   scope '(:locale)', locale: /de|en|fr|it/ do
     root to: 'pages#home'
 
-    get 'about',        to: 'pages#about',        as: :about
-    get 'skis',         to: 'pages#skis',         as: :skis
-    get 'allrounder',   to: 'pages#allrounder',   as: :allrounder
-    get 'mieten',       to: 'pages#mieten',       as: :mieten
-    get 'service',      to: 'pages#service',      as: :service
-    get 'contact',      to: 'contacts#new',       as: :contact
-    get 'schreiner',    to: 'pages#schreiner',    as: :schreiner
-    post 'schreiner_send',    to: 'pages#schreiner_send',    as: :schreiner_send
-    get 'eco-peak',      to: 'pages#eco-peak'
+    get 'about',           to: 'pages#about',          as: :about
+    get 'skis',            to: 'pages#skis',           as: :skis
+    get 'allrounder',      to: 'pages#allrounder',     as: :allrounder
+    get 'mieten',          to: 'pages#mieten',         as: :mieten
+    get 'service',         to: 'pages#service',        as: :service
+    get 'contact',         to: 'contacts#new',         as: :contact
+    get 'schreiner',       to: 'pages#schreiner',      as: :schreiner
+    post 'schreiner_send', to: 'pages#schreiner_send', as: :schreiner_send
+    get 'eco-peak',        to: 'pages#eco-peak',       as: :ecopeak
 
     get 'media', to: 'media#index', as: :media
     delete 'media', to: 'media#destroy', as: :delete_medium
