@@ -1,14 +1,3 @@
-<div class="w-100 row justify-content-center py-5">
-  <div class="col-9 col-md-6 col-lg-4 py-5 text-center">
-    <h1 id="countdown"> <span><%= t('crowdfunding_still') %> </span><span id="days"> </span><span> <%= t('crowdfunding_days') %></span></h1>
-    <h1><%= t('crowdfunding_title') %></h1>
-    <p class="pb-3"><%= t('crowdfunding_preview') %></p>
-
-    <a href="https://wemakeit.com/projects/ecopeak-the-ski-revolution" class="button_2" target="_blank">
-      <%= fa_icon "hand-holding-heart" %> <%= t('crowdfunding_cta') %>
-    </a>
-  </div>
-</div>
 <div class="w-100 row justify-content-center py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(https://res.cloudinary.com/swissmassiv/image/upload/f_auto,q_auto/v1599604724/Assets/eco-peak4_quhrfu.jpg); background-size: cover; background-position: center;">
   <div class="col-9 col-md-6 col-lg-4 py-5">
     <h1><%= t('eco-peak_title') %></h1>
@@ -77,30 +66,3 @@
     <div class="col-1 col-md-3 col-lg-2"></div>
   </div>
 <% end%>
-
-
-<script>
-  // Set the date we're counting down to
-  var countDownDate = new Date("Dec 15, 2024 23:59:59").getTime();
-
-
-    // Get today's date and time
-    var now = new Date().getTime();
-
-    // Find the distance between now and the count down date
-    var distance = countDownDate - now;
-
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-
-    // Display the result in the element with id="demo"
-    document.getElementById("days").innerHTML = days;
-
-    // If the count down is finished, write some text
-    if (distance < 0) {
-      clearInterval(x);
-      document.getElementById("countdown").innerHTML = "";
-    }
-
-
-</script>
