@@ -37,6 +37,11 @@
           <% end %>
         </style>
         <div class="card product-card">
+          <% if product.is_ski? %>
+            <div class="sale">
+              SALE
+            </div>
+          <% end %>
           <% url = spree.product_path(product, taxon_id: @taxon.try(:id)) %>
           <div id="product_<%= product.id %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
             <% cache(@taxon.present? ? [I18n.locale, current_pricing_options, @taxon, product] : [I18n.locale, current_pricing_options, product]) do %>
@@ -56,6 +61,11 @@
                     <% end %>
                     <span itemprop="priceCurrency" content="<%= current_pricing_options.currency %>"></span>
                   </span>
+                  <% if product.name.include?("Entlebucher") %>
+                    CHF1'750.00
+                  <% else %>
+                    CHF1'650.00
+                  <% end %>
                   <div class="pt-3 col-7 col-sm-5 col-md-7 col-lg-12 col-xl-6 text-right">
                     <small><%= link_to t('more'), url, class: "button_2" %></small>
                   </div>
