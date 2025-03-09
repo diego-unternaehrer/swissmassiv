@@ -61,12 +61,15 @@
                     <% end %>
                     <span itemprop="priceCurrency" content="<%= current_pricing_options.currency %>"></span>
                     <% if product.is_ski? %>
-                      <%= t('instead_of') %>
-                      <% if product.name.include?("Entlebucher") %>
-                        CHF1'750.00
-                      <% else %>
-                        CHF1'650.00
-                      <% end %>
+                      <br>
+                      <span class="old-price">
+                        <%= t('instead_of') %>
+                        <% if product.name.include?("Entlebucher") %>
+                          CHF1'750.00
+                        <% else %>
+                          CHF1'650.00
+                        <% end %>
+                      </span>
                     <% end %>
                   </span>
                   <div class="pt-3 col-7 col-sm-5 col-md-7 col-lg-12 col-xl-6 text-right">
