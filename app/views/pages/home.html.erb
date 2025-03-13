@@ -1,32 +1,48 @@
-<% if I18n.locale == :de %>
-  <div class="w-100 row justify-content-center py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://res.cloudinary.com/swissmassiv/image/upload/f_auto,q_auto/v1599604719/Assets/skitest_ngzqup.jpg); background-size: cover; background-position: center;">
-    <div class="col-9 col-md-6 col-lg-4 py-5">
-      <h1>Ski-Tests</h1>
-      <p class="pb-3">An einem Ski-Test können Sie unsere Skis gratis testfahren und sich von der Qualität überzeugen lassen.</p>
-      <%= link_to main_app.events_path, class: "button_2" do %>
-        <%= fa_icon "calendar-alt" %> Termine
-      <% end %>
-    </div>
-    <div class="col-1 col-md-3 col-lg-2"></div>
+<div class="w-100 row justify-content-center py-2">
+  <div class="col-10 col-md-7 col-lg-6 py-2 text-center">
+    <h1><%= t('closing_title1') %><br><%= t('closing_title2') %></h1>
+    <img src="https://res.cloudinary.com/swissmassiv/image/upload/v1741897863/closing_ujuij2.jpg" width="100%" height="auto" quality="auto:best" crop="scale" fetch_format="auto" class="pb-4" style="max-width: 500px;">
+
+    <p class="pb-3"><%= t('closing_outro') %></p>
+
+    <h2 id="countdown"> <span><%= t('closing_still') %> </span><span id="days"> </span><span> <%= t('closing_days') %></span></h2>
   </div>
-<% end%>
-<div class="w-100 row justify-content-center py-5"  style="position: relative; background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(https://res.cloudinary.com/swissmassiv/image/upload/f_auto,q_auto/v1599604722/Assets/tree_pcqwjm.jpg); background-size: cover; background-position: center;">
-  <div class="col-9 col-md-6 col-lg-4 py-5">
+</div>
+<div class="w-100 row justify-content-center py-2">
+  <div class="col-12 col-md-4 col-lg-3 py-2 mb-4 text-center">
+    <%= link_to spree.nested_taxons_path("skis"), class: "button_2" do %>
+        <%= fa_icon "skiing" %> Skis
+    <% end %>
+  </div>
+  <div class="col-12 col-md-4 col-lg-3 py-2 text-center">
+    <%= link_to spree.nested_taxons_path("equipment"), class: "button_2" do %>
+        <%= fa_icon "tshirt" %> <%= t('equipment') %>
+    <% end %>
+  </div>
+</div>
+<div class="w-100 row justify-content-center overflow-hidden py-5 position-relative">
+  <div class="col-9 col-md-5 col-lg-3 py-5">
     <h1><%= t('handmade') %></h1>
     <p class="pb-3" >"<%= t('quote') %>" <i>- René Unternährer </i></p>
     <%= link_to main_app.about_path, class: "button_2" do %>
       <%= fa_icon "info-circle" %> <%= t('about') %>
     <% end %>
   </div>
-  <div class="col-1 col-md-3 col-lg-2"></div>
+  <div class="home-img col-md-4 col-lg-4">
+      <img src="https://res.cloudinary.com/swissmassiv/image/upload/f_auto,q_auto/v1599604722/Assets/tree_pcqwjm.jpg" width="100%" height="auto" quality="auto:best" crop="scale" fetch_format="auto">
+  </div>
   <div>
     <div style="position: absolute; right: 40px; bottom: 40px;">
       <img src="https://res.cloudinary.com/swissmassiv/image/upload/v1602333228/Assets/swisslabel-logo_izofhp.png" height="50", quality="auto:best", crop="scale", fetch_format="auto">
       <img src="https://res.cloudinary.com/swissmassiv/image/upload/v1602333217/Assets/UBE_Partner_Betrieb_2017_cv3zge.png" height="50", quality="auto:best", crop="scale", fetch_format="auto">
     </div>
   </div>
+
 </div>
-<div class="w-100 row justify-content-center py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)), url(https://res.cloudinary.com/swissmassiv/image/upload/f_auto,q_auto/v1599604724/Assets/ski_preview_vjoq93.jpg); background-size: cover; background-position: center;">
+<div class="w-100 row justify-content-center py-5 overflow-hidden position-relative">
+  <div class="home-img col-md-3 col-lg-3">
+      <img src="https://res.cloudinary.com/swissmassiv/image/upload/f_auto,q_auto/v1599604724/Assets/ski_preview_vjoq93.jpg" width="100%" height="auto" quality="auto:best" crop="scale" fetch_format="auto">
+  </div>
   <div class="col-9 col-md-6 col-lg-4 py-5">
     <h1><%= t('one_of_a_kind') %></h1>
     <p class="pb-3"><%= t('ski_preview') %></p>
@@ -34,9 +50,8 @@
       <%= fa_icon "skiing" %> Skis
     <% end %>
   </div>
-  <div class="col-1 col-md-3 col-lg-2"></div>
 </div>
-<div class="w-100 row justify-content-center py-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://res.cloudinary.com/swissmassiv/image/upload/f_auto,q_auto/v1599602441/Assets/jacke_vc3pu5.jpg); background-size: cover; background-position: center;">
+<div class="w-100 row justify-content-center py-5 overflow-hidden position-relative">
   <div class="col-9 col-md-6 col-lg-4 py-5">
     <h1><%= t('equipment') %></h1>
     <p class="pb-3"><%= t('equipment_preview') %> </p>
@@ -44,6 +59,33 @@
         <%= fa_icon "tshirt" %> <%= t('equipment') %>
     <% end %>
   </div>
-  <div class="col-1 col-md-3 col-lg-2"></div>
+  <div class="d-none d-md-block col-md-3 col-lg-3">
+      <img src="https://res.cloudinary.com/swissmassiv/image/upload/v1/variants/sy9w6a920qyxh00ws7gqxy0m3bgx/738f3894d1f6ffd5984cdf02a7bf860b80058ea425975c9d70410dc5b5cd9934.png" width="100%" height="auto" quality="auto:best" crop="scale" fetch_format="auto">
+  </div>
 </div>
 
+<script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("Apr 30, 2025 23:59:59").getTime();
+
+
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    // Display the result in the element with id="demo"
+    document.getElementById("days").innerHTML = days;
+
+    // If the count down is finished, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("countdown").innerHTML = "";
+    }
+
+
+</script>

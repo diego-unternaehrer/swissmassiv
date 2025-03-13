@@ -1,49 +1,19 @@
 <nav class="site-header sticky-top py-3">
   <div class="d-flex justify-content-around align-items-center layer_1">
-    <% if I18n.locale == :de %>
-      <%= link_to main_app.events_path, class: "p-2" do %>
-        <p class="d-block header-icon"> <%= fa_icon "calendar-alt" %></i></p>
-        <p class="d-block header-text-small"> <%= t('event') %> </p>
-      <% end %>
-    <% else %>
-      <div class="d-block"></div>
+    <%= link_to main_app.skis_path do %>
+     <p class="d-block header-icon"> <i class="fas fa-skiing"></i> </p>
+     <p class="d-block header-text-small"> Skis </p>
+    <% end %>
+    <%= link_to spree.nested_taxons_path("equipment") do %>
+      <p class="d-block header-icon"> <i class="fas fa-tshirt"></i> </p>
+      <p class="d-block header-text-small"> <%= t('equipment') %>  </p>
+    <% end %>
+    <%= link_to main_app.about_path, class: "p-2" do %>
+      <p class="d-block header-icon"> <%= fa_icon "info-circle" %> </p>
+      <p class="d-block header-text-small"> <%= t('about') %> </p>
     <% end %>
     <%= link_to root_path, class: "p-2" do %>
       <%= image_tag ("logo_handmade_white.PNG"), style: "height: 40px;" %>
-    <% end %>
-    <div class="dropdown">
-      <button class="dropdown-toggle" style="background-color: #0b0b0b; color: white; border: none;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <%= fa_icon "language" %>
-        <p class="d-inline header-text-small"> <%= I18n.locale.to_s %> </p>
-      </button>
-      <div class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton">
-        <% unless I18n.locale == :de %>
-          <%= link_to "Deutsch", url_for( locale: "de" ), class: "dropdown-item", style: "background-color: #0b0b0b;"%>
-        <% end %>
-        <% unless I18n.locale == :en %>
-          <%= link_to "English", url_for( locale: "en" ), class: "dropdown-item", style: "background-color: #0b0b0b;"%>
-        <% end %>
-<!--         <% unless I18n.locale == :fr %>
-          <%= link_to "Français", url_for( locale: "fr" ), class: "dropdown-item", style: "background-color: #0b0b0b;"%>
-        <% end %>
-        <% unless I18n.locale == :it %>
-          <%= link_to "Italiano", url_for( locale: "it" ), class: "dropdown-item", style: "background-color: #0b0b0b;"%>
-        <% end %> -->
-      </div>
-    </div>
-  </div>
-  <div class="d-flex justify-content-around align-items-center pt-1 layer_2">
-    <%= link_to main_app.skis_path do %>
-     <p class="d-inline header-icon"> <i class="fas fa-skiing"></i> </p>
-     <p class="d-inline header-text-big"> Skis </p>
-    <% end %>
-    <%= link_to spree.nested_taxons_path("equipment") do %>
-      <p class="d-inline header-icon"> <i class="fas fa-tshirt"></i> </p>
-      <p class="d-inline header-text-big"> <%= t('equipment') %>  </p>
-    <% end %>
-    <%= link_to main_app.about_path, class: "p-2" do %>
-      <p class="d-inline header-icon"> <%= fa_icon "info-circle" %> </p>
-      <p class="d-inline header-text-big"> <%= t('about') %> </p>
     <% end %>
     <% unless spree_current_user.blank? %>
       <%= link_to spree.account_path(spree_current_user.id) do %>
@@ -60,6 +30,20 @@
       <p class="d-block header-icon"> <%= fa_icon "shopping-cart" %> </p>
       <p class="d-block header-text-small"> <%= t('cart') %> </p>
     <% end %>
+    <div class="dropdown">
+      <button class="dropdown-toggle" style="background-color: #0b0b0b; color: white; border: none;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <%= fa_icon "language" %>
+        <p class="d-block header-text-small"> <%= I18n.locale.to_s %> </p>
+      </button>
+      <div class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton">
+        <% unless I18n.locale == :de %>
+          <%= link_to "Deutsch", url_for( locale: "de" ), class: "dropdown-item", style: "background-color: #0b0b0b;"%>
+        <% end %>
+        <% unless I18n.locale == :en %>
+          <%= link_to "English", url_for( locale: "en" ), class: "dropdown-item", style: "background-color: #0b0b0b;"%>
+        <% end %>
+      </div>
+    </div>
   </div>
 </nav>
 <%# render partial: 'spree/shared/main_nav_bar' if store_menu? %>
