@@ -31,7 +31,7 @@
         </div>
         <% unless @product.description.nil? %>
           <div id="product-description" data-hook="product_description">
-            <div itemprop="description" data-hook="description">
+            <div class="pb-5" itemprop="description" data-hook="description">
               <%= product_description(@product) rescue t('spree.product_has_no_description') %>
             </div>
           </div>
