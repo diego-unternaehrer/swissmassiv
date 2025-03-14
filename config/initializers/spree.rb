@@ -69,11 +69,12 @@ end
 
 Spree::Frontend::Config.configure do |config|
   config.locale = 'de'
+  config.load_defaults('3.4.3')
 end
 
 Spree::Backend::Config.configure do |config|
   config.locale = 'de'
-
+  config.load_defaults('3.4.3')
   # Uncomment and change the following configuration if you want to add
   # a new menu item:
   #
@@ -86,6 +87,7 @@ end
 
 Spree::Api::Config.configure do |config|
   config.requires_authentication = true
+  config.load_defaults('3.4.3')
 end
 
 Spree.user_class = "Spree::LegacyUser"
