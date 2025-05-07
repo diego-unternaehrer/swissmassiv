@@ -1,93 +1,54 @@
-<div class="w-100 row justify-content-center py-2">
-  <div class="col-10 col-md-7 col-lg-6 py-2 text-center">
-    <h1><%= t('closing_title1') %><br><%= t('closing_title2') %></h1>
-    <img src="https://res.cloudinary.com/swissmassiv/image/upload/v1741897863/closing_ujuij2.jpg" width="100%" height="auto" quality="auto:best" crop="scale" fetch_format="auto" class="pb-4" style="max-width: 500px;">
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+  <!-- HEROKU -->
 
-    <p class="pb-3"><%= t('closing_outro') %></p>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>swiss massiv</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-    <h2 id="countdown"> <span><%= t('closing_still') %> </span><span id="days"> </span><span> <%= t('closing_days') %></span></h2>
-  </div>
-</div>
-<div class="w-100 row justify-content-center py-2">
-  <div class="col-10 col-md-7 col-lg-6 py-2 text-center">
-    <%= link_to spree.nested_taxons_path("equipment"), class: "button_2" do %>
-        <%= fa_icon "tshirt" %> <%= t('equipment') %>
-    <% end %>
-    </div>
-</div>
-<div class="w-100 row justify-content-center py-2">
-  <div class="col-10 col-md-7 col-lg-6 py-2 text-center">
-    <p><%= t('final_sale') %></p>
-    <p class="pb-3"><%= t('final_sale_cta') %></p>
-    <a href=" https://wa.me/41786677832?text=Hey%20René" class="button_2">
-      <i class="fab fa-whatsapp"></i>
-      <%= t('inquire_now')%>
-    </a>
-  </div>
-</div>
-<div class="w-100 row justify-content-center overflow-hidden py-5 position-relative">
-  <div class="col-9 col-md-5 col-lg-3 py-5">
-    <h1><%= t('handmade') %></h1>
-    <p class="pb-3" >"<%= t('quote') %>" <i>- René Unternährer </i></p>
-    <%= link_to main_app.about_path, class: "button_2" do %>
-      <%= fa_icon "info-circle" %> <%= t('about') %>
-    <% end %>
-  </div>
-  <div class="home-img col-md-4 col-lg-4">
-      <img src="https://res.cloudinary.com/swissmassiv/image/upload/f_auto,q_auto/v1599604722/Assets/tree_pcqwjm.jpg" width="100%" height="auto" quality="auto:best" crop="scale" fetch_format="auto">
-  </div>
-  <div>
-    <div style="position: absolute; right: 40px; bottom: 40px;">
-      <img src="https://res.cloudinary.com/swissmassiv/image/upload/v1602333228/Assets/swisslabel-logo_izofhp.png" height="50", quality="auto:best", crop="scale", fetch_format="auto">
-      <img src="https://res.cloudinary.com/swissmassiv/image/upload/v1602333217/Assets/UBE_Partner_Betrieb_2017_cv3zge.png" height="50", quality="auto:best", crop="scale", fetch_format="auto">
-    </div>
-  </div>
+    <style>
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        width: 100%;
+      }
 
-</div>
-<div class="w-100 row justify-content-center py-5 overflow-hidden position-relative">
-  <div class="home-img col-md-3 col-lg-3">
-      <img src="https://res.cloudinary.com/swissmassiv/image/upload/f_auto,q_auto/v1599604724/Assets/ski_preview_vjoq93.jpg" width="100%" height="auto" quality="auto:best" crop="scale" fetch_format="auto">
-  </div>
-  <div class="col-9 col-md-6 col-lg-4 py-5">
-    <h1><%= t('one_of_a_kind') %></h1>
-    <p class="pb-3"><%= t('ski_preview') %></p>
-  </div>
-</div>
-<div class="w-100 row justify-content-center py-5 overflow-hidden position-relative">
-  <div class="col-9 col-md-6 col-lg-4 py-5">
-    <h1><%= t('equipment') %></h1>
-    <p class="pb-3"><%= t('equipment_preview') %> </p>
-    <%= link_to spree.nested_taxons_path("equipment"), class: "button_2" do %>
-        <%= fa_icon "tshirt" %> <%= t('equipment') %>
-    <% end %>
-  </div>
-  <div class="d-none d-md-block col-md-3 col-lg-3">
-      <img src="https://res.cloudinary.com/swissmassiv/image/upload/v1/variants/sy9w6a920qyxh00ws7gqxy0m3bgx/738f3894d1f6ffd5984cdf02a7bf860b80058ea425975c9d70410dc5b5cd9934.png" width="100%" height="auto" quality="auto:best" crop="scale" fetch_format="auto">
-  </div>
-</div>
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    </style>
+  </head>
 
-<script>
-  // Set the date we're counting down to
-  var countDownDate = new Date("Apr 30, 2025 23:59:59").getTime();
+  <body style="background-color: #000000; color: #FFFFFF; max-width: 800px; margin: 0 auto; padding: 20px;  font-family: 'Roboto', sans-serif;">
+    <main style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; text-align: center; padding: 1rem; ">
+      <img src="https://res.cloudinary.com/swissmassiv/image/upload/v1602331340/Assets/Logo_weiss_Mario_vvkj4r.png" alt="" style="width: 100%; max-width: 300px; height: auto; padding-bottom: 50px;">
+      <h1 style="font-weight: bold;">swiss massiv hat den Betrieb eingestellt</h1>
+      <p style="font-size: 16px; line-height: 26px; max-width: 800px; padding-bottom: 50px;">
+        Die vergangenen Jahre waren von grossen Erfolgen und wertvollen Kooperationen geprägt. Gemeinsam mit euch, unseren geschätzten Kunden und Partnern, konnten wir viel erreichen. Auf diese Zeiten blicken wir mit Stolz zurück.
+        <br>
+        Deine Unterstützung hat uns in jeder Phase begleitet und swiss massiv zu dem gemacht, was es heute ist. Dafür möchten wir uns von ganzen Herzen bedanken.
+      </p>
 
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/otmDqH0Zcas?autoplay=1&controls=0&mute=1&modestbranding=1&rel=0&playsinline=1&loop=1&playlist=otmDqH0Zcas"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+      </div>
 
-    // Get today's date and time
-    var now = new Date().getTime();
-
-    // Find the distance between now and the count down date
-    var distance = countDownDate - now;
-
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-
-    // Display the result in the element with id="demo"
-    document.getElementById("days").innerHTML = days;
-
-    // If the count down is finished, write some text
-    if (distance < 0) {
-      clearInterval(x);
-      document.getElementById("countdown").innerHTML = "";
-    }
-
-
-</script>
+    </main>
+  </body>
+</html>
